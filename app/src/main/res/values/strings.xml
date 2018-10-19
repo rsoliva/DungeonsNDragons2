@@ -2,7 +2,7 @@
     <string name="app_name">DungeonsNDragons</string>
     <string name="title">DnD 5e Character Creator</string>
     <string name="newCharacter">New Character</string>
-    <string name="Finalize">Finalize</string>
+    <string name="Next">Next</string>
 
     <string-array name="RaceList">
         <item>Human</item>

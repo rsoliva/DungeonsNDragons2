@@ -17,6 +17,7 @@ public class CharacterList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_list);
 
+        // we need to display the saved characters at the home page
         newCharacter = findViewById(R.id.newCharacterButton);
         dndTitle = findViewById(R.id.dndTitle);
 
