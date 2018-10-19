@@ -2,4 +2,29 @@
     <string name="app_name">DungeonsNDragons</string>
     <string name="title">DnD 5e Character Creator</string>
     <string name="newCharacter">New Character</string>
+    <string name="Finalize">Finalize</string>
+
+    <string-array name="RaceList">
+        <item>Human</item>
+        <item>Halfelf</item>
+        <item>Goliath</item>
+        <item>Elf</item>
+        <item>Dwarf</item>
+    </string-array>
+
+    <string-array name="ClassList">
+        <item>Barbarian</item>
+        <item>Wizard</item>
+        <item>Cleric</item>
+        <item>Rogue</item>
+        <item>Fighter</item>
+    </string-array>
+
+    <string-array name="BackgroundList">
+        <item>Soldier</item>
+        <item>Criminal</item>
+        <item>Cook</item>
+        <item>Farmer</item>
+        <item>John</item>
+    </string-array>
 </resources>
