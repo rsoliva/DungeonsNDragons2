@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DungeonsNDragons</string>
+    <string name="title">DnD 5e Character Creator</string>
+    <string name="newCharacter">New Character</string>
 </resources>
