@@ -3,8 +3,13 @@
     <string name="title">DnD 5e Character Creator</string>
     <string name="newCharacter">New Character</string>
     <string name="Next">Next</string>
+    <string name="insertName">Name Your Character</string>
+    <string name="chooseRace">Choose Race</string>
+    <string name="chooseClass">Choose Class</string>
+    <string name="chooseBackground">Choose Background</string>
 
     <string-array name="RaceList">
+        <item> </item>
         <item>Human</item>
         <item>Halfelf</item>
         <item>Goliath</item>
@@ -13,6 +18,7 @@
     </string-array>
 
     <string-array name="ClassList">
+        <item> </item>
         <item>Barbarian</item>
         <item>Wizard</item>
         <item>Cleric</item>
@@ -21,6 +27,7 @@
     </string-array>
 
     <string-array name="BackgroundList">
+        <item> </item>
         <item>Soldier</item>
         <item>Criminal</item>
         <item>Cook</item>
