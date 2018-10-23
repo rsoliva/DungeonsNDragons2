@@ -12,6 +12,7 @@ public interface CharacterMethods
     void SetCharisma(int val);
     void SetSpeed(int val);
     void SetRace(Race inRace);
+    void SetProficiency(int val);
 
     int GetStrength();
     int GetDexterity();
@@ -20,4 +21,5 @@ public interface CharacterMethods
     int GetIntelligence();
     int GetCharisma();
     int GetSpeed();
+    int GetProficiency();
 }

@@ -74,6 +74,12 @@ public class Character implements CharacterMethods
     }
 
     @Override
+    public void SetProficiency(int val)
+    {
+        CLASS_PROFICIENCY = val;
+    }
+
+    @Override
     public int GetStrength()
     {
         return STRENGTH;
@@ -113,5 +119,11 @@ public class Character implements CharacterMethods
     public int GetSpeed()
     {
         return SPEED;
+    }
+
+    @Override
+    public int GetProficiency()
+    {
+        return CLASS_PROFICIENCY;
     }
 }

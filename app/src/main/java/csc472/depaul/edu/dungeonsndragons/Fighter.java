@@ -4,6 +4,6 @@ public class Fighter extends Character
 {
     Fighter()
     {
-        //this.STRENGTH = 5;
+        this.SetProficiency(5);
     }
 }
