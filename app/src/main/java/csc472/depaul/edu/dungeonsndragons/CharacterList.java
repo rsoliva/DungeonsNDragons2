@@ -28,8 +28,6 @@ public class CharacterList extends AppCompatActivity {
                 createCharacterActivity();
             }
         });
-
-
     }
 
     private void createCharacterActivity(){
