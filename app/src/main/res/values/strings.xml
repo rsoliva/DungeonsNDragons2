@@ -7,6 +7,17 @@
     <string name="chooseRace">Choose Race</string>
     <string name="chooseClass">Choose Class</string>
     <string name="chooseBackground">Choose Background</string>
+    <string name="STR">STR</string>
+    <string name="DEX">DEX</string>
+    <string name="CON">CON</string>
+    <string name="INT">INT</string>
+    <string name="WIS">WIS</string>
+    <string name="CHA">CHA</string>
+    <string name="ptBuy">Point Buy</string>
+    <string name="roll">Roll</string>
+    <string name="pts">Points Remaining</string>
+    <string name="maxpts">27</string>
+    <string name="defaultpts">8</string>
 
     <string-array name="RaceList">
         <item> </item>
@@ -32,6 +43,6 @@
         <item>Criminal</item>
         <item>Cook</item>
         <item>Farmer</item>
-        <item>John</item>
+        <item>Jon</item>
     </string-array>
 </resources>

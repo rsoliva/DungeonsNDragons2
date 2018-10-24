@@ -1,5 +1,6 @@
 package csc472.depaul.edu.dungeonsndragons;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -48,8 +49,17 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
             @Override
             public void onClick(View v) {
                 characterName = name.getText().toString();
+                generateStatActivity();
             }
         });
+
+        //character = new character(blah blha blha)
+
+    }
+
+    private void generateStatActivity(){
+        Intent intent = new Intent(this, GenerateStatActivity.class);
+        startActivity(intent);
     }
 
     @Override
