@@ -15,7 +15,7 @@ import android.widget.Toast;
 public class CreationScreen extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     EditText name;
-    Spinner Race, Class, Background;
+    Spinner RaceVals, Class, Background;
     Button next;
     String characterName, characterRace, characterClass, characterBackground;
 
@@ -25,15 +25,18 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
         setContentView(R.layout.activity_creation_screen);
 
         name = findViewById(R.id.editText);
-        Race = findViewById(R.id.Race);
+        RaceVals = findViewById(R.id.Race);
         Class = findViewById(R.id.Class);
         Background = findViewById(R.id.Background);
         next = findViewById(R.id.button);
 
-        ArrayAdapter<CharSequence> raceAdapter = ArrayAdapter.createFromResource(this, R.array.RaceList, android.R.layout.simple_spinner_item);
+       /* ArrayAdapter<Race> raceAdapter = ArrayAdapter.createFromResource(this, R.array.RaceList, android.R.layout.simple_spinner_item);
         raceAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         Race.setAdapter(raceAdapter);
-        Race.setOnItemSelectedListener(this);
+        Race.setOnItemSelectedListener(this);*/
+
+        RaceVals.setAdapter(new ArrayAdapter<Race>(this, android.R.layout.simple_list_item_1, Race.values()));
+        RaceVals.setOnItemSelectedListener(this);
 
         ArrayAdapter<CharSequence> classAdapter = ArrayAdapter.createFromResource(this, R.array.ClassList, android.R.layout.simple_spinner_item);
         classAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -53,7 +56,7 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
             }
         });
 
-        //character = new character(blah blha blha)
+//        Character character = new Character((Race.characterRace, (Job)characterClass, (Background)characterBackground);
 
     }
 

@@ -11,6 +11,9 @@ public class Character implements CharacterMethods
     private int SPEED = 0;
     private int CLASS_PROFICIENCY = 0;
     private Race RACE;
+//    private Job job;
+//    private Background background;
+    private String name;
 
     @Override
     public void Initialize()
@@ -24,7 +27,44 @@ public class Character implements CharacterMethods
             default:
         }
     }
+    /*public Character(Race race, Job job, Background background){
+        this.RACE = race;
+        this.job = job;
+        this.background = background;
+        this.SetStrength(8);
+        this.SetDexterity(8);
+        this.SetConstitution(8);
+        this.SetIntelligence(8);
+        this.SetWisdom(8);
+        this.SetCharisma(8);
 
+        switch(RACE) {
+            case ELF:
+                break;
+            case ORC:
+                break;
+            case DWARF:
+                break;
+            case GNOME:
+                break;
+            case HUMAN:
+                break;
+            case GOBLIN:
+                break;
+            case BUGBEAR:
+                break;
+            case GOLIATH:
+                break;
+            case HALF_ELF:
+                break;
+            case HALF_ORC:
+                break;
+            case HALFLING:
+                break;
+            case DRAGONBORN:
+                break;
+        }
+    }*/
     @Override
     public void SetStrength(int val)
     {
@@ -80,6 +120,9 @@ public class Character implements CharacterMethods
     }
 
     @Override
+    public void SetName(String name) { this.name = name; }
+
+    @Override
     public int GetStrength()
     {
         return STRENGTH;
@@ -126,4 +169,8 @@ public class Character implements CharacterMethods
     {
         return CLASS_PROFICIENCY;
     }
+
+    @Override
+    public String GetName() { return this.name; }
+
 }

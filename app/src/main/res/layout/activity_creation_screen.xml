@@ -12,7 +12,6 @@
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:layout_marginTop="41dp"
-        android:entries="@array/RaceList"
 
         app:layout_constraintBottom_toTopOf="@+id/Class"
         app:layout_constraintTop_toBottomOf="@+id/editText"

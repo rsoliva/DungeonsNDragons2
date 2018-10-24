@@ -19,14 +19,21 @@
     <string name="maxpts">27</string>
     <string name="defaultpts">8</string>
 
-    <string-array name="RaceList">
+    <!--<Race name="RaceList">
         <item> </item>
-        <item>Human</item>
-        <item>Halfelf</item>
-        <item>Goliath</item>
-        <item>Elf</item>
-        <item>Dwarf</item>
-    </string-array>
+        <item>Race.BUGBEAR</item>
+        <item>Race.DRAGONBORN</item>
+        <item>Race.DWARF</item>
+        <item>Race.ELF</item>
+        <item>Race.GNOME</item>
+        <item>Race.GOBLIN</item>
+        <item>Race.GOLIATH</item>
+        <item>Race.HALF_ELF</item>
+        <item>Race.HALFLING</item>
+        <item>Race.HALF_ORC</item>
+        <item>Race.HUMAN</item>
+        <item>Race.ORC</item>
+    </Race> -->
 
     <string-array name="ClassList">
         <item> </item>
