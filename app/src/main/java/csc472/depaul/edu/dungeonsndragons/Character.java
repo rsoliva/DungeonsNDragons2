@@ -1,6 +1,11 @@
 package csc472.depaul.edu.dungeonsndragons;
 
-public class Character implements CharacterMethods
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
+
+public class Character implements Parcelable, CharacterMethods
 {
     private int STRENGTH = 0;
     private int DEXTERITY = 0;
@@ -10,61 +15,43 @@ public class Character implements CharacterMethods
     private int CHARISMA = 0;
     private int SPEED = 0;
     private int CLASS_PROFICIENCY = 0;
-    private Race RACE;
-//    private Job job;
-//    private Background background;
+
     private String name;
+    private String race;
+    private String job;
 
     @Override
-    public void Initialize()
-    {
-        switch (RACE)
-        {
-            case BUGBEAR:
-                break;
-            case DRAGONBORN:
-                break;
-            default:
-        }
+    public int describeContents() {
+        return hashCode();
     }
-    /*public Character(Race race, Job job, Background background){
-        this.RACE = race;
-        this.job = job;
-        this.background = background;
-        this.SetStrength(8);
-        this.SetDexterity(8);
-        this.SetConstitution(8);
-        this.SetIntelligence(8);
-        this.SetWisdom(8);
-        this.SetCharisma(8);
 
-        switch(RACE) {
-            case ELF:
-                break;
-            case ORC:
-                break;
-            case DWARF:
-                break;
-            case GNOME:
-                break;
-            case HUMAN:
-                break;
-            case GOBLIN:
-                break;
-            case BUGBEAR:
-                break;
-            case GOLIATH:
-                break;
-            case HALF_ELF:
-                break;
-            case HALF_ORC:
-                break;
-            case HALFLING:
-                break;
-            case DRAGONBORN:
-                break;
+    @Override
+    public void writeToParcel(Parcel dest, int flags){
+        dest.writeString(name);
+        dest.writeString(race);
+        dest.writeString(job);
+    }
+    public Character(Parcel p){
+        name = p.readString();
+        race = p.readString();
+        job = p.readString();
+    }
+
+    public Character(){
+    }
+
+    public static final Parcelable.Creator<Character> CREATOR = new Parcelable.Creator<Character>(){
+
+        @Override
+        public Character createFromParcel(Parcel parcel) {
+            return new Character(parcel);
         }
-    }*/
+
+        @Override
+        public Character[] newArray(int size) {
+            return new Character[size];
+        }
+    };
     @Override
     public void SetStrength(int val)
     {
@@ -108,9 +95,14 @@ public class Character implements CharacterMethods
     }
 
     @Override
-    public void SetRace(Race inRace)
+    public void SetRace(String inRace)
     {
-        RACE = inRace;
+        race = inRace;
+    }
+
+    public void SetJob(String inJob)
+    {
+        job = inJob;
     }
 
     @Override
@@ -172,5 +164,7 @@ public class Character implements CharacterMethods
 
     @Override
     public String GetName() { return this.name; }
+    public String GetRace() { return this.race; }
+    public String GetJob() { return this.job; }
 
 }
