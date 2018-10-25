@@ -1,25 +1,29 @@
 package csc472.depaul.edu.dungeonsndragons;
 
-public enum Race
-{
-    BUGBEAR("Bugbear"),
+public enum Race {
+    DARKELF("Dark Elf"),
     DRAGONBORN("Dragonborn"),
-    DWARF("Dwarf"),
-    ELF("Elf"),
-    GNOME("Gnome"),
-    GOBLIN("Goblin"),
-    GOLIATH("Goliath"),
-    HALF_ELF("Half elf"),
-    HALFLING("Halfling"),
-    HALF_ORC("Half orc"),
+    FORESTGNOME("Forest Gnome"),
+    HALFELF("Elf"),
+    HALFORC("Half-Orc"),
+    HIGHELF("High-Elf"),
+    HILLDWARF("Hill Dwarf"),
     HUMAN("Human"),
-    ORC("Orc");
+    LIGHTFOOTHALFING("Lightfoot Halfling"),
+    MOUNTTAINDWARF("Mountain Dwarf"),
+    ROCKGNOME("Rock Gnome"),
+    STOUTHALFLING("Stout Halfing"),
+    TIEFLING("Tiefling"),
+    WOODELF("Wood Elf");
 
-    private String races;
+    private String RACE;
 
-    Race(String races){ this.races = races; }
+    Race(String inRace) {
+        this.RACE = inRace;
+    }
 
-    @Override public String toString() {
-        return races;
+    @Override
+    public String toString() {
+        return RACE;
     }
 }
