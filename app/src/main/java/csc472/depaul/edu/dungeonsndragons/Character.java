@@ -1,11 +1,6 @@
 package csc472.depaul.edu.dungeonsndragons;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
-import java.io.Serializable;
-
-public class Character implements Parcelable, CharacterMethods
+public class Character implements CharacterMethods
 {
     private int STRENGTH = 0;
     private int DEXTERITY = 0;
@@ -15,43 +10,10 @@ public class Character implements Parcelable, CharacterMethods
     private int CHARISMA = 0;
     private int SPEED = 0;
     private int CLASS_PROFICIENCY = 0;
-
+    private Race RACE;
+//    private Job job;
+//    private Background background;
     private String name;
-    private String race;
-    private String job;
-
-    @Override
-    public int describeContents() {
-        return hashCode();
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags){
-        dest.writeString(name);
-        dest.writeString(race);
-        dest.writeString(job);
-    }
-    public Character(Parcel p){
-        name = p.readString();
-        race = p.readString();
-        job = p.readString();
-    }
-
-    public Character(){
-    }
-
-    public static final Parcelable.Creator<Character> CREATOR = new Parcelable.Creator<Character>(){
-
-        @Override
-        public Character createFromParcel(Parcel parcel) {
-            return new Character(parcel);
-        }
-
-        @Override
-        public Character[] newArray(int size) {
-            return new Character[size];
-        }
-    };
     @Override
     public void SetStrength(int val)
     {
@@ -94,22 +56,17 @@ public class Character implements Parcelable, CharacterMethods
         SPEED = val;
     }
 
-    @Override
-    public void SetRace(String inRace)
-    {
-        race = inRace;
-    }
+    //@Override
+    //public void SetRace(Race inRace)
+    //{
+        //RACE = inRace;
+    //}
 
-    public void SetJob(String inJob)
-    {
-        job = inJob;
-    }
-
-    @Override
-    public void SetProficiency(int val)
-    {
-        CLASS_PROFICIENCY = val;
-    }
+    //@Override
+    //public void SetProficiency(int val)
+    //{
+        //CLASS_PROFICIENCY = val;
+    //}
 
     @Override
     public void SetName(String name) { this.name = name; }
@@ -156,15 +113,13 @@ public class Character implements Parcelable, CharacterMethods
         return SPEED;
     }
 
-    @Override
-    public int GetProficiency()
-    {
-        return CLASS_PROFICIENCY;
-    }
+    //@Override
+    //public int GetProficiency()
+    //{
+        //return CLASS_PROFICIENCY;
+    //}
 
     @Override
     public String GetName() { return this.name; }
-    public String GetRace() { return this.race; }
-    public String GetJob() { return this.job; }
 
 }
