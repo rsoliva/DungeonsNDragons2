@@ -14,6 +14,7 @@ public interface CharacterMethods
     void SetProficiency(int val);
     void SetName(String name);
 
+
     int GetStrength();
     int GetDexterity();
     int GetConstitution();
