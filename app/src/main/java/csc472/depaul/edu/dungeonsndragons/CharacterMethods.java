@@ -2,8 +2,6 @@ package csc472.depaul.edu.dungeonsndragons;
 
 public interface CharacterMethods
 {
-    void Initialize();
-
     void SetStrength(int val);
     void SetDexterity(int val);
     void SetConstitution(int val);
@@ -11,7 +9,6 @@ public interface CharacterMethods
     void SetIntelligence(int val);
     void SetCharisma(int val);
     void SetSpeed(int val);
-    void SetRace(Race inRace);
     void SetProficiency(int val);
     void SetName(String name);
 
