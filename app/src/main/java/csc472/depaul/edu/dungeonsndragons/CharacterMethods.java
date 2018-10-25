@@ -9,7 +9,6 @@ public interface CharacterMethods
     void SetIntelligence(int val);
     void SetCharisma(int val);
     void SetSpeed(int val);
-    void SetProficiency(int val);
     void SetName(String name);
 
     int GetStrength();
@@ -19,6 +18,5 @@ public interface CharacterMethods
     int GetIntelligence();
     int GetCharisma();
     int GetSpeed();
-    int GetProficiency();
     String GetName();
 }
