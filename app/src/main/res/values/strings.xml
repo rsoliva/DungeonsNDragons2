@@ -35,14 +35,14 @@
         <item>Race.ORC</item>
     </Race> -->
 
-    <string-array name="ClassList">
+    <!-- <string-array name="ClassList">
         <item> </item>
         <item>Barbarian</item>
         <item>Wizard</item>
         <item>Cleric</item>
         <item>Rogue</item>
         <item>Fighter</item>
-    </string-array>
+    </string-array> -->
 
     <string-array name="BackgroundList">
         <item> </item>

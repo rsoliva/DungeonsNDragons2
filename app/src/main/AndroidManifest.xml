@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CreationScreen" />
-        <activity android:name=".GenerateStatActivity"> </activity>
+        <activity android:name=".GenerateStatActivity"></activity>
+        <activity android:name=".CharacterSheetMain"></activity>
     </application>
 
 </manifest>
