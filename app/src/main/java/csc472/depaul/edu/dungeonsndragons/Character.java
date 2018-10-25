@@ -14,57 +14,6 @@ public class Character implements CharacterMethods
 //    private Job job;
 //    private Background background;
     private String name;
-
-    @Override
-    public void Initialize()
-    {
-        switch (RACE)
-        {
-            case BUGBEAR:
-                break;
-            case DRAGONBORN:
-                break;
-            default:
-        }
-    }
-    /*public Character(Race race, Job job, Background background){
-        this.RACE = race;
-        this.job = job;
-        this.background = background;
-        this.SetStrength(8);
-        this.SetDexterity(8);
-        this.SetConstitution(8);
-        this.SetIntelligence(8);
-        this.SetWisdom(8);
-        this.SetCharisma(8);
-
-        switch(RACE) {
-            case ELF:
-                break;
-            case ORC:
-                break;
-            case DWARF:
-                break;
-            case GNOME:
-                break;
-            case HUMAN:
-                break;
-            case GOBLIN:
-                break;
-            case BUGBEAR:
-                break;
-            case GOLIATH:
-                break;
-            case HALF_ELF:
-                break;
-            case HALF_ORC:
-                break;
-            case HALFLING:
-                break;
-            case DRAGONBORN:
-                break;
-        }
-    }*/
     @Override
     public void SetStrength(int val)
     {
@@ -107,17 +56,17 @@ public class Character implements CharacterMethods
         SPEED = val;
     }
 
-    @Override
-    public void SetRace(Race inRace)
-    {
-        RACE = inRace;
-    }
+    //@Override
+    //public void SetRace(Race inRace)
+    //{
+        //RACE = inRace;
+    //}
 
-    @Override
-    public void SetProficiency(int val)
-    {
-        CLASS_PROFICIENCY = val;
-    }
+    //@Override
+    //public void SetProficiency(int val)
+    //{
+        //CLASS_PROFICIENCY = val;
+    //}
 
     @Override
     public void SetName(String name) { this.name = name; }
@@ -164,11 +113,11 @@ public class Character implements CharacterMethods
         return SPEED;
     }
 
-    @Override
-    public int GetProficiency()
-    {
-        return CLASS_PROFICIENCY;
-    }
+    //@Override
+    //public int GetProficiency()
+    //{
+        //return CLASS_PROFICIENCY;
+    //}
 
     @Override
     public String GetName() { return this.name; }
