@@ -52,6 +52,21 @@ public class MountainDwarf extends AbstractRace implements CharacterMethods
     }
 
     @Override
+    public void SetRace(String inRace) {
+
+    }
+
+    @Override
+    public void SetJob(String inJob) {
+
+    }
+
+    @Override
+    public void SetProficiency(int val) {
+
+    }
+
+    @Override
     public void SetName(String name)
     {
         this.NAME = name;
@@ -100,8 +115,23 @@ public class MountainDwarf extends AbstractRace implements CharacterMethods
     }
 
     @Override
+    public int GetProficiency() {
+        return 0;
+    }
+
+    @Override
     public String GetName()
     {
         return this.privCharRef.GetName();
+    }
+
+    @Override
+    public String GetRace() {
+        return null;
+    }
+
+    @Override
+    public String GetJob() {
+        return null;
     }
 }
