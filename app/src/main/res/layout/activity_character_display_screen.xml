@@ -26,7 +26,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/black"
-        android:text="Strength"
+        android:text="@string/Strength"
         android:textAlignment="center"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@+id/guideline17"
@@ -40,7 +40,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="@color/black"
-        android:text="dexterity"
+        android:text="@string/Dexteriy"
         android:textAlignment="center"
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/conText"
@@ -54,7 +54,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="28dp"
         android:background="@color/black"
-        android:text="Constitution"
+        android:text="@string/Constitution"
         android:textAlignment="center"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,10 +67,10 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="20dp"
         android:background="@color/black"
-        android:text="Charisma"
+        android:text="@string/Charisma"
         android:textAlignment="center"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/charVal"
+        app:layout_constraintBottom_toTopOf="@+id/speedVal9"
         app:layout_constraintEnd_toStartOf="@+id/guideline20" />
 
     <TextView
@@ -81,12 +81,12 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:background="@color/black"
-        android:text="Wisdom"
+        android:text="@string/Wisdom"
         android:textAlignment="center"
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/chaText"
         app:layout_constraintStart_toEndOf="@+id/intText"
-        app:layout_constraintTop_toBottomOf="@+id/dexVal" />
+        app:layout_constraintTop_toBottomOf="@+id/speedVal7" />
 
     <TextView
         android:id="@+id/intText"
@@ -95,10 +95,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginBottom="16dp"
         android:background="@color/black"
-        android:text="Intelligence"
+        android:text="@string/Intelligence"
         android:textAlignment="center"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/intVal"
+        app:layout_constraintBottom_toTopOf="@+id/speedVal11"
         app:layout_constraintStart_toStartOf="@+id/guideline17" />
 
     <TextView
@@ -113,7 +113,7 @@
         android:text="Armor Class"
         android:textAlignment="center"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/armorClassVal"
+        app:layout_constraintBottom_toTopOf="@+id/speedVal3"
         app:layout_constraintEnd_toStartOf="@+id/profiencyText"
         app:layout_constraintStart_toEndOf="@+id/hitDiceText"
         app:layout_constraintTop_toTopOf="@+id/guideline21"
@@ -130,7 +130,7 @@
         android:text="Proficiency"
         android:textAlignment="center"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/proficiencyVal"
+        app:layout_constraintBottom_toTopOf="@+id/speedVal2"
         app:layout_constraintEnd_toStartOf="@+id/guideline20"
         app:layout_constraintTop_toTopOf="@+id/guideline21"
         app:layout_constraintVertical_bias="0.0" />
@@ -156,7 +156,7 @@
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textImeMultiLine|number"
         android:text="3"
@@ -167,7 +167,7 @@
         app:layout_constraintStart_toStartOf="@+id/speedText" />
 
     <EditText
-        android:id="@+id/proficiencyVal"
+        android:id="@+id/speedVal2"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -181,10 +181,10 @@
         app:layout_constraintStart_toStartOf="@+id/profiencyText" />
 
     <EditText
-        android:id="@+id/armorClassVal"
+        android:id="@+id/speedVal3"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="24dp"
         android:ems="10"
         android:inputType="textImeMultiLine|number"
         android:text="3"
@@ -211,7 +211,7 @@
         app:layout_constraintStart_toEndOf="@+id/Initiative" />
 
     <EditText
-        android:id="@+id/strengthVal"
+        android:id="@+id/speedVal6"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -228,7 +228,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/dexVal"
+        android:id="@+id/speedVal7"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -241,7 +241,7 @@
         app:layout_constraintTop_toBottomOf="@+id/dexText" />
 
     <EditText
-        android:id="@+id/constVal"
+        android:id="@+id/speedVal8"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -256,7 +256,7 @@
         app:layout_constraintTop_toBottomOf="@+id/conText" />
 
     <EditText
-        android:id="@+id/charVal"
+        android:id="@+id/speedVal9"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -269,7 +269,7 @@
         app:layout_constraintStart_toStartOf="@+id/chaText" />
 
     <EditText
-        android:id="@+id/wisVal"
+        android:id="@+id/speedVal10"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -284,7 +284,7 @@
         app:layout_constraintTop_toBottomOf="@+id/wisText" />
 
     <EditText
-        android:id="@+id/intVal"
+        android:id="@+id/speedVal11"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"

@@ -19,6 +19,7 @@ public class Character implements Parcelable, CharacterMethods
     private String name;
     private String race;
     private String job;
+    private String background;
 
     @Override
     public int describeContents() {
@@ -99,12 +100,13 @@ public class Character implements Parcelable, CharacterMethods
     {
         race = inRace;
     }
-
+    @Override
     public void SetJob(String inJob)
     {
         job = inJob;
     }
-
+    @Override
+    public void SetBackground(String inBackground) { background = inBackground; }
     @Override
     public void SetProficiency(int val)
     {
@@ -164,7 +166,11 @@ public class Character implements Parcelable, CharacterMethods
 
     @Override
     public String GetName() { return this.name; }
+    @Override
     public String GetRace() { return this.race; }
+    @Override
     public String GetJob() { return this.job; }
+    @Override
+    public String GetBackground() { return this.background; }
 
 }

@@ -62,6 +62,11 @@ public class Half_Orc extends AbstractRace implements CharacterMethods
     }
 
     @Override
+    public void SetBackground(String inBackground) {
+
+    }
+
+    @Override
     public void SetProficiency(int val) {
 
     }
@@ -132,6 +137,11 @@ public class Half_Orc extends AbstractRace implements CharacterMethods
 
     @Override
     public String GetJob() {
+        return null;
+    }
+
+    @Override
+    public String GetBackground() {
         return null;
     }
 }

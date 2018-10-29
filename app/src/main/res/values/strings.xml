@@ -19,37 +19,11 @@
     <string name="maxpts">27</string>
     <string name="defaultpts">8</string>
 
-    <!--<Race name="RaceList">
-        <item> </item>
-        <item>Race.BUGBEAR</item>
-        <item>Race.DRAGONBORN</item>
-        <item>Race.DWARF</item>
-        <item>Race.ELF</item>
-        <item>Race.GNOME</item>
-        <item>Race.GOBLIN</item>
-        <item>Race.GOLIATH</item>
-        <item>Race.HALF_ELF</item>
-        <item>Race.HALFLING</item>
-        <item>Race.HALF_ORC</item>
-        <item>Race.HUMAN</item>
-        <item>Race.ORC</item>
-    </Race> -->
+    <string name="Strength">Strength</string>
+    <string name="Dexteriy">Dexterity</string>
+    <string name="Constitution">Constitution</string>
+    <string name="Intelligence">Intelligence</string>
+    <string name="Wisdom">Wisdom</string>
+    <string name="Charisma">Charisma</string>
 
-    <!-- <string-array name="ClassList">
-        <item> </item>
-        <item>Barbarian</item>
-        <item>Wizard</item>
-        <item>Cleric</item>
-        <item>Rogue</item>
-        <item>Fighter</item>
-    </string-array> -->
-
-    <string-array name="BackgroundList">
-        <item> </item>
-        <item>Soldier</item>
-        <item>Criminal</item>
-        <item>Cook</item>
-        <item>Farmer</item>
-        <item>Jon</item>
-    </string-array>
 </resources>
