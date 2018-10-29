@@ -11,6 +11,7 @@ public interface CharacterMethods
     void SetSpeed(int val);
     void SetRace(String inRace);
     void SetJob(String inJob);
+    void SetBackground(String inBackground);
     void SetProficiency(int val);
     void SetName(String name);
 
@@ -26,4 +27,5 @@ public interface CharacterMethods
     String GetName();
     String GetRace();
     String GetJob();
+    String GetBackground();
 }
