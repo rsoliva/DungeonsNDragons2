@@ -1,4 +1,4 @@
-package csc472.depaul.edu.dungeonsndragons;
+package csc472.depaul.edu.dungeonsndragons.Races;
 
 public enum Race {
     DARKELF("Dark Elf"),

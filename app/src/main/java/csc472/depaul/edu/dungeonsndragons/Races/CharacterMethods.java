@@ -1,4 +1,4 @@
-package csc472.depaul.edu.dungeonsndragons;
+package csc472.depaul.edu.dungeonsndragons.Races;
 
 public interface CharacterMethods
 {
@@ -13,6 +13,7 @@ public interface CharacterMethods
     void SetJob(String inJob);
     void SetProficiency(int val);
     void SetName(String name);
+
 
     int GetStrength();
     int GetDexterity();

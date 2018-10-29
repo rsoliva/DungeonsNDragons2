@@ -1,10 +1,10 @@
-package csc472.depaul.edu.dungeonsndragons;
+package csc472.depaul.edu.dungeonsndragons.Races;
 
-public class DarkElf extends AbstractRace implements CharacterMethods
+public class HillDwarf extends AbstractRace implements CharacterMethods
 {
     private CharacterMethods privCharRef = null;
 
-    public DarkElf(CharacterMethods charRef)
+    public HillDwarf(CharacterMethods charRef)
     {
         this.privCharRef = charRef;
     }
@@ -53,7 +53,7 @@ public class DarkElf extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetRace(String inRace) {
-
+        this.RACE = inRace;
     }
 
     @Override
@@ -63,7 +63,7 @@ public class DarkElf extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetProficiency(int val) {
-
+        this.CLASS_PROFICIENCY = val;
     }
 
     @Override
@@ -81,19 +81,19 @@ public class DarkElf extends AbstractRace implements CharacterMethods
     @Override
     public int GetDexterity()
     {
-        return this.privCharRef.GetDexterity() + 2;
+        return this.privCharRef.GetDexterity();
     }
 
     @Override
     public int GetConstitution()
     {
-        return this.privCharRef.GetConstitution();
+        return this.privCharRef.GetConstitution() + 2;
     }
 
     @Override
     public int GetWisdom()
     {
-        return this.privCharRef.GetWisdom();
+        return this.privCharRef.GetWisdom() + 1;
     }
 
     @Override
@@ -105,7 +105,7 @@ public class DarkElf extends AbstractRace implements CharacterMethods
     @Override
     public int GetCharisma()
     {
-        return this.privCharRef.GetCharisma() + 1;
+        return this.privCharRef.GetCharisma();
     }
 
     @Override

@@ -1,10 +1,10 @@
-package csc472.depaul.edu.dungeonsndragons;
+package csc472.depaul.edu.dungeonsndragons.Races;
 
-public class WoodElf extends AbstractRace implements CharacterMethods
+public class LightfootHalfling extends AbstractRace implements CharacterMethods
 {
     private CharacterMethods privCharRef = null;
 
-    public WoodElf(CharacterMethods charRef)
+    public LightfootHalfling(CharacterMethods charRef)
     {
         this.privCharRef = charRef;
     }
@@ -53,7 +53,7 @@ public class WoodElf extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetRace(String inRace) {
-
+        this.RACE = inRace;
     }
 
     @Override
@@ -63,7 +63,7 @@ public class WoodElf extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetProficiency(int val) {
-
+        this.CLASS_PROFICIENCY = val;
     }
 
     @Override
@@ -93,7 +93,7 @@ public class WoodElf extends AbstractRace implements CharacterMethods
     @Override
     public int GetWisdom()
     {
-        return this.privCharRef.GetWisdom() + 1;
+        return this.privCharRef.GetWisdom();
     }
 
     @Override
@@ -105,7 +105,7 @@ public class WoodElf extends AbstractRace implements CharacterMethods
     @Override
     public int GetCharisma()
     {
-        return this.privCharRef.GetCharisma();
+        return this.privCharRef.GetCharisma() + 1;
     }
 
     @Override

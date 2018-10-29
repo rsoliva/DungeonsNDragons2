@@ -3,15 +3,15 @@ package csc472.depaul.edu.dungeonsndragons;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import csc472.depaul.edu.dungeonsndragons.Jobs.Job;
+import csc472.depaul.edu.dungeonsndragons.Races.Race;
 
 public class CreationScreen extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 

@@ -3,7 +3,7 @@ package csc472.depaul.edu.dungeonsndragons;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.io.Serializable;
+import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
 
 public class Character implements Parcelable, CharacterMethods
 {
