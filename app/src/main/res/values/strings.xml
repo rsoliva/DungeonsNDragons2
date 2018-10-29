@@ -25,5 +25,16 @@
     <string name="Intelligence">Intelligence</string>
     <string name="Wisdom">Wisdom</string>
     <string name="Charisma">Charisma</string>
+    <string name="HitDice">Hit Dice</string>
+    <string name="ArmorClass">Armor Class</string>
+    <string name="Proficiency">Proficiency</string>
+    <string name="Speed">Speed</string>
+    <string name="Initiative">Initiative</string>
+    <string name="Name">Name</string>
+    <string name="Class">Class</string>
+    <string name="HP">HP</string>
+    <string name="Level">Level</string>
+    <string name="Race">Race</string>
+    <string name="Blank"> </string>
 
 </resources>

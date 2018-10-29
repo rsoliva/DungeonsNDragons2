@@ -19,7 +19,8 @@
         <activity android:name=".CreationScreen" />
         <activity android:name=".GenerateStatActivity" />
         <activity android:name=".CharacterSheetMain" />
-        <activity android:name=".ChracterDisplayScreen2"></activity>
+        <activity android:name=".characterDisplayScreen" />
+        <activity android:name=".ChracterDisplayScreen2" />
     </application>
 
 </manifest>
