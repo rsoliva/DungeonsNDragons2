@@ -55,8 +55,6 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
             }
         });
 
-//        Character character = new Character((Race.characterRace, (Job)characterClass, (Background)characterBackground);
-
     }
 
     private void generateStatActivity(){
@@ -66,6 +64,7 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
         dummy.SetName(characterName);
         dummy.SetRace(characterRace);
         dummy.SetJob(characterClass);
+        dummy.SetBackground(characterBackground);
         genStat.putExtra("characterInfo", dummy);
         startActivity(genStat);
     }
