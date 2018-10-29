@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".character_display_screen">
+    tools:context=".characterDisplayScreen">
 
     <TextView
         android:id="@+id/hitDiceText"
@@ -141,14 +141,14 @@
         android:layout_height="28dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:background="@color/black"
         android:text="Speed"
         android:textAlignment="center"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/speedVal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintHorizontal_bias="0.855"
         app:layout_constraintStart_toEndOf="@+id/Initiative" />
 
     <EditText
@@ -156,14 +156,14 @@
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textImeMultiLine|number"
         android:text="3"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline21"
         app:layout_constraintEnd_toEndOf="@+id/speedText"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.714"
         app:layout_constraintStart_toStartOf="@+id/speedText" />
 
     <EditText
@@ -200,14 +200,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="72dp"
         android:ems="10"
         android:inputType="textImeMultiLine|number"
         android:text="3"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline21"
         app:layout_constraintEnd_toStartOf="@+id/speedText"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toEndOf="@+id/Initiative" />
 
     <EditText
@@ -314,29 +314,31 @@
         android:id="@+id/InitVal"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:inputType="textImeMultiLine|number"
         android:text="3"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline21"
         app:layout_constraintEnd_toEndOf="@+id/Initiative"
-        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="@+id/Initiative" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
         android:layout_marginBottom="8dp"
         android:text="Name"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/Initiative"
+        app:layout_constraintEnd_toStartOf="@+id/Level"
         app:layout_constraintStart_toStartOf="@+id/guideline17"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.021" />
 
     <TextView
         android:id="@+id/className"
@@ -351,7 +353,7 @@
         app:layout_constraintBottom_toTopOf="@+id/speedText"
         app:layout_constraintEnd_toStartOf="@+id/guideline20"
         app:layout_constraintHorizontal_bias="0.951"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/Name"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -365,8 +367,10 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/speedVal5"
         app:layout_constraintEnd_toEndOf="@+id/speedVal5"
+        app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="@+id/speedVal5"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.812" />
 
     <TextView
         android:id="@+id/hitDiceValue"
@@ -417,5 +421,34 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="187dp" />
+
+    <TextView
+        android:id="@+id/Race"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="8dp"
+        android:text="Race"
+        app:layout_constraintBottom_toTopOf="@+id/hpText"
+        app:layout_constraintEnd_toStartOf="@+id/className"
+        app:layout_constraintStart_toEndOf="@+id/Level"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="160dp"
+        android:text="Level"
+        app:layout_constraintBottom_toTopOf="@+id/guideline21"
+        app:layout_constraintEnd_toStartOf="@+id/Race"
+        app:layout_constraintStart_toEndOf="@+id/Name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>
