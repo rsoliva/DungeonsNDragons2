@@ -53,7 +53,7 @@ public class Tiefling extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetRace(String inRace) {
-        
+
     }
 
     @Override
