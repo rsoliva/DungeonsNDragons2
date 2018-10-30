@@ -34,7 +34,6 @@
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:layout_marginTop="40dp"
-        android:entries="@array/BackgroundList"
 
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"

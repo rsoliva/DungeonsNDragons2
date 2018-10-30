@@ -3,6 +3,7 @@ package csc472.depaul.edu.dungeonsndragons;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -35,6 +36,8 @@ public class GenerateStatActivity extends AppCompatActivity {
         intScore = Integer.parseInt(i.getText().toString());
         wisScore = Integer.parseInt(w.getText().toString());
         chaScore = Integer.parseInt(ch.getText().toString());
+        Log.d("testAttr", "str is: " + strScore);
+
         storeNewInfo();
 
         next.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +67,8 @@ public class GenerateStatActivity extends AppCompatActivity {
         dummy.SetIntelligence(intScore);
         dummy.SetWisdom(wisScore);
         dummy.SetCharisma(chaScore);
+        Log.d("testAttr", "str is: " + dummy.GetStrength());
+
 
     }
 

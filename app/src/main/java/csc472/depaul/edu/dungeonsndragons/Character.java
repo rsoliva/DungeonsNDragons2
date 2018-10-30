@@ -31,11 +31,24 @@ public class Character implements Parcelable, CharacterMethods
         dest.writeString(name);
         dest.writeString(race);
         dest.writeString(job);
+        dest.writeInt(STRENGTH);
+        dest.writeInt(DEXTERITY);
+        dest.writeInt(CONSTITUTION);
+        dest.writeInt(INTELLIGENCE);
+        dest.writeInt(WISDOM);
+        dest.writeInt(CHARISMA);
+
     }
     public Character(Parcel p){
         name = p.readString();
         race = p.readString();
         job = p.readString();
+        STRENGTH = p.readInt();
+        DEXTERITY = p.readInt();
+        CONSTITUTION = p.readInt();
+        INTELLIGENCE = p.readInt();
+        WISDOM = p.readInt();
+        CHARISMA = p.readInt();
     }
 
     public Character(){

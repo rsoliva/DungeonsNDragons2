@@ -70,7 +70,7 @@
         android:text="@string/Charisma"
         android:textAlignment="center"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/speedVal9"
+        app:layout_constraintBottom_toTopOf="@+id/chaNum"
         app:layout_constraintEnd_toStartOf="@+id/guideline20" />
 
     <TextView
@@ -86,7 +86,7 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/chaText"
         app:layout_constraintStart_toEndOf="@+id/intText"
-        app:layout_constraintTop_toBottomOf="@+id/speedVal7" />
+        app:layout_constraintTop_toBottomOf="@+id/dexNum" />
 
     <TextView
         android:id="@+id/intText"
@@ -98,7 +98,7 @@
         android:text="@string/Intelligence"
         android:textAlignment="center"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/speedVal11"
+        app:layout_constraintBottom_toTopOf="@+id/intNum"
         app:layout_constraintStart_toStartOf="@+id/guideline17" />
 
     <TextView
@@ -215,8 +215,8 @@
         app:layout_constraintStart_toEndOf="@+id/Initiative" />
 
     <EditText
-        android:id="@+id/speedVal6"
-        android:labelFor="@+id/speedVal6"
+        android:id="@+id/strNum"
+        android:labelFor="@+id/strNum"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -233,8 +233,8 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/speedVal7"
-        android:labelFor="@+id/speedVal7"
+        android:id="@+id/dexNum"
+        android:labelFor="@+id/dexNum"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -247,8 +247,8 @@
         app:layout_constraintTop_toBottomOf="@+id/dexText" />
 
     <EditText
-        android:id="@+id/speedVal8"
-        android:labelFor="@+id/speedVal8"
+        android:id="@+id/conNum"
+        android:labelFor="@+id/conNum"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -263,8 +263,8 @@
         app:layout_constraintTop_toBottomOf="@+id/conText" />
 
     <EditText
-        android:id="@+id/speedVal9"
-        android:labelFor="@+id/speedVal9"
+        android:id="@+id/chaNum"
+        android:labelFor="@+id/chaNum"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -277,8 +277,8 @@
         app:layout_constraintStart_toStartOf="@+id/chaText" />
 
     <EditText
-        android:id="@+id/speedVal10"
-        android:labelFor="@+id/speedVal10"
+        android:id="@+id/wisNum"
+        android:labelFor="@+id/wisNum"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -293,8 +293,8 @@
         app:layout_constraintTop_toBottomOf="@+id/wisText" />
 
     <EditText
-        android:id="@+id/speedVal11"
-        android:labelFor="@+id/speedVal11"
+        android:id="@+id/intNum"
+        android:labelFor="@+id/intNum"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
