@@ -62,6 +62,11 @@ public class Half_Elf extends AbstractRace implements CharacterMethods
     }
 
     @Override
+    public void SetBackground(String inBackground) {
+
+    }
+
+    @Override
     public void SetProficiency(int val) {
         this.CLASS_PROFICIENCY = val;
     }
@@ -132,6 +137,11 @@ public class Half_Elf extends AbstractRace implements CharacterMethods
 
     @Override
     public String GetJob() {
+        return null;
+    }
+
+    @Override
+    public String GetBackground() {
         return null;
     }
 }

@@ -17,8 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".CreationScreen" />
-        <activity android:name=".GenerateStatActivity"></activity>
-        <activity android:name=".CharacterSheetMain"></activity>
+        <activity android:name=".GenerateStatActivity" />
+        <activity android:name=".CharacterSheetMain" />
+        <activity android:name=".characterDisplayScreen" />
+        <activity android:name=".ChracterDisplayScreen2" />
     </application>
 
 </manifest>

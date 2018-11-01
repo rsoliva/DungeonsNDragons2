@@ -19,6 +19,7 @@ public class Character implements Parcelable, CharacterMethods
     private String name;
     private String race;
     private String job;
+    private String background;
 
     @Override
     public int describeContents() {
@@ -30,11 +31,24 @@ public class Character implements Parcelable, CharacterMethods
         dest.writeString(name);
         dest.writeString(race);
         dest.writeString(job);
+        dest.writeInt(STRENGTH);
+        dest.writeInt(DEXTERITY);
+        dest.writeInt(CONSTITUTION);
+        dest.writeInt(INTELLIGENCE);
+        dest.writeInt(WISDOM);
+        dest.writeInt(CHARISMA);
+
     }
     public Character(Parcel p){
         name = p.readString();
         race = p.readString();
         job = p.readString();
+        STRENGTH = p.readInt();
+        DEXTERITY = p.readInt();
+        CONSTITUTION = p.readInt();
+        INTELLIGENCE = p.readInt();
+        WISDOM = p.readInt();
+        CHARISMA = p.readInt();
     }
 
     public Character(){
@@ -99,12 +113,13 @@ public class Character implements Parcelable, CharacterMethods
     {
         race = inRace;
     }
-
+    @Override
     public void SetJob(String inJob)
     {
         job = inJob;
     }
-
+    @Override
+    public void SetBackground(String inBackground) { background = inBackground; }
     @Override
     public void SetProficiency(int val)
     {
@@ -164,7 +179,11 @@ public class Character implements Parcelable, CharacterMethods
 
     @Override
     public String GetName() { return this.name; }
+    @Override
     public String GetRace() { return this.race; }
+    @Override
     public String GetJob() { return this.job; }
+    @Override
+    public String GetBackground() { return this.background; }
 
 }
