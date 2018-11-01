@@ -13,6 +13,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import csc472.depaul.edu.dungeonsndragons.Races.Race;
+
 public class CreationScreen extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     EditText name;
@@ -66,7 +68,10 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
         dummy.SetJob(characterClass);
         dummy.SetBackground(characterBackground);
         genStat.putExtra("characterInfo", dummy);
-        startActivity(genStat);
+
+
+
+        //startActivity(genStat);
     }
 
     @Override
