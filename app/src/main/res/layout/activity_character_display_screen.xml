@@ -216,7 +216,6 @@
 
     <EditText
         android:id="@+id/strNum"
-        android:labelFor="@+id/strNum"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -234,7 +233,6 @@
 
     <EditText
         android:id="@+id/dexNum"
-        android:labelFor="@+id/dexNum"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

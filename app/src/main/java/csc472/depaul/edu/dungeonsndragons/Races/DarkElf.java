@@ -1,12 +1,12 @@
 package csc472.depaul.edu.dungeonsndragons.Races;
 
-public class DarkElf extends AbstractRace implements CharacterMethods
+public class DarkElf extends AbstractRace
 {
-    private CharacterMethods privCharRef = null;
+    private CharacterMethods character;
 
     public DarkElf(CharacterMethods charRef)
     {
-        this.privCharRef = charRef;
+        this.character = charRef;
     }
 
     @Override
@@ -53,7 +53,7 @@ public class DarkElf extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetRace(String inRace) {
-        this.RACE = inRace;
+
     }
 
     @Override
@@ -68,7 +68,7 @@ public class DarkElf extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetProficiency(int val) {
-        this.CLASS_PROFICIENCY = val;
+
     }
 
     @Override
@@ -80,43 +80,43 @@ public class DarkElf extends AbstractRace implements CharacterMethods
     @Override
     public int GetStrength()
     {
-        return this.privCharRef.GetStrength();
+        return this.character.GetStrength();
     }
 
     @Override
     public int GetDexterity()
     {
-        return this.privCharRef.GetDexterity() + 2;
+        return this.character.GetDexterity() + 2;
     }
 
     @Override
     public int GetConstitution()
     {
-        return this.privCharRef.GetConstitution();
+        return this.character.GetConstitution();
     }
 
     @Override
     public int GetWisdom()
     {
-        return this.privCharRef.GetWisdom();
+        return this.character.GetWisdom();
     }
 
     @Override
     public int GetIntelligence()
     {
-        return this.privCharRef.GetIntelligence();
+        return this.character.GetIntelligence();
     }
 
     @Override
     public int GetCharisma()
     {
-        return this.privCharRef.GetCharisma() + 1;
+        return this.character.GetCharisma() + 1;
     }
 
     @Override
     public int GetSpeed()
     {
-        return this.privCharRef.GetSpeed();
+        return this.character.GetSpeed();
     }
 
     @Override
@@ -127,21 +127,21 @@ public class DarkElf extends AbstractRace implements CharacterMethods
     @Override
     public String GetName()
     {
-        return this.privCharRef.GetName();
+        return this.character.GetName();
     }
 
     @Override
     public String GetRace() {
-        return null;
+        return "Dark Elf";
     }
 
     @Override
     public String GetJob() {
-        return null;
+        return character.GetJob();
     }
 
     @Override
     public String GetBackground() {
-        return null;
+        return character.GetBackground();
     }
 }

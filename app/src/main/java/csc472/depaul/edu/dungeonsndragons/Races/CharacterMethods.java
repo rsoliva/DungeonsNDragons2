@@ -13,6 +13,7 @@ public interface CharacterMethods
     void SetJob(String inJob);
     void SetProficiency(int val);
     void SetName(String name);
+    void SetBackground(String inBackground);
 
 
     int GetStrength();
@@ -23,6 +24,7 @@ public interface CharacterMethods
     int GetCharisma();
     int GetSpeed();
     int GetProficiency();
+    String GetBackground();
     String GetName();
     String GetRace();
     String GetJob();
