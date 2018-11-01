@@ -1,10 +1,10 @@
-package csc472.depaul.edu.dungeonsndragons;
+package csc472.depaul.edu.dungeonsndragons.Races;
 
-public class DarkElf extends AbstractRace implements CharacterMethods
+public class StoutHalfling extends AbstractRace implements CharacterMethods
 {
     private CharacterMethods privCharRef = null;
 
-    public DarkElf(CharacterMethods charRef)
+    public StoutHalfling(CharacterMethods charRef)
     {
         this.privCharRef = charRef;
     }
@@ -53,7 +53,7 @@ public class DarkElf extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetRace(String inRace) {
-
+        this.RACE = inRace;
     }
 
     @Override
@@ -68,7 +68,7 @@ public class DarkElf extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetProficiency(int val) {
-
+        this.CLASS_PROFICIENCY = val;
     }
 
     @Override
@@ -92,7 +92,7 @@ public class DarkElf extends AbstractRace implements CharacterMethods
     @Override
     public int GetConstitution()
     {
-        return this.privCharRef.GetConstitution();
+        return this.privCharRef.GetConstitution() + 1;
     }
 
     @Override
@@ -110,7 +110,7 @@ public class DarkElf extends AbstractRace implements CharacterMethods
     @Override
     public int GetCharisma()
     {
-        return this.privCharRef.GetCharisma() + 1;
+        return this.privCharRef.GetCharisma();
     }
 
     @Override

@@ -1,10 +1,10 @@
-package csc472.depaul.edu.dungeonsndragons;
+package csc472.depaul.edu.dungeonsndragons.Races;
 
-public class Dragonborn extends AbstractRace implements CharacterMethods
+public class Human extends AbstractRace implements CharacterMethods
 {
     private CharacterMethods privCharRef = null;
 
-    public Dragonborn(CharacterMethods charRef)
+    public Human(CharacterMethods charRef)
     {
         this.privCharRef = charRef;
     }
@@ -53,7 +53,7 @@ public class Dragonborn extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetRace(String inRace) {
-
+        this.RACE = inRace;
     }
 
     @Override
@@ -68,7 +68,7 @@ public class Dragonborn extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetProficiency(int val) {
-
+        this.CLASS_PROFICIENCY = val;
     }
 
     @Override
@@ -80,31 +80,31 @@ public class Dragonborn extends AbstractRace implements CharacterMethods
     @Override
     public int GetStrength()
     {
-        return this.privCharRef.GetStrength() + 2;
+        return this.privCharRef.GetStrength() + 1;
     }
 
     @Override
     public int GetDexterity()
     {
-        return this.privCharRef.GetDexterity();
+        return this.privCharRef.GetDexterity() + 1;
     }
 
     @Override
     public int GetConstitution()
     {
-        return this.privCharRef.GetConstitution();
+        return this.privCharRef.GetConstitution() + 1;
     }
 
     @Override
     public int GetWisdom()
     {
-        return this.privCharRef.GetWisdom();
+        return this.privCharRef.GetWisdom() + 1;
     }
 
     @Override
     public int GetIntelligence()
     {
-        return this.privCharRef.GetIntelligence();
+        return this.privCharRef.GetIntelligence() + 1;
     }
 
     @Override

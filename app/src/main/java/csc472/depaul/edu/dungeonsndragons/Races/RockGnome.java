@@ -1,10 +1,10 @@
-package csc472.depaul.edu.dungeonsndragons;
+package csc472.depaul.edu.dungeonsndragons.Races;
 
-public class Human extends AbstractRace implements CharacterMethods
+public class RockGnome extends AbstractRace implements CharacterMethods
 {
     private CharacterMethods privCharRef = null;
 
-    public Human(CharacterMethods charRef)
+    public RockGnome(CharacterMethods charRef)
     {
         this.privCharRef = charRef;
     }
@@ -53,7 +53,7 @@ public class Human extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetRace(String inRace) {
-
+        this.RACE = inRace;
     }
 
     @Override
@@ -68,7 +68,7 @@ public class Human extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetProficiency(int val) {
-
+        this.CLASS_PROFICIENCY = val;
     }
 
     @Override
@@ -80,13 +80,13 @@ public class Human extends AbstractRace implements CharacterMethods
     @Override
     public int GetStrength()
     {
-        return this.privCharRef.GetStrength() + 1;
+        return this.privCharRef.GetStrength();
     }
 
     @Override
     public int GetDexterity()
     {
-        return this.privCharRef.GetDexterity() + 1;
+        return this.privCharRef.GetDexterity();
     }
 
     @Override
@@ -98,19 +98,19 @@ public class Human extends AbstractRace implements CharacterMethods
     @Override
     public int GetWisdom()
     {
-        return this.privCharRef.GetWisdom() + 1;
+        return this.privCharRef.GetWisdom();
     }
 
     @Override
     public int GetIntelligence()
     {
-        return this.privCharRef.GetIntelligence() + 1;
+        return this.privCharRef.GetIntelligence() + 2;
     }
 
     @Override
     public int GetCharisma()
     {
-        return this.privCharRef.GetCharisma() + 1;
+        return this.privCharRef.GetCharisma();
     }
 
     @Override

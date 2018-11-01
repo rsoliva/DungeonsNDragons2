@@ -1,10 +1,10 @@
-package csc472.depaul.edu.dungeonsndragons;
+package csc472.depaul.edu.dungeonsndragons.Races;
 
-public class RockGnome extends AbstractRace implements CharacterMethods
+public class MountainDwarf extends AbstractRace implements CharacterMethods
 {
     private CharacterMethods privCharRef = null;
 
-    public RockGnome(CharacterMethods charRef)
+    public MountainDwarf(CharacterMethods charRef)
     {
         this.privCharRef = charRef;
     }
@@ -53,7 +53,7 @@ public class RockGnome extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetRace(String inRace) {
-
+        this.RACE = inRace;
     }
 
     @Override
@@ -68,7 +68,7 @@ public class RockGnome extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetProficiency(int val) {
-
+        this.CLASS_PROFICIENCY = val;
     }
 
     @Override
@@ -80,7 +80,7 @@ public class RockGnome extends AbstractRace implements CharacterMethods
     @Override
     public int GetStrength()
     {
-        return this.privCharRef.GetStrength();
+        return this.privCharRef.GetStrength() + 2;
     }
 
     @Override
@@ -92,7 +92,7 @@ public class RockGnome extends AbstractRace implements CharacterMethods
     @Override
     public int GetConstitution()
     {
-        return this.privCharRef.GetConstitution() + 1;
+        return this.privCharRef.GetConstitution() + 2;
     }
 
     @Override
@@ -104,7 +104,7 @@ public class RockGnome extends AbstractRace implements CharacterMethods
     @Override
     public int GetIntelligence()
     {
-        return this.privCharRef.GetIntelligence() + 2;
+        return this.privCharRef.GetIntelligence();
     }
 
     @Override

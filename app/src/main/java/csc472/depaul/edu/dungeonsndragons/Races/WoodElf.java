@@ -1,10 +1,10 @@
-package csc472.depaul.edu.dungeonsndragons;
+package csc472.depaul.edu.dungeonsndragons.Races;
 
-public class StoutHalfling extends AbstractRace implements CharacterMethods
+public class WoodElf extends AbstractRace implements CharacterMethods
 {
     private CharacterMethods privCharRef = null;
 
-    public StoutHalfling(CharacterMethods charRef)
+    public WoodElf(CharacterMethods charRef)
     {
         this.privCharRef = charRef;
     }
@@ -53,7 +53,7 @@ public class StoutHalfling extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetRace(String inRace) {
-
+        this.RACE = inRace;
     }
 
     @Override
@@ -68,7 +68,7 @@ public class StoutHalfling extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetProficiency(int val) {
-
+        this.CLASS_PROFICIENCY = val;
     }
 
     @Override
@@ -92,13 +92,13 @@ public class StoutHalfling extends AbstractRace implements CharacterMethods
     @Override
     public int GetConstitution()
     {
-        return this.privCharRef.GetConstitution() + 1;
+        return this.privCharRef.GetConstitution();
     }
 
     @Override
     public int GetWisdom()
     {
-        return this.privCharRef.GetWisdom();
+        return this.privCharRef.GetWisdom() + 1;
     }
 
     @Override

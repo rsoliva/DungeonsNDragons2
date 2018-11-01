@@ -1,10 +1,10 @@
-package csc472.depaul.edu.dungeonsndragons;
+package csc472.depaul.edu.dungeonsndragons.Races;
 
-public class ForestGnome extends AbstractRace implements CharacterMethods
+public class LightfootHalfling extends AbstractRace implements CharacterMethods
 {
     private CharacterMethods privCharRef = null;
 
-    public ForestGnome(CharacterMethods charRef)
+    public LightfootHalfling(CharacterMethods charRef)
     {
         this.privCharRef = charRef;
     }
@@ -53,7 +53,7 @@ public class ForestGnome extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetRace(String inRace) {
-
+        this.RACE = inRace;
     }
 
     @Override
@@ -68,7 +68,7 @@ public class ForestGnome extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetProficiency(int val) {
-
+        this.CLASS_PROFICIENCY = val;
     }
 
     @Override
@@ -86,7 +86,7 @@ public class ForestGnome extends AbstractRace implements CharacterMethods
     @Override
     public int GetDexterity()
     {
-        return this.privCharRef.GetDexterity() + 1;
+        return this.privCharRef.GetDexterity() + 2;
     }
 
     @Override
@@ -104,13 +104,13 @@ public class ForestGnome extends AbstractRace implements CharacterMethods
     @Override
     public int GetIntelligence()
     {
-        return this.privCharRef.GetIntelligence() + 2;
+        return this.privCharRef.GetIntelligence();
     }
 
     @Override
     public int GetCharisma()
     {
-        return this.privCharRef.GetCharisma();
+        return this.privCharRef.GetCharisma() + 1;
     }
 
     @Override
