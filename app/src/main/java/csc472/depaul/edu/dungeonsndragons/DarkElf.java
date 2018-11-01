@@ -1,19 +1,16 @@
 package csc472.depaul.edu.dungeonsndragons;
 
-public class DarkElf extends AbstractRace implements CharacterMethods
+public class DarkElf extends AbstractRace
 {
-    private CharacterMethods privCharRef = null;
+    private CharacterMethods character;
 
     public DarkElf(CharacterMethods charRef)
     {
-        this.privCharRef = charRef;
+        this.character = charRef;
     }
 
     @Override
-    public void SetStrength(int val)
-    {
-        this.STRENGTH = val;
-    }
+    public void SetStrength(int val) { this.STRENGTH = val; }
 
     @Override
     public void SetDexterity(int val)
@@ -78,45 +75,39 @@ public class DarkElf extends AbstractRace implements CharacterMethods
     }
 
     @Override
-    public int GetStrength()
-    {
-        return this.privCharRef.GetStrength();
-    }
+    public int GetStrength() { return character.GetStrength(); }
 
     @Override
     public int GetDexterity()
     {
-        return this.privCharRef.GetDexterity() + 2;
+        return character.GetDexterity() + 2;
     }
 
     @Override
     public int GetConstitution()
     {
-        return this.privCharRef.GetConstitution();
+        return character.GetConstitution();
     }
 
     @Override
     public int GetWisdom()
     {
-        return this.privCharRef.GetWisdom();
+        return character.GetWisdom();
     }
 
     @Override
-    public int GetIntelligence()
-    {
-        return this.privCharRef.GetIntelligence();
-    }
+    public int GetIntelligence() { return character.GetIntelligence(); }
 
     @Override
     public int GetCharisma()
     {
-        return this.privCharRef.GetCharisma() + 1;
+        return character.GetCharisma() + 1;
     }
 
     @Override
     public int GetSpeed()
     {
-        return this.privCharRef.GetSpeed();
+        return character.GetSpeed();
     }
 
     @Override
@@ -127,21 +118,19 @@ public class DarkElf extends AbstractRace implements CharacterMethods
     @Override
     public String GetName()
     {
-        return this.privCharRef.GetName();
+        return character.GetName();
     }
 
     @Override
     public String GetRace() {
-        return null;
+        return "Dark Elf";
     }
 
     @Override
     public String GetJob() {
-        return null;
+        return character.GetJob();
     }
 
     @Override
-    public String GetBackground() {
-        return null;
-    }
+    public String GetBackground() { return character.GetBackground(); }
 }

@@ -46,7 +46,6 @@ public class characterDisplayScreen extends AppCompatActivity {
         dInt.setText(Integer.toString(dummy.GetIntelligence()));
         dWis.setText(Integer.toString(dummy.GetWisdom()));
         dCha.setText(Integer.toString(dummy.GetConstitution()));
-
     }
 
     private void getCharInfo(){

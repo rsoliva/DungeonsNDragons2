@@ -20,6 +20,7 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
     Button next;
     String characterName;
     String characterRace, characterClass, characterBackground;
+    CharacterMethods dummy;
     Enum dummyRace, dummyClass;
 
     @Override
@@ -60,13 +61,18 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
     private void generateStatActivity(){
         Intent genStat = new Intent(this, GenerateStatActivity.class);
 //        Intent characterMain = new Intent(this, characterDisplayScreen.class);
-        Character dummy = new Character();
+        dummy = new Character();
         dummy.SetName(characterName);
         dummy.SetRace(characterRace);
         dummy.SetJob(characterClass);
         dummy.SetBackground(characterBackground);
-        genStat.putExtra("characterInfo", dummy);
-        startActivity(genStat);
+        genStat.putExtra("characterInfo", (Character)dummy);
+//        genStat.putExtra()
+
+        wrapRace();
+        //wrapClass();
+//        wrapBackground();
+//        startActivity(genStat);
     }
 
     @Override
@@ -85,5 +91,26 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+//    DARKELF("Dark Elf"),
+//    DRAGONBORN("Dragonborn"),
+//    FORESTGNOME("Forest Gnome"),
+//    HALFELF("Elf"),
+//    HALFORC("Half-Orc"),
+//    HIGHELF("High-Elf"),
+//    HILLDWARF("Hill Dwarf"),
+//    HUMAN("Human"),
+//    LIGHTFOOTHALFING("Lightfoot Halfling"),
+//    MOUNTTAINDWARF("Mountain Dwarf"),
+//    ROCKGNOME("Rock Gnome"),
+//    STOUTHALFLING("Stout Halfing"),
+//    TIEFLING("Tiefling"),
+//    WOODELF("Wood Elf");
+    private void wrapRace(){
+        switch(characterRace){
+            case "Dark Elf":
+                dummy = new DarkElf(dummy);
+
+        }
     }
 }

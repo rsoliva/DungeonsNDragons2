@@ -1,5 +1,7 @@
 package csc472.depaul.edu.dungeonsndragons;
 
+import android.os.Parcelable;
+
 public interface CharacterMethods
 {
     void SetStrength(int val);
