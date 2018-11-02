@@ -1,10 +1,10 @@
-package csc472.depaul.edu.dungeonsndragons;
+package csc472.depaul.edu.dungeonsndragons.Races;
 
-public class Half_Elf extends AbstractRace implements CharacterMethods
+public class HighElf extends AbstractRace implements CharacterMethods
 {
     private CharacterMethods privCharRef = null;
 
-    public Half_Elf(CharacterMethods charRef)
+    public HighElf(CharacterMethods charRef)
     {
         this.privCharRef = charRef;
     }
@@ -53,12 +53,12 @@ public class Half_Elf extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetRace(String inRace) {
-
+        this.RACE = inRace;
     }
 
     @Override
     public void SetJob(String inJob) {
-
+        //JOB = inJob;
     }
 
     @Override
@@ -68,7 +68,7 @@ public class Half_Elf extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetProficiency(int val) {
-
+        this.CLASS_PROFICIENCY = val;
     }
 
     @Override
@@ -86,7 +86,7 @@ public class Half_Elf extends AbstractRace implements CharacterMethods
     @Override
     public int GetDexterity()
     {
-        return this.privCharRef.GetDexterity();
+        return this.privCharRef.GetDexterity() + 2;
     }
 
     @Override
@@ -104,13 +104,13 @@ public class Half_Elf extends AbstractRace implements CharacterMethods
     @Override
     public int GetIntelligence()
     {
-        return this.privCharRef.GetIntelligence();
+        return this.privCharRef.GetIntelligence() + 1;
     }
 
     @Override
     public int GetCharisma()
     {
-        return this.privCharRef.GetCharisma() + 2;
+        return this.privCharRef.GetCharisma();
     }
 
     @Override

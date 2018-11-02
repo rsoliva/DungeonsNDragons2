@@ -1,10 +1,10 @@
-package csc472.depaul.edu.dungeonsndragons;
+package csc472.depaul.edu.dungeonsndragons.Races;
 
-public class Tiefling extends AbstractRace implements CharacterMethods
+public class WoodElf extends AbstractRace implements CharacterMethods
 {
     private CharacterMethods privCharRef = null;
 
-    public Tiefling(CharacterMethods charRef)
+    public WoodElf(CharacterMethods charRef)
     {
         this.privCharRef = charRef;
     }
@@ -53,7 +53,7 @@ public class Tiefling extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetRace(String inRace) {
-        
+        this.RACE = inRace;
     }
 
     @Override
@@ -68,7 +68,7 @@ public class Tiefling extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetProficiency(int val) {
-
+        this.CLASS_PROFICIENCY = val;
     }
 
     @Override
@@ -86,7 +86,7 @@ public class Tiefling extends AbstractRace implements CharacterMethods
     @Override
     public int GetDexterity()
     {
-        return this.privCharRef.GetDexterity();
+        return this.privCharRef.GetDexterity() + 2;
     }
 
     @Override
@@ -98,19 +98,19 @@ public class Tiefling extends AbstractRace implements CharacterMethods
     @Override
     public int GetWisdom()
     {
-        return this.privCharRef.GetWisdom();
+        return this.privCharRef.GetWisdom() + 1;
     }
 
     @Override
     public int GetIntelligence()
     {
-        return this.privCharRef.GetIntelligence() + 1;
+        return this.privCharRef.GetIntelligence();
     }
 
     @Override
     public int GetCharisma()
     {
-        return this.privCharRef.GetCharisma() + 2;
+        return this.privCharRef.GetCharisma();
     }
 
     @Override
