@@ -5,8 +5,10 @@ import android.os.Parcelable;
 
 import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
 
+//Base class that gets wrapped in decorator
 public class Character implements Parcelable, CharacterMethods
 {
+    //Main stats
     private int STRENGTH = 0;
     private int DEXTERITY = 0;
     private int CONSTITUTION = 0;
@@ -16,6 +18,7 @@ public class Character implements Parcelable, CharacterMethods
     private int SPEED = 0;
     private int CLASS_PROFICIENCY = 0;
 
+    //Character info
     private String name;
     private String race;
     private String job;
@@ -26,23 +29,27 @@ public class Character implements Parcelable, CharacterMethods
         return hashCode();
     }
 
+    //write to a parcel
     @Override
     public void writeToParcel(Parcel dest, int flags){
         dest.writeString(name);
         dest.writeString(race);
         dest.writeString(job);
+        dest.writeString(background);
         dest.writeInt(STRENGTH);
         dest.writeInt(DEXTERITY);
         dest.writeInt(CONSTITUTION);
         dest.writeInt(INTELLIGENCE);
         dest.writeInt(WISDOM);
         dest.writeInt(CHARISMA);
-
     }
+
+    //read from a parcel
     public Character(Parcel p){
         name = p.readString();
         race = p.readString();
         job = p.readString();
+        background = p.readString();
         STRENGTH = p.readInt();
         DEXTERITY = p.readInt();
         CONSTITUTION = p.readInt();

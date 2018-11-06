@@ -1,5 +1,6 @@
 package csc472.depaul.edu.dungeonsndragons.Races;
 
+//Main interface for everything
 public interface CharacterMethods
 {
     void SetStrength(int val);

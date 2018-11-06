@@ -1,5 +1,6 @@
 package csc472.depaul.edu.dungeonsndragons.Jobs;
 
+//Enum of all Martial Melee weapons
 public enum MartialMelee
 {
     NONE            ("None"),

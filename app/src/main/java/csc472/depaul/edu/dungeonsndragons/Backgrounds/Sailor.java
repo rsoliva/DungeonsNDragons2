@@ -1,35 +1,19 @@
-package csc472.depaul.edu.dungeonsndragons.Jobs;
+package csc472.depaul.edu.dungeonsndragons.Backgrounds;
 
 import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
 
-public class Wizard extends AbstractJob
+public class Sailor extends AbstractBackground
 {
-    CharacterMethods privCharRef;
+    private CharacterMethods privCharRef;
 
-    public Wizard()
+    public Sailor()
     {
-        this.DIE = DieType.D6;
-        this.PRIMARY_STAT = new Stats[] {Stats.INTELLIGENCE};
-        this.SAVING_THROW = new Stats[] {Stats.INTELLIGENCE, Stats.WISDOM};
-        this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.NONE};
-        this.SM_PROF = new SimpleMelee[] {SimpleMelee.DAGGER, SimpleMelee.QUARTERSTAFF};
-        this.SR_PROF = new SimpleRange[] {SimpleRange.DART, SimpleRange.SLING, SimpleRange.LIGHT_CROSSBOW};
-        this.MM_PROF = new MartialMelee[] {MartialMelee.NONE};
-        this.MR_PROF = new MartialRange[] {MartialRange.NONE};
+
     }
 
-    public Wizard(CharacterMethods charRef)
+    public Sailor(CharacterMethods charRef)
     {
-        this.privCharRef = charRef;
-
-        this.DIE = DieType.D6;
-        this.PRIMARY_STAT = new Stats[] {Stats.INTELLIGENCE};
-        this.SAVING_THROW = new Stats[] {Stats.INTELLIGENCE, Stats.WISDOM};
-        this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.NONE};
-        this.SM_PROF = new SimpleMelee[] {SimpleMelee.DAGGER, SimpleMelee.QUARTERSTAFF};
-        this.SR_PROF = new SimpleRange[] {SimpleRange.DART, SimpleRange.SLING, SimpleRange.LIGHT_CROSSBOW};
-        this.MM_PROF = new MartialMelee[] {MartialMelee.NONE};
-        this.MR_PROF = new MartialRange[] {MartialRange.NONE};
+        privCharRef = charRef;
     }
 
     @Override
@@ -134,7 +118,7 @@ public class Wizard extends AbstractJob
 
     @Override
     public String GetBackground() {
-        return privCharRef.GetBackground();
+        return "Sailor";
     }
 
     @Override
@@ -149,6 +133,6 @@ public class Wizard extends AbstractJob
 
     @Override
     public String GetJob() {
-        return "Wizard";
+        return privCharRef.GetJob();
     }
 }

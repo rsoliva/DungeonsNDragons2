@@ -1,5 +1,6 @@
 package csc472.depaul.edu.dungeonsndragons.Races;
 
+//Abstract race which all races come from
 public abstract class AbstractRace implements CharacterMethods
 {
     protected int STRENGTH = 0;
@@ -10,8 +11,10 @@ public abstract class AbstractRace implements CharacterMethods
     protected int CHARISMA = 0;
     protected int SPEED = 0;
     protected int CLASS_PROFICIENCY = 0;
-    protected String RACE;
-    protected String NAME;
+    protected String RACE = "";
+    protected String NAME = "";
+    protected String JOB = "";
+    protected String BACKGROUND = "";
 
     public abstract int GetStrength();
     public abstract int GetDexterity();

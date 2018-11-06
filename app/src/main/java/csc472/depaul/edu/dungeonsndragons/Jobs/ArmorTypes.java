@@ -1,5 +1,6 @@
 package csc472.depaul.edu.dungeonsndragons.Jobs;
 
+//Enum of all armor variants
 public enum ArmorTypes
 {
     NONE("None"),

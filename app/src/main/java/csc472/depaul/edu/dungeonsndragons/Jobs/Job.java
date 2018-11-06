@@ -1,5 +1,6 @@
 package csc472.depaul.edu.dungeonsndragons.Jobs;
 
+//Enum of all Jobs available
 public enum Job
 {
     BARBARIAN("Barbarian"),
