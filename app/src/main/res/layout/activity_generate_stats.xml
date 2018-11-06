@@ -7,355 +7,408 @@
     tools:context=".GenerateStatsActivity">
 
     <LinearLayout
-        android:layout_width="251dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/STRENGTH"
-                android:layout_width="18dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:layout_weight="1"
-                android:text="@string/STR"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="75dp" />
-
-            <TextView
-                android:id="@+id/STRScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="13dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginStart="13dp"
-                android:layout_marginTop="14dp"
-                android:text="@string/defaultpts"
-                android:textSize="35sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/STRU"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="@string/Up"
-                    android:textSize="15dp" />
-
-                <Button
-                    android:id="@+id/STRD"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="@string/Down"
-                    android:textSize="15dp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/DEXTERITY"
-                android:layout_width="18dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:layout_weight="1"
-                android:text="@string/DEX"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="75dp" />
-
-            <TextView
-                android:id="@+id/DEXScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="13dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginStart="13dp"
-                android:layout_marginTop="14dp"
-                android:text="@string/defaultpts"
-                android:textSize="35sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/DEXU"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="@string/Up"
-                    android:textSize="15dp" />
-
-                <Button
-                    android:id="@+id/DEXD"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="@string/Down"
-                    android:textSize="15dp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/CONSTITUTION"
-                android:layout_width="18dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:layout_weight="1"
-                android:text="@string/CON"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="75dp" />
-            <TextView
-                android:id="@+id/CONScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="13dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginStart="13dp"
-                android:layout_marginTop="14dp"
-                android:text="@string/defaultpts"
-                android:textSize="35sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/CONU"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="@string/Up"
-                    android:textSize="15dp" />
-
-                <Button
-                    android:id="@+id/COND"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="@string/Down"
-                    android:textSize="15dp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/INTELLIGENCE"
-                android:layout_width="18dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:layout_weight="1"
-                android:text="@string/INT"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="75dp" />
-
-            <TextView
-                android:id="@+id/INTScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="13dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginStart="13dp"
-                android:layout_marginTop="14dp"
-                android:text="@string/defaultpts"
-                android:textSize="35sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/INTU"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="@string/Up"
-                    android:textSize="15dp" />
-
-                <Button
-                    android:id="@+id/INTD"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="@string/Down"
-                    android:textSize="15dp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/WISDOM"
-                android:layout_width="18dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:layout_weight="1"
-                android:text="@string/WIS"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="75dp" />
-            <TextView
-                android:id="@+id/WISScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="13dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginStart="13dp"
-                android:layout_marginTop="14dp"
-                android:text="@string/defaultpts"
-                android:textSize="35sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/WISU"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="@string/Up"
-                    android:textSize="15dp" />
-
-                <Button
-                    android:id="@+id/WISD"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="@string/Down"
-                    android:textSize="15dp" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/CHARISMA"
-                android:layout_width="18dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:layout_weight="1"
-                android:text="@string/CHA"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="75dp" />
-
-            <TextView
-                android:id="@+id/CHAScore"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="13dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginStart="13dp"
-                android:layout_marginTop="14dp"
-                android:text="@string/defaultpts"
-                android:textSize="35sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/CHAU"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="@string/Up"
-                    android:textSize="15dp" />
-
-                <Button
-                    android:id="@+id/CHAD"
-                    android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:text="@string/Down"
-                    android:textSize="15dp" />
-            </LinearLayout>
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="117dp"
-        android:layout_height="503dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="259dp"
-        tools:layout_editor_absoluteY="8dp">
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="@string/ptBuy"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
 
-        <TextView
-            android:id="@+id/textView12"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="208dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/STRENGTH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_weight="1"
+                        android:text="@string/STR"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="75dp" />
+
+                    <TextView
+                        android:id="@+id/STRScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="13dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/defaultpts"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/STRU"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/arrowbutton"
+                            android:rotation="0" />
+
+                        <Button
+                            android:id="@+id/STRD"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/arrowbutton"
+                            android:rotation="180" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/DEXTERITY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_weight="1"
+                        android:text="@string/DEX"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="75dp" />
+
+                    <TextView
+                        android:id="@+id/DEXScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="13dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/defaultpts"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/DEXU"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/arrowbutton"
+                            android:rotation="0" />
+
+                        <Button
+                            android:id="@+id/DEXD"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/arrowbutton"
+                            android:rotation="180" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/CONSTITUTION"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_weight="1"
+                        android:text="@string/CON"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="75dp" />
+
+                    <TextView
+                        android:id="@+id/CONScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="13dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/defaultpts"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/CONU"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/arrowbutton"
+                            android:rotation="0" />
+
+                        <Button
+                            android:id="@+id/COND"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/arrowbutton"
+                            android:rotation="180" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/INTELLIGENCE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_weight="1"
+                        android:text="@string/INT"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="75dp" />
+
+                    <TextView
+                        android:id="@+id/INTScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="13dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/defaultpts"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/INTU"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/arrowbutton"
+                            android:rotation="0" />
+
+                        <Button
+                            android:id="@+id/INTD"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/arrowbutton"
+                            android:rotation="180" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/WISDOM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_weight="1"
+                        android:text="@string/WIS"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="75dp" />
+
+                    <TextView
+                        android:id="@+id/WISScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="13dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/defaultpts"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/WISU"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/arrowbutton"
+                            android:rotation="0" />
+
+                        <Button
+                            android:id="@+id/WISD"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/arrowbutton"
+                            android:rotation="180" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/CHARISMA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_weight="1"
+                        android:text="@string/CHA"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="75dp" />
+
+                    <TextView
+                        android:id="@+id/CHAScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="13dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="14dp"
+                        android:text="@string/defaultpts"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/CHAU"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/arrowbutton"
+                            android:rotation="0" />
+
+                        <Button
+                            android:id="@+id/CHAD"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/arrowbutton"
+                            android:rotation="180" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="144dp"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="223dp"
+                tools:layout_editor_absoluteY="8dp">
+
+                <TextView
+                    android:id="@+id/ptsRemTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pts"
+                    android:textAlignment="center"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/ptsLeftNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maxpts"
+                    android:textAlignment="center"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/Roll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/roll" />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
         <Button
-            android:id="@+id/button6"
+            android:id="@+id/Next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/Next" />
 
-        <Button
-            android:id="@+id/button7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

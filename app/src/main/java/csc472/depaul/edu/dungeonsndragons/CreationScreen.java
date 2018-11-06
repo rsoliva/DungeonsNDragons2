@@ -13,6 +13,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
 import csc472.depaul.edu.dungeonsndragons.Races.Race;
 
 public class CreationScreen extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -23,6 +24,8 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
     String characterName;
     String characterRace, characterClass, characterBackground;
     Enum dummyRace, dummyClass;
+
+    CharacterMethods dummy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,18 +63,18 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
     }
 
     private void generateStatActivity(){
-        Intent genStat = new Intent(this, GenerateStatActivity.class);
+        Intent genStat = new Intent(this, GenerateStatsActivity.class);
 //        Intent characterMain = new Intent(this, characterDisplayScreen.class);
-        Character dummy = new Character();
+        dummy = new Character();
         dummy.SetName(characterName);
         dummy.SetRace(characterRace);
         dummy.SetJob(characterClass);
         dummy.SetBackground(characterBackground);
-        genStat.putExtra("characterInfo", dummy);
+        genStat.putExtra("characterInfo", (Character)dummy);
 
 
 
-        //startActivity(genStat);
+        startActivity(genStat);
     }
 
     @Override
