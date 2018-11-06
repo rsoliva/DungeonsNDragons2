@@ -1,5 +1,6 @@
 package csc472.depaul.edu.dungeonsndragons.Jobs;
 
+//Enum of all Martial Range weapons
 public enum MartialRange
 {
     NONE                ("None"),

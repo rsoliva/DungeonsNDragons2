@@ -1,6 +1,9 @@
 package csc472.depaul.edu.dungeonsndragons.Jobs;
 
-public abstract class AbstractJob
+import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
+
+//Abstract Job which is extended by every job
+public abstract class AbstractJob implements CharacterMethods
 {
     protected DieType DIE = DieType.D6;
     protected Stats[] PRIMARY_STAT;

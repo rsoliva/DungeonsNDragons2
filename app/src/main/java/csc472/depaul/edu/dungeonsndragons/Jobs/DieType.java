@@ -1,5 +1,6 @@
 package csc472.depaul.edu.dungeonsndragons.Jobs;
 
+//Enum of die types
 public enum DieType
 {
     D6      (6),
