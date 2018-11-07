@@ -1,5 +1,6 @@
 package csc472.depaul.edu.dungeonsndragons.Jobs;
 
+//Enum of all Simple Melee weapons
 public enum SimpleMelee
 {
     NONE            ("None"),

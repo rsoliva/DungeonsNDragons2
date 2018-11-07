@@ -1,5 +1,6 @@
 package csc472.depaul.edu.dungeonsndragons.Races;
 
+//Enum of all available races
 public enum Race {
     DARKELF("Dark Elf"),
     DRAGONBORN("Dragonborn"),
@@ -16,12 +17,15 @@ public enum Race {
     TIEFLING("Tiefling"),
     WOODELF("Wood Elf");
 
+    //string of race
     private String RACE;
 
+    //assign string
     Race(String inRace) {
         this.RACE = inRace;
     }
 
+    //return race string
     @Override
     public String toString() {
         return RACE;

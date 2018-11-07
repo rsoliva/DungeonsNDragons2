@@ -21,13 +21,6 @@ public class CharacterSheetMain extends AppCompatActivity {
         charRace = findViewById(R.id.charRace);
         charClass = findViewById(R.id.charClass);
 
-//        Bundle characterInfo = getIntent().getBundleExtra("characterInfo");
-//        name = characterInfo.getString("name");
-//        race = characterInfo.getString("race");
-//        job = characterInfo.getString("job");
-//        b = characterInfo.get("dummy");
-//        dummy = (Character)b;
-
         Bundle b = getIntent().getExtras();
         dummy = (Character)b.getParcelable("characterInfo");
         name = dummy.GetName();

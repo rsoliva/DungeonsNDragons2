@@ -8,9 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
 
 public class GenerateStatsActivity extends AppCompatActivity implements View.OnClickListener{

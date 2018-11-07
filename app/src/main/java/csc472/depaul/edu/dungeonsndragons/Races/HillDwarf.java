@@ -53,7 +53,7 @@ public class HillDwarf extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetRace(String inRace) {
-        this.RACE = inRace;
+
     }
 
     @Override
@@ -67,8 +67,7 @@ public class HillDwarf extends AbstractRace implements CharacterMethods
     }
 
     @Override
-    public void SetProficiency(int val) {
-        this.CLASS_PROFICIENCY = val;
+    public void SetProficiency(int val){
     }
 
     @Override
@@ -132,16 +131,16 @@ public class HillDwarf extends AbstractRace implements CharacterMethods
 
     @Override
     public String GetRace() {
-        return null;
+        return "Hill Dwarf";
     }
 
     @Override
     public String GetJob() {
-        return null;
+        return privCharRef.GetJob();
     }
 
     @Override
     public String GetBackground() {
-        return null;
+        return privCharRef.GetBackground();
     }
 }

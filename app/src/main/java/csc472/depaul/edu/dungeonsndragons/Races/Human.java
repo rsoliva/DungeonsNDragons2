@@ -1,8 +1,10 @@
 package csc472.depaul.edu.dungeonsndragons.Races;
 
+import android.os.Parcel;
+
 public class Human extends AbstractRace implements CharacterMethods
 {
-    private CharacterMethods privCharRef = null;
+    private CharacterMethods privCharRef;
 
     public Human(CharacterMethods charRef)
     {
@@ -53,7 +55,7 @@ public class Human extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetRace(String inRace) {
-        this.RACE = inRace;
+
     }
 
     @Override
@@ -68,7 +70,7 @@ public class Human extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetProficiency(int val) {
-        this.CLASS_PROFICIENCY = val;
+
     }
 
     @Override
@@ -132,16 +134,16 @@ public class Human extends AbstractRace implements CharacterMethods
 
     @Override
     public String GetRace() {
-        return null;
+        return "Human";
     }
 
     @Override
     public String GetJob() {
-        return null;
+        return privCharRef.GetJob();
     }
 
     @Override
     public String GetBackground() {
-        return null;
+        return privCharRef.GetBackground();
     }
 }

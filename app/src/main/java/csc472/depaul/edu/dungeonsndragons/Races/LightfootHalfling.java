@@ -53,7 +53,7 @@ public class LightfootHalfling extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetRace(String inRace) {
-        this.RACE = inRace;
+
     }
 
     @Override
@@ -68,7 +68,7 @@ public class LightfootHalfling extends AbstractRace implements CharacterMethods
 
     @Override
     public void SetProficiency(int val) {
-        this.CLASS_PROFICIENCY = val;
+
     }
 
     @Override
@@ -132,16 +132,16 @@ public class LightfootHalfling extends AbstractRace implements CharacterMethods
 
     @Override
     public String GetRace() {
-        return null;
+        return "Lightfoot Halfling";
     }
 
     @Override
     public String GetJob() {
-        return null;
+        return privCharRef.GetJob();
     }
 
     @Override
     public String GetBackground() {
-        return null;
+        return privCharRef.GetBackground();
     }
 }
