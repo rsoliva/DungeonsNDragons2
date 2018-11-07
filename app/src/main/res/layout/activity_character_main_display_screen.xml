@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CharacterMainDisplayScreen">
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:text="@string/Name"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/classText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="29dp"
+        android:text="@string/Class"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="107dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="18dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameText">
+
+        <TextView
+            android:id="@+id/hitDiceText"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="1"
+            android:text="@string/HitDice"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/diceVal"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:layout_weight="1"
+            android:text="1d12"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="107dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="18dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classText">
+
+        <TextView
+            android:id="@+id/profText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Proficiency"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/profVal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="+0"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="131dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="35dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/classText"
+        app:layout_constraintStart_toEndOf="@+id/nameText"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/hpText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/HP"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="264dp"
+            tools:layout_editor_absoluteY="174dp" />
+
+        <TextView
+            android:id="@+id/hpVal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="107dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <TextView
+            android:id="@+id/initiveText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Initiative"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/initText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="107dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <TextView
+            android:id="@+id/spdText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Speed"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/spdVal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:text="8"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/coreStats"
+        android:layout_width="354dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="167dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TableRow
+            android:id="@+id/Strength"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/strText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Strength"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/strVal"
+                android:layout_width="123dp"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:text="@string/defaultpts"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/strModVal"
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:text="+1"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Dexterity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dexText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Dexteriy"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/dexVal"
+                android:layout_width="105dp"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:text="@string/defaultpts"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/dexModVal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="+1"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Constitution"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/costText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Constitution"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/costVal"
+                android:layout_width="106dp"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:text="@string/defaultpts"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/costModVal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="+1"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+            android:enabled = false;
+            android:focusable = false;
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Intelligence"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/intText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Intelligence"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/intVal"
+                android:layout_width="103dp"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:text="@string/defaultpts"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/intModVal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="+1"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Wisdom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/wisText"
+                android:layout_width="79dp"
+                android:layout_height="52dp"
+                android:text="@string/Wisdom"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/wisVal"
+                android:layout_width="71dp"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:text="@string/defaultpts"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/wisModVal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="+1"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Charisma"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/charText"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:text="@string/Charisma"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/charVal"
+                android:layout_width="122dp"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:text="@string/defaultpts"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/charModVal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="+1"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="107dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="31dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/armorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ArmorClass"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/armorVal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+0"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
