@@ -43,7 +43,7 @@ public class GenerateStatsActivity extends AppCompatActivity implements View.OnC
     }
 
     public void mainDisplayActivity() {
-        Intent mainScreen = new Intent(this, characterDisplayScreen.class);
+        Intent mainScreen = new Intent(this,  CharacterMainDisplayScreen.class);
 
         mainScreen.putExtra("characterInfo", (Character)dummy);
         startActivity(mainScreen);
