@@ -38,5 +38,10 @@
     <string name="Level">Level</string>
     <string name="Race">Race</string>
     <string name="Blank"> </string>
+    <string name="Intimidation">Intimidation</string>
+    <string name="Performance">Performance</string>
+    <string name="Persuasion">Persuasion</string>
+    <string name="Deception">Deception</string>
+
 
 </resources>
