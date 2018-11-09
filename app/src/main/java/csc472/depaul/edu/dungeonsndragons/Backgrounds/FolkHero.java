@@ -8,12 +8,13 @@ public class FolkHero extends AbstractBackground
 
     public FolkHero()
     {
-
+        SKILL_PROF = new Skills[] {Skills.ANIMAL_HANDLING, Skills.SURVIVAL};
     }
 
     public FolkHero(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.ANIMAL_HANDLING, Skills.SURVIVAL};
     }
 
     @Override

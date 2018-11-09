@@ -8,12 +8,13 @@ public class Outlander extends AbstractBackground
 
     public Outlander()
     {
-
+        SKILL_PROF = new Skills[] {Skills.ATHLETICS, Skills.SURVIVAL};
     }
 
     public Outlander(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.ATHLETICS, Skills.SURVIVAL};
     }
 
     @Override

@@ -8,7 +8,7 @@ public class Hermit extends AbstractBackground
 
     public Hermit()
     {
-
+        SKILL_PROF = new Skills[] {Skills.RELIGION, Skills.MEDICINE};
     }
 
     public Hermit(CharacterMethods charRef)

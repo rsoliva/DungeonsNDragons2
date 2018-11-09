@@ -8,12 +8,13 @@ public class Urchin extends AbstractBackground
 
     public Urchin()
     {
-
+        SKILL_PROF = new Skills[] {Skills.SLEIGHT_OF_HAND, Skills.STEALTH};
     }
 
     public Urchin(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.SLEIGHT_OF_HAND, Skills.STEALTH};
     }
 
     @Override

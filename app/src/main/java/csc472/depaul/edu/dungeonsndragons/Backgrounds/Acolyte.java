@@ -8,12 +8,13 @@ public class Acolyte extends AbstractBackground
 
     public Acolyte()
     {
-
+        SKILL_PROF = new Skills[] {Skills.RELIGION, Skills.INSIGHT};
     }
 
     public Acolyte(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.RELIGION, Skills.INSIGHT};
     }
 
     @Override

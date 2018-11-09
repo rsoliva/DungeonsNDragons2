@@ -8,12 +8,13 @@ public class GuildArtisan extends AbstractBackground
 
     public GuildArtisan()
     {
-
+        SKILL_PROF = new Skills[] {Skills.INSIGHT, Skills.PERSUASION};
     }
 
     public GuildArtisan(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.INSIGHT, Skills.PERSUASION};
     }
 
     @Override

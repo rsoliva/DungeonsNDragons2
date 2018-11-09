@@ -8,12 +8,13 @@ public class Sage extends AbstractBackground
 
     public Sage()
     {
-
+        SKILL_PROF = new Skills[] {Skills.ARCANA, Skills.HISTORY};
     }
 
     public Sage(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.ARCANA, Skills.HISTORY};
     }
 
     @Override

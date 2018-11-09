@@ -8,12 +8,13 @@ public class Criminal extends AbstractBackground
 
     public Criminal()
     {
-
+        SKILL_PROF = new Skills[] {Skills.DECEPTION, Skills.STEALTH};
     }
 
     public Criminal(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.DECEPTION, Skills.STEALTH};
     }
 
     @Override

@@ -8,12 +8,13 @@ public class Soldier extends AbstractBackground
 
     public Soldier()
     {
-
+        SKILL_PROF = new Skills[] {Skills.ATHLETICS, Skills.INTIMIDATION};
     }
 
     public Soldier(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.ATHLETICS, Skills.INTIMIDATION};
     }
 
     @Override

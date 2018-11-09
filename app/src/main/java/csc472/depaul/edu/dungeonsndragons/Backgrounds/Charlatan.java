@@ -8,12 +8,13 @@ public class Charlatan extends AbstractBackground
 
     public Charlatan()
     {
-
+        SKILL_PROF = new Skills[] {Skills.DECEPTION, Skills.DECEPTION};
     }
 
     public Charlatan(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.DECEPTION, Skills.DECEPTION};
     }
 
     @Override

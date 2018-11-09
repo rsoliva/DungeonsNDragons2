@@ -8,12 +8,13 @@ public class Noble extends AbstractBackground
 
     public Noble()
     {
-
+        SKILL_PROF = new Skills[] {Skills.HISTORY, Skills.PERSUASION};
     }
 
     public Noble(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.HISTORY, Skills.PERSUASION};
     }
 
     @Override

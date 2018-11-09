@@ -8,12 +8,13 @@ public class Sailor extends AbstractBackground
 
     public Sailor()
     {
-
+        SKILL_PROF = new Skills[] {Skills.ATHLETICS, Skills.PERCEPTION};
     }
 
     public Sailor(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.ATHLETICS, Skills.PERCEPTION};
     }
 
     @Override

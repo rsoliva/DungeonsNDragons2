@@ -8,12 +8,13 @@ public class Entertainer extends AbstractBackground
 
     public Entertainer()
     {
-
+        SKILL_PROF = new Skills[] {Skills.ACROBATICS, Skills.PERFORMANCE};
     }
 
     public Entertainer(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.ACROBATICS, Skills.PERFORMANCE};
     }
 
     @Override
