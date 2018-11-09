@@ -61,7 +61,7 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
     }
 
     private void generateStatActivity(){
-        Intent genStat = new Intent(this, GenerateStatActivity.class);
+        Intent genStat = new Intent(this, GenerateStatsActivity.class);
 //        Intent characterMain = new Intent(this, characterDisplayScreen.class);
         dummy = new Character();
         dummy.SetName(characterName);

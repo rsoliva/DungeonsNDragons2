@@ -18,6 +18,8 @@
     <string name="pts">Points Remaining</string>
     <string name="maxpts">27</string>
     <string name="defaultpts">8</string>
+    <string name="Up">Up</string>
+    <string name="Down">Down</string>
 
     <string name="Strength">Strength</string>
     <string name="Dexteriy">Dexterity</string>
@@ -36,5 +38,10 @@
     <string name="Level">Level</string>
     <string name="Race">Race</string>
     <string name="Blank"> </string>
+    <string name="Intimidation">Intimidation</string>
+    <string name="Performance">Performance</string>
+    <string name="Persuasion">Persuasion</string>
+    <string name="Deception">Deception</string>
+
 
 </resources>

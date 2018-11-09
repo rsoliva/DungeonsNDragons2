@@ -37,13 +37,14 @@
         android:layout_width="82dp"
         android:layout_height="24dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:background="@color/black"
         android:text="@string/Dexteriy"
         android:textAlignment="center"
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/conText"
+        app:layout_constraintHorizontal_bias="0.42"
         app:layout_constraintStart_toEndOf="@+id/strText"
         app:layout_constraintTop_toTopOf="@+id/guideline15" />
 
@@ -184,12 +185,11 @@
 
     <EditText
         android:id="@+id/speedVal3"
-        android:labelFor="@+id/speedVal3"
         android:layout_width="38dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:ems="10"
-        android:inputType="textImeMultiLine|number"
+        android:labelFor="@+id/speedVal3"
         android:text="@string/Blank"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline15"
@@ -221,7 +221,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
-        android:inputType="textImeMultiLine|number"
+        android:inputType="none"
         android:text="@string/Blank"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/intText"
@@ -240,9 +240,9 @@
         android:inputType="textImeMultiLine|number"
         android:text="@string/Blank"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/dexText"
-        app:layout_constraintStart_toStartOf="@+id/dexText"
-        app:layout_constraintTop_toBottomOf="@+id/dexText" />
+        app:layout_constraintEnd_toEndOf="@+id/strText"
+        app:layout_constraintStart_toStartOf="@+id/strText"
+        app:layout_constraintTop_toBottomOf="@+id/strText" />
 
     <EditText
         android:id="@+id/conNum"
@@ -286,9 +286,9 @@
         android:text="@string/Blank"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline16"
-        app:layout_constraintEnd_toEndOf="@+id/wisText"
-        app:layout_constraintStart_toStartOf="@+id/wisText"
-        app:layout_constraintTop_toBottomOf="@+id/wisText" />
+        app:layout_constraintEnd_toEndOf="@+id/intText"
+        app:layout_constraintStart_toStartOf="@+id/intText"
+        app:layout_constraintTop_toBottomOf="@+id/intText" />
 
     <EditText
         android:id="@+id/intNum"
@@ -384,9 +384,9 @@
     <TextView
         android:id="@+id/hitDiceValue"
         android:layout_width="67dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="20dp"
         android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/Blank"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline15"

@@ -6,9 +6,11 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
+
 public class characterDisplayScreen extends AppCompatActivity {
 
-    Character dummy;
+    CharacterMethods dummy;
     EditText dStr, dDex, dCon, dInt, dWis, dCha;
     TextView dName, dRace, dClass;
     @Override
@@ -45,8 +47,7 @@ public class characterDisplayScreen extends AppCompatActivity {
         dCon.setText(Integer.toString(dummy.GetConstitution()));
         dInt.setText(Integer.toString(dummy.GetIntelligence()));
         dWis.setText(Integer.toString(dummy.GetWisdom()));
-        dCha.setText(Integer.toString(dummy.GetConstitution()));
-
+        dCha.setText(Integer.toString(dummy.GetCharisma()));
     }
 
     private void getCharInfo(){
