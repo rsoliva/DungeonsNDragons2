@@ -40,7 +40,7 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
     TextView dStr, dDex, dCon, dInt, dWis, dCha;
     TextView dName, dRace, dClass, dBackground;
     TextView strMod, dexMod, conMod, intMod, wisMod, chaMod;
-    TextView initiative, proficiency, speed, hitDie;
+    TextView initiative, proficiency, speed, hitDie, armorVal;
     int sMod, dMod, cMod, iMod, wMod, chMod;
 
     @Override
@@ -81,6 +81,7 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
         proficiency = findViewById(R.id.profVal);
         speed = findViewById(R.id.spdVal);
         hitDie = findViewById(R.id.diceVal);
+        armorVal = findViewById(R.id.armorVal);
 
         //Ability Scores
         dStr = findViewById(R.id.strVal);
@@ -107,6 +108,7 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
         hitDie.setText(dummy.GetDie());
         proficiency.setText("+2");
         speed.setText(Integer.toString(dummy.GetSpeed()));
+        armorVal.setText(Integer.toString(dMod + 10 ));
 
 //        Log.d("testAttr", "str is: " + dummy.GetStrength());
 
@@ -129,7 +131,8 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
 
     private void getCharInfo(){
         Bundle b = getIntent().getExtras();
-        dummy = (Character)b.getParcelable("characterInfo");
+        if(b != null)
+            dummy = (Character)b.getParcelable("characterInfo");
     }
 
     private void WrapRace()

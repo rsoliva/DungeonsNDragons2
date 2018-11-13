@@ -15,7 +15,7 @@ public class Character implements Parcelable, CharacterMethods
     private int WISDOM = 0;
     private int INTELLIGENCE = 0;
     private int CHARISMA = 0;
-    private int SPEED = 30;
+    private int SPEED = 0;
     private int CLASS_PROFICIENCY = 0;
 
     //Character info
@@ -47,7 +47,7 @@ public class Character implements Parcelable, CharacterMethods
     }
 
     //read from a parcel
-    public Character(Parcel p){
+    private Character(Parcel p){
         name = p.readString();
         race = p.readString();
         job = p.readString();

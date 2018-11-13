@@ -2,7 +2,7 @@ package csc472.depaul.edu.dungeonsndragons.Races;
 
 public class Half_Orc extends AbstractRace implements CharacterMethods
 {
-    private CharacterMethods privCharRef = null;
+    private CharacterMethods privCharRef;
 
     public Half_Orc(CharacterMethods charRef)
     {
@@ -116,7 +116,7 @@ public class Half_Orc extends AbstractRace implements CharacterMethods
     @Override
     public int GetSpeed()
     {
-        return this.privCharRef.GetSpeed();
+        return this.privCharRef.GetSpeed() + 30;
     }
 
     @Override
