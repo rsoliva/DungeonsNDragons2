@@ -144,4 +144,9 @@ public class DarkElf extends AbstractRace
     public String GetBackground() {
         return character.GetBackground();
     }
+
+    @Override
+    public String GetDie() {
+        return character.GetDie();
+    }
 }

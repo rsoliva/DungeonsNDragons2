@@ -20,6 +20,7 @@
     <string name="defaultpts">8</string>
     <string name="Up">Up</string>
     <string name="Down">Down</string>
+    <string name="blank"> </string>
 
     <string name="Strength">Strength</string>
     <string name="Dexteriy">Dexterity</string>
@@ -34,6 +35,7 @@
     <string name="Initiative">Initiative</string>
     <string name="Name">Name</string>
     <string name="Class">Class</string>
+    <string name="Background">Background</string>
     <string name="HP">HP</string>
     <string name="Level">Level</string>
     <string name="Race">Race</string>
@@ -42,6 +44,7 @@
     <string name="Performance">Performance</string>
     <string name="Persuasion">Persuasion</string>
     <string name="Deception">Deception</string>
+    <string name="Modifiers">Modifiers</string>
 
 
 </resources>

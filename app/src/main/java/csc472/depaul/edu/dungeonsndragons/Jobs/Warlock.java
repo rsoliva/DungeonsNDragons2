@@ -151,4 +151,9 @@ public class Warlock extends AbstractJob
     public String GetJob() {
         return "Warlock";
     }
+
+    @Override
+    public String GetDie() {
+        return privCharRef.GetDie() + "1d8";
+    }
 }

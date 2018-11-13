@@ -15,7 +15,7 @@ public class Character implements Parcelable, CharacterMethods
     private int WISDOM = 0;
     private int INTELLIGENCE = 0;
     private int CHARISMA = 0;
-    private int SPEED = 0;
+    private int SPEED = 30;
     private int CLASS_PROFICIENCY = 0;
 
     //Character info
@@ -23,6 +23,7 @@ public class Character implements Parcelable, CharacterMethods
     private String race;
     private String job;
     private String background;
+    private String hitDie = "";
 
     @Override
     public int describeContents() {
@@ -36,6 +37,7 @@ public class Character implements Parcelable, CharacterMethods
         dest.writeString(race);
         dest.writeString(job);
         dest.writeString(background);
+        dest.writeString(hitDie);
         dest.writeInt(STRENGTH);
         dest.writeInt(DEXTERITY);
         dest.writeInt(CONSTITUTION);
@@ -50,6 +52,7 @@ public class Character implements Parcelable, CharacterMethods
         race = p.readString();
         job = p.readString();
         background = p.readString();
+        hitDie = p.readString();
         STRENGTH = p.readInt();
         DEXTERITY = p.readInt();
         CONSTITUTION = p.readInt();
@@ -192,5 +195,10 @@ public class Character implements Parcelable, CharacterMethods
     public String GetJob() { return this.job; }
     @Override
     public String GetBackground() { return this.background; }
+
+    @Override
+    public String GetDie() {
+        return hitDie;
+    }
 
 }

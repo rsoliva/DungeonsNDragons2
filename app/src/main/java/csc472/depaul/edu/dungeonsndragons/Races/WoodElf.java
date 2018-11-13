@@ -144,4 +144,9 @@ public class WoodElf extends AbstractRace implements CharacterMethods
     public String GetBackground() {
         return privCharRef.GetBackground();
     }
+
+    @Override
+    public String GetDie() {
+        return privCharRef.GetDie();
+    }
 }
