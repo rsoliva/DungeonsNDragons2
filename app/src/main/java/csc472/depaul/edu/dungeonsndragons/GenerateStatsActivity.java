@@ -43,7 +43,7 @@ public class GenerateStatsActivity extends AppCompatActivity implements View.OnC
     }
 
     public void mainDisplayActivity() {
-        Intent mainScreen = new Intent(this, characterDisplayScreen.class);
+        Intent mainScreen = new Intent(this,  CharacterMainDisplayScreen.class);
 
         mainScreen.putExtra("characterInfo", (Character)dummy);
         startActivity(mainScreen);
@@ -252,14 +252,18 @@ public class GenerateStatsActivity extends AppCompatActivity implements View.OnC
                 ptsRem--;
                 break;
             case 13:
-                num++;
-                ptsRem--;
-                ptsRem--;
+                if(ptsRem > 1){
+                    num++;
+                    ptsRem--;
+                    ptsRem--;
+                }
                 break;
             case 14:
-                num++;
-                ptsRem--;
-                ptsRem--;
+                if(ptsRem > 1){
+                    num++;
+                    ptsRem--;
+                    ptsRem--;
+                }
                 break;
             case 15:
                 break;
