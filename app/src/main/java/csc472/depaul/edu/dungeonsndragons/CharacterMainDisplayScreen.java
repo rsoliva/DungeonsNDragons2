@@ -2,8 +2,6 @@ package csc472.depaul.edu.dungeonsndragons;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import csc472.depaul.edu.dungeonsndragons.Jobs.Barbarian;
@@ -38,9 +36,9 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
 
     CharacterMethods dummy;
     TextView dStr, dDex, dCon, dInt, dWis, dCha;
-    TextView dName, dRace, dClass, dBackground;
+    TextView dName, dClass, dBackground;
     TextView strMod, dexMod, conMod, intMod, wisMod, chaMod;
-    TextView initiative, proficiency, speed, hitDie, armorVal;
+    TextView initiative, proficiency, speed, hitDie, armorVal, hpVal;
     int sMod, dMod, cMod, iMod, wMod, chMod;
 
     @Override
@@ -74,14 +72,15 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
 
     private void bindViews(){
         //General
-        dName = findViewById(R.id.nameText);
-        dBackground = findViewById(R.id.Background);
-        dClass = findViewById(R.id.classText);
+        dName = findViewById(R.id.nameVal);
+        dBackground = findViewById(R.id.BackgroundVal);
+        dClass = findViewById(R.id.classVal);
         initiative = findViewById(R.id.initText);
         proficiency = findViewById(R.id.profVal);
         speed = findViewById(R.id.spdVal);
         hitDie = findViewById(R.id.diceVal);
         armorVal = findViewById(R.id.armorVal);
+        hpVal = findViewById(R.id.hpVal);
 
         //Ability Scores
         dStr = findViewById(R.id.strVal);
@@ -109,11 +108,13 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
         proficiency.setText("+2");
         speed.setText(Integer.toString(dummy.GetSpeed()));
         armorVal.setText(Integer.toString(dMod + 10 ));
+        setHP();
 
 //        Log.d("testAttr", "str is: " + dummy.GetStrength());
 
         //Ability scores
         dStr.setText(Integer.toString(dummy.GetStrength()));
+//        dStr.setText(String.format("%d", dummy.GetStrength()));
         dDex.setText(Integer.toString(dummy.GetDexterity()));
         dCon.setText(Integer.toString(dummy.GetConstitution()));
         dInt.setText(Integer.toString(dummy.GetIntelligence()));
@@ -129,6 +130,22 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
         chaMod.setText(Integer.toString(chMod));
     }
 
+    private void setHP(){
+        switch (dummy.GetDie()){
+            case "1d6":
+                hpVal.setText("6");
+                break;
+            case "1d8":
+                hpVal.setText("8");
+                break;
+            case "1d10":
+                hpVal.setText("10");
+                break;
+            case "1d12":
+                hpVal.setText("12");
+                break;
+        }
+    }
     private void getCharInfo(){
         Bundle b = getIntent().getExtras();
         if(b != null)

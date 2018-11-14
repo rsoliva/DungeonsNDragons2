@@ -45,6 +45,8 @@
     <string name="Persuasion">Persuasion</string>
     <string name="Deception">Deception</string>
     <string name="Modifiers">Modifiers</string>
+    <string name="Ability">Ability</string>
+    <string name="Scores">Scores</string>
 
 
 </resources>

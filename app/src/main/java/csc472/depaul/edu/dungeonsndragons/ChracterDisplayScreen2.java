@@ -24,7 +24,7 @@ public class ChracterDisplayScreen2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_character_display_screen);
+        setContentView(R.layout.activity_chracter_display_screen2);
 
         getCharInfo();
 //        wrapCharacter();
