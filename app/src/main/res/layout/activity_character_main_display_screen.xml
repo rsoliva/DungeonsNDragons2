@@ -2,6 +2,7 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainScreen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -11,10 +12,10 @@
         android:id="@+id/NCB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:baselineAligned="false"
         android:layout_marginBottom="15dp"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/NameVert"
@@ -28,9 +29,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Name"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                android:textSize="23sp" />
+                android:textSize="23sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/nameVal"
@@ -54,9 +55,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Class"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                android:textSize="23sp" />
+                android:textSize="23sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/classVal"
@@ -80,9 +81,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Background"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                android:textSize="23sp" />
+                android:textSize="23sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/BackgroundVal"
@@ -100,9 +101,9 @@
         android:id="@+id/SHD"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginBottom="15dp"
         android:baselineAligned="false"
-        android:layout_marginBottom="15dp">
+        android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/speedVert"
@@ -116,9 +117,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Speed"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                android:textSize="23sp" />
+                android:textSize="23sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/spdVal"
@@ -141,9 +142,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/HP"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                android:textSize="23sp" />
+                android:textSize="23sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/hpVal"
@@ -165,9 +166,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/HitDice"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                android:textSize="23sp" />
+                android:textSize="23sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/diceVal"
@@ -183,9 +184,9 @@
         android:id="@+id/AIP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginBottom="15dp"
         android:baselineAligned="false"
-        android:layout_marginBottom="15dp">
+        android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/acVert"
@@ -199,9 +200,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/ArmorClass"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                android:textSize="23sp" />
+                android:textSize="23sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/armorVal"
@@ -223,9 +224,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Initiative"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                android:textSize="23sp" />
+                android:textSize="23sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/initText"
@@ -249,9 +250,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Proficiency"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                android:textSize="23sp" />
+                android:textSize="23sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/profVal"
@@ -266,22 +267,24 @@
         android:id="@+id/coreStats"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
         android:layout_marginBottom="15dp"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="15dp"
+        android:layout_weight="3">
 
-        <TableRow android:id="@+id/Titles"
+        <TableRow
+            android:id="@+id/Titles"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <TextView
                 android:id="@+id/Ability"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/Ability"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/Scores"
@@ -289,9 +292,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/Scores"
-                android:textStyle="bold"
                 android:textAlignment="center"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/ModScore"
@@ -299,9 +302,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/Modifiers"
-                android:textStyle="bold"
-               android:textAlignment="center"
-                android:textSize="24sp" />
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
         </TableRow>
 
@@ -449,8 +452,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/Wisdom"
-                android:textSize="24sp"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/wisVal"
