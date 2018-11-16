@@ -33,7 +33,7 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
         name = findViewById(R.id.editText);
         RaceVals = findViewById(R.id.Race);
         JobVals = findViewById(R.id.Class);
-        BGVals = findViewById(R.id.Background);
+        BGVals = findViewById(R.id.BackgroundText);
         next = findViewById(R.id.button);
 
        /* ArrayAdapter<Race> raceAdapter = ArrayAdapter.createFromResource(this, R.array.RaceList, android.R.layout.simple_spinner_item);
@@ -85,7 +85,7 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
                 characterRace = (RaceVals.getSelectedItem()).toString();
             case R.id.Class:
                 characterClass = (JobVals.getSelectedItem()).toString();
-           case R.id.Background:
+           case R.id.BackgroundText:
                 characterBackground = (BGVals.getSelectedItem()).toString();
         }
     }

@@ -3,8 +3,10 @@ package csc472.depaul.edu.dungeonsndragons;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.EditText;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import csc472.depaul.edu.dungeonsndragons.Jobs.Barbarian;
 import csc472.depaul.edu.dungeonsndragons.Jobs.Bard;
@@ -38,16 +40,20 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
 
     CharacterMethods dummy;
     TextView dStr, dDex, dCon, dInt, dWis, dCha;
-    TextView dName, dRace, dClass, dBackground;
+    TextView dName, dClass, dBackground;
     TextView strMod, dexMod, conMod, intMod, wisMod, chaMod;
-    TextView initiative, proficiency, speed, hitDie;
+    TextView initiative, proficiency, speed, hitDie, armorVal, hpVal;
+//    View screen;
     int sMod, dMod, cMod, iMod, wMod, chMod;
+//    float x1 = 0;
+//    float x2 = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_main_display_screen);
-
+//        screen = findViewById(R.id.mainScreen);
+//        screen.setOnTouchListener(this);
         getCharInfo();
         wrapCharacter();
         calcModifiers();
@@ -74,13 +80,15 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
 
     private void bindViews(){
         //General
-        dName = findViewById(R.id.nameText);
-        dBackground = findViewById(R.id.Background);
-        dClass = findViewById(R.id.classText);
+        dName = findViewById(R.id.nameVal);
+        dBackground = findViewById(R.id.BackgroundVal);
+        dClass = findViewById(R.id.classVal);
         initiative = findViewById(R.id.initText);
         proficiency = findViewById(R.id.profVal);
         speed = findViewById(R.id.spdVal);
         hitDie = findViewById(R.id.diceVal);
+        armorVal = findViewById(R.id.armorVal);
+        hpVal = findViewById(R.id.hpVal);
 
         //Ability Scores
         dStr = findViewById(R.id.strVal);
@@ -99,6 +107,7 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
         chaMod = findViewById(R.id.charModVal);
     }
 
+    //METHOD to update UI Text
     private void updateUIText(){
         dName.setText(dummy.GetName());
         dBackground.setText(dummy.GetBackground());
@@ -107,8 +116,9 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
         hitDie.setText(dummy.GetDie());
         proficiency.setText("+2");
         speed.setText(Integer.toString(dummy.GetSpeed()));
+        armorVal.setText(Integer.toString(dMod + 10 ));
+        setHP();
 
-//        Log.d("testAttr", "str is: " + dummy.GetStrength());
 
         //Ability scores
         dStr.setText(Integer.toString(dummy.GetStrength()));
@@ -127,11 +137,32 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
         chaMod.setText(Integer.toString(chMod));
     }
 
-    private void getCharInfo(){
-        Bundle b = getIntent().getExtras();
-        dummy = (Character)b.getParcelable("characterInfo");
+    //METHOD to update HP Text
+    private void setHP(){
+        switch (dummy.GetDie()){
+            case "1d6":
+                hpVal.setText("6");
+                break;
+            case "1d8":
+                hpVal.setText("8");
+                break;
+            case "1d10":
+                hpVal.setText("10");
+                break;
+            case "1d12":
+                hpVal.setText("12");
+                break;
+        }
     }
 
+    //Gets info from previous activity into this one
+    private void getCharInfo(){
+        Bundle b = getIntent().getExtras();
+        if(b != null)
+            dummy = (Character)b.getParcelable("characterInfo");
+    }
+
+    //Wraps race onto the character
     private void WrapRace()
     {
         //dummy = new DarkElf(dummy)
@@ -184,7 +215,8 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
         }
     }
 
-   private void WrapJob()
+    //wraps job/class onto the character
+    private void WrapJob()
     {
         switch (dummy.GetJob())
         {
@@ -227,4 +259,29 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
                 dummy = new Monk(dummy);
         }
     }
+
+//    @Override
+//    public boolean onTouch(View v, MotionEvent event) {
+//        switch(event.getAction())
+//        {
+//            case MotionEvent.ACTION_DOWN:
+//                x1 = event.getX();
+//                break;
+//            case MotionEvent.ACTION_UP:
+//                x2 = event.getX();
+//                float deltaX = x2 - x1;
+//                Log.d("distance", Float.toString(deltaX));
+//                Log.d("touched", Float.toString(x2));
+//                if (Math.abs(deltaX) > 10)
+//                {
+//                    Toast.makeText(this, "left2right swipe", Toast.LENGTH_SHORT).show ();
+//                }
+//                else
+//                {
+//                    // consider as something else - a screen tap for example
+//                }
+//                break;
+//        }
+//        return false;
+//    }
 }
