@@ -151,6 +151,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        android:layout_gravuity = 100
 
         <TextView
             android:id="@+id/spdText"

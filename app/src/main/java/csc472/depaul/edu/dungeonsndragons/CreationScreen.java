@@ -1,6 +1,7 @@
 package csc472.depaul.edu.dungeonsndragons;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.Spinner;
 import csc472.depaul.edu.dungeonsndragons.Jobs.Job;
 import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
@@ -19,9 +21,11 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
 
     EditText name;
     Spinner RaceVals, JobVals, BGVals;
-    Button next;
+    Button next, weaponSelectBtn;
     String characterName;
     String characterRace, characterClass, characterBackground;
+
+
     Enum dummyRace, dummyClass;
     CharacterMethods dummy;
 
@@ -35,6 +39,7 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
         JobVals = findViewById(R.id.Class);
         BGVals = findViewById(R.id.Background);
         next = findViewById(R.id.button);
+        weaponSelectBtn = findViewById(R.id.weaponSelectBtn);
 
        /* ArrayAdapter<Race> raceAdapter = ArrayAdapter.createFromResource(this, R.array.RaceList, android.R.layout.simple_spinner_item);
         raceAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -47,14 +52,26 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
         JobVals.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, Job.values()));
         JobVals.setOnItemSelectedListener(this);
 
+//        JobVals.setOnItemClickListener(this);
+
+
         BGVals.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, Background.values()));
         BGVals.setOnItemSelectedListener(this);
+
+        final WeaponSelectDialogFragment weaponSelectDialog = new WeaponSelectDialogFragment(this);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 characterName = name.getText().toString();
                 generateStatActivity();
+            }
+        });
+        weaponSelectBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                weaponSelectDialog.show();
             }
         });
 
@@ -77,6 +94,7 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
         startActivity(genStat);
     }
 
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
@@ -89,6 +107,8 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
                 characterBackground = (BGVals.getSelectedItem()).toString();
         }
     }
+
+
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {

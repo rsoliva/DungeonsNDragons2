@@ -44,4 +44,12 @@
     <string name="Deception">Deception</string>
 
 
-</resources>
+    <string name = "Athletics"> Athletics</string>
+    <string name = "Insight"> Insiggt</string>
+    <string name = "Nature"> Nature</string>
+    <string name = "Perception"> Perception</string>
+    <string name = "Religion"> Religion</string>
+    <string name = "Survival"> Survival</string>
+
+
+    </resources>
