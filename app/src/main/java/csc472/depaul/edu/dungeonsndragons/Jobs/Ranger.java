@@ -129,6 +129,13 @@ public class Ranger extends AbstractJob
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Long Bow x1 Arrows x20 ";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
     }

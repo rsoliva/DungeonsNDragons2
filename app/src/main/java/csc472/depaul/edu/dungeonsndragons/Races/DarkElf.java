@@ -125,6 +125,11 @@ public class DarkElf extends AbstractRace
     }
 
     @Override
+    public String GetInventory() {
+        return character.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public String GetName()
     {
         return this.character.GetName();

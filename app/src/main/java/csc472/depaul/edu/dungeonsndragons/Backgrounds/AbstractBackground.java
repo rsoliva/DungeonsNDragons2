@@ -6,6 +6,7 @@ import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
 public abstract class AbstractBackground implements CharacterMethods
 {
     protected Skills[] SKILL_PROF;
+    protected String INVENTORY;
 
     public abstract int GetStrength();
     public abstract int GetDexterity();
@@ -15,6 +16,7 @@ public abstract class AbstractBackground implements CharacterMethods
     public abstract int GetCharisma();
     public abstract int GetSpeed();
     public abstract int GetProficiency();
+    public abstract String GetInventory();
 
     public Skills[] GetSkillProfs()
     {

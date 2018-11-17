@@ -13,4 +13,5 @@ public abstract class AbstractJob implements CharacterMethods
     protected SimpleRange[] SR_PROF;
     protected MartialMelee[] MM_PROF;
     protected MartialRange[] MR_PROF;
+    protected String INVENTORY;
 }

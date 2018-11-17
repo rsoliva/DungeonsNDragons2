@@ -133,6 +133,13 @@ public class Wizard extends AbstractJob
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Spellbook ";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public String GetBackground() {
         return privCharRef.GetBackground();
     }

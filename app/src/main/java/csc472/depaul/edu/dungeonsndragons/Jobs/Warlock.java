@@ -133,6 +133,13 @@ public class Warlock extends AbstractJob
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Leather Armor x1 Dagger x2 ";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public String GetBackground() {
         return privCharRef.GetBackground();
     }

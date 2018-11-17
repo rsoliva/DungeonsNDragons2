@@ -120,6 +120,11 @@ public class Half_Elf extends AbstractRace implements CharacterMethods
     }
 
     @Override
+    public String GetInventory() {
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public int GetProficiency() {
         return 0;
     }

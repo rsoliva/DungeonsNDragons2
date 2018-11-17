@@ -113,6 +113,13 @@ public class Acolyte extends AbstractBackground
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Holy Symbol x1 Prayer Book x1 Prayer Wheel x1 Incense x5 Vestments x1 Common Clothes x1 GP x15 ";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
     }

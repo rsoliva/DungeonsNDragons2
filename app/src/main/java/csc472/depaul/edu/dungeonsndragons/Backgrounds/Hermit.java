@@ -117,6 +117,13 @@ public class Hermit extends AbstractBackground
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Explorers' Pack x1 Javelins x4 ";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public String GetBackground() {
         return "Hermit";
     }

@@ -128,6 +128,13 @@ public class Sorcerer extends AbstractJob
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Dagger x2 ";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
     }

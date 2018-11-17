@@ -128,6 +128,13 @@ public class Fighter extends AbstractJob
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
     }

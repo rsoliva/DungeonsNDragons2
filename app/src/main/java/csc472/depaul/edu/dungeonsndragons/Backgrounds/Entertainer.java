@@ -113,6 +113,13 @@ public class Entertainer extends AbstractBackground
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += " ";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
     }

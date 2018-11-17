@@ -113,6 +113,13 @@ public class Charlatan extends AbstractBackground
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Fine Clothes x1 Disguise Kit x1 Tools x1 GP x15 ";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
     }

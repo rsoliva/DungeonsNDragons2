@@ -128,6 +128,13 @@ public class Monk extends AbstractJob
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Darts x10 ";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
     }

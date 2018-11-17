@@ -25,6 +25,7 @@ public interface CharacterMethods
     int GetCharisma();
     int GetSpeed();
     int GetProficiency();
+    String GetInventory();
     String GetBackground();
     String GetName();
     String GetRace();

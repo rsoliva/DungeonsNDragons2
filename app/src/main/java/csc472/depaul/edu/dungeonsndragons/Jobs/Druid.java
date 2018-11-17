@@ -128,6 +128,13 @@ public class Druid extends AbstractJob
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Leather Armor x1 Explorer's Pack x1 Druidic Focus x1";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
     }
