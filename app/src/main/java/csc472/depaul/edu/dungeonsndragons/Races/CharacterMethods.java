@@ -1,5 +1,7 @@
 package csc472.depaul.edu.dungeonsndragons.Races;
 
+import android.os.Parcelable;
+
 import csc472.depaul.edu.dungeonsndragons.Jobs.DieType;
 
 //Main interface for everything
