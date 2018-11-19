@@ -21,5 +21,8 @@ public class WeaponSelectDialogFragment extends Dialog{
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.weapon_select_dialog);
 
+
     }
+
+
 }

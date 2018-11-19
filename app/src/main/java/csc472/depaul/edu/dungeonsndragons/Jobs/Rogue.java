@@ -151,4 +151,9 @@ public class Rogue extends AbstractJob
     public String GetJob() {
         return "Rouge";
     }
+
+    @Override
+    public String GetDie() {
+        return privCharRef.GetDie() + "1d8";
+    }
 }

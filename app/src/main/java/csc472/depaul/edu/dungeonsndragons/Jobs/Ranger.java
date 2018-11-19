@@ -152,4 +152,9 @@ public class Ranger extends AbstractJob
     public String GetJob() {
         return "Ranger";
     }
+
+    @Override
+    public String GetDie() {
+        return privCharRef.GetDie() + "1d10";
+    }
 }

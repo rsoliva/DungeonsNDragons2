@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
@@ -17,8 +19,8 @@ public class GenerateStatsActivity extends AppCompatActivity implements View.OnC
 
     TextView s,d,c,i,w,ch,ptsLeft;
     Button su,sd,du,dd,cu,cd,iu,id,wu,wd,chu,chd,next,roll;
-
-    int strScore, dexScore, conScore, intScore, wisScore, chaScore;
+    CheckBox aniSkill,athSkill,instSkill,intimSkill,NaturSkull,PercSkill,survSkill;
+    int strScore, dexScore, conScore, intScore, wisScore, chaScore,numberOfSelectedSkills;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,12 +40,45 @@ public class GenerateStatsActivity extends AppCompatActivity implements View.OnC
 
         //set onclicks for buttons
         setClickListener();
+        setCheckListeners();
         storeNewInfo();
 
     }
 
+    private void setCheckListeners() {
+        aniSkill = findViewById(R.id.animalHandleCheckBox) ;
+        athSkill= findViewById(R.id.AthleticsCheckBox);
+        instSkill= findViewById(R.id.InsightCheckBox);
+        intimSkill= findViewById(R.id.IntimidationCheckBox);
+        NaturSkull= findViewById(R.id.NatureCheckBox);
+        PercSkill= findViewById(R.id.PerceptionCheckBox);
+        survSkill= findViewById(R.id.SurvivalCheckBox);
+        boolean isChecked = true;
+
+
+        aniSkill.setOnCheckedChangeListener(onCheckedChanged());
+
+    }
+
+
+    @Override
+   public void onCheckedChange(CompoundButton buttonView, boolean isChecked){
+        if(isChecked && numberOfSelectedSkills >= 2){
+            buttonView.setChecked(false);
+        }
+        else{
+
+            if(isChecked){
+                numberOfSelectedSkills++;
+            }
+            else{
+                numberOfSelectedSkills--;
+            }
+        }
+    }
+
     public void mainDisplayActivity() {
-        Intent mainScreen = new Intent(this, characterDisplayScreen.class);
+        Intent mainScreen = new Intent(this,  CharacterMainDisplayScreen.class);
 
         mainScreen.putExtra("characterInfo", (Character)dummy);
         startActivity(mainScreen);
@@ -252,14 +287,18 @@ public class GenerateStatsActivity extends AppCompatActivity implements View.OnC
                 ptsRem--;
                 break;
             case 13:
-                num++;
-                ptsRem--;
-                ptsRem--;
+                if(ptsRem > 1){
+                    num++;
+                    ptsRem--;
+                    ptsRem--;
+                }
                 break;
             case 14:
-                num++;
-                ptsRem--;
-                ptsRem--;
+                if(ptsRem > 1){
+                    num++;
+                    ptsRem--;
+                    ptsRem--;
+                }
                 break;
             case 15:
                 break;

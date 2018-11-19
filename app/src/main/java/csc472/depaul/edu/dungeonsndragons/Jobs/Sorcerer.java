@@ -151,4 +151,9 @@ public class Sorcerer extends AbstractJob
     public String GetJob() {
         return "Sorcerer";
     }
+
+    @Override
+    public String GetDie() {
+        return privCharRef.GetDie() + "1d6";
+    }
 }

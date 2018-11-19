@@ -150,4 +150,9 @@ public class Bard extends AbstractJob
     public String GetJob() {
         return "Bard";
     }
+
+    @Override
+    public String GetDie() {
+        return privCharRef.GetDie() + "1d8";
+    }
 }

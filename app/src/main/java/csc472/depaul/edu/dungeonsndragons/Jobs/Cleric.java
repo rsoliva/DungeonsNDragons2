@@ -151,4 +151,9 @@ public class Cleric extends AbstractJob
     public String GetJob() {
         return "Cleric";
     }
+
+    @Override
+    public String GetDie() {
+        return privCharRef.GetDie() + "1d8";
+    }
 }

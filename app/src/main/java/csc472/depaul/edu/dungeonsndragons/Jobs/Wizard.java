@@ -151,4 +151,9 @@ public class Wizard extends AbstractJob
     public String GetJob() {
         return "Wizard";
     }
+
+    @Override
+    public String GetDie() {
+        return privCharRef.GetDie() + "1d6";
+    }
 }

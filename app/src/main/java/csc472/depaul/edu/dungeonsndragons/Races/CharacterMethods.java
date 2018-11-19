@@ -1,8 +1,11 @@
 package csc472.depaul.edu.dungeonsndragons.Races;
 
+import csc472.depaul.edu.dungeonsndragons.Jobs.DieType;
+
 //Main interface for everything
 public interface CharacterMethods
 {
+    DieType DIE = null;
     void SetStrength(int val);
     void SetDexterity(int val);
     void SetConstitution(int val);
@@ -29,4 +32,5 @@ public interface CharacterMethods
     String GetName();
     String GetRace();
     String GetJob();
+    String GetDie();
 }

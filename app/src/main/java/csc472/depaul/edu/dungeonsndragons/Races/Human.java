@@ -118,7 +118,7 @@ public class Human extends AbstractRace implements CharacterMethods
     @Override
     public int GetSpeed()
     {
-        return this.privCharRef.GetSpeed();
+        return this.privCharRef.GetSpeed() + 30;
     }
 
     @Override
@@ -145,5 +145,10 @@ public class Human extends AbstractRace implements CharacterMethods
     @Override
     public String GetBackground() {
         return privCharRef.GetBackground();
+    }
+
+    @Override
+    public String GetDie() {
+        return privCharRef.GetDie();
     }
 }

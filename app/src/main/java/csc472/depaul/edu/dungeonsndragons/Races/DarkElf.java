@@ -116,7 +116,7 @@ public class DarkElf extends AbstractRace
     @Override
     public int GetSpeed()
     {
-        return this.character.GetSpeed();
+        return this.character.GetSpeed() + 30;
     }
 
     @Override
@@ -143,5 +143,10 @@ public class DarkElf extends AbstractRace
     @Override
     public String GetBackground() {
         return character.GetBackground();
+    }
+
+    @Override
+    public String GetDie() {
+        return character.GetDie();
     }
 }

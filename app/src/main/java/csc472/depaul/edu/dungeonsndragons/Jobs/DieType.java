@@ -3,18 +3,21 @@ package csc472.depaul.edu.dungeonsndragons.Jobs;
 //Enum of die types
 public enum DieType
 {
-    D6      (6),
-    D8      (8),
-    D10     (10),
-    D12     (12);
+    D6      ("1d6"),
+    D8      ("1d8"),
+    D10     ("1d10"),
+    D12     ("1d12");
 
-    private int typeVal;
+    private String typeVal;
 
-    DieType(int typeVal) {
+    DieType(String typeVal) {
         this.typeVal = typeVal;
     }
 
-    public int getTypeVal() {
+
+
+    @Override
+    public String toString() {
         return typeVal;
     }
 }

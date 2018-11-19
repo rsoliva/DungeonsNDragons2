@@ -21,7 +21,7 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
 
     EditText name;
     Spinner RaceVals, JobVals, BGVals;
-    Button next, weaponSelectBtn;
+    Button next;
     String characterName;
     String characterRace, characterClass, characterBackground;
 
@@ -37,9 +37,9 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
         name = findViewById(R.id.editText);
         RaceVals = findViewById(R.id.Race);
         JobVals = findViewById(R.id.Class);
-        BGVals = findViewById(R.id.Background);
+        BGVals = findViewById(R.id.BackgroundText);
         next = findViewById(R.id.button);
-        weaponSelectBtn = findViewById(R.id.weaponSelectBtn);
+
 
        /* ArrayAdapter<Race> raceAdapter = ArrayAdapter.createFromResource(this, R.array.RaceList, android.R.layout.simple_spinner_item);
         raceAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -58,7 +58,6 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
         BGVals.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, Background.values()));
         BGVals.setOnItemSelectedListener(this);
 
-        final WeaponSelectDialogFragment weaponSelectDialog = new WeaponSelectDialogFragment(this);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,13 +66,9 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
                 generateStatActivity();
             }
         });
-        weaponSelectBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                weaponSelectDialog.show();
-            }
-        });
+
+
 
     }
 
@@ -103,7 +98,7 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
                 characterRace = (RaceVals.getSelectedItem()).toString();
             case R.id.Class:
                 characterClass = (JobVals.getSelectedItem()).toString();
-           case R.id.Background:
+           case R.id.BackgroundText:
                 characterBackground = (BGVals.getSelectedItem()).toString();
         }
     }

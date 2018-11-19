@@ -2,7 +2,7 @@ package csc472.depaul.edu.dungeonsndragons.Races;
 
 public class WoodElf extends AbstractRace implements CharacterMethods
 {
-    private CharacterMethods privCharRef = null;
+    private CharacterMethods privCharRef;
 
     public WoodElf(CharacterMethods charRef)
     {
@@ -116,7 +116,7 @@ public class WoodElf extends AbstractRace implements CharacterMethods
     @Override
     public int GetSpeed()
     {
-        return this.privCharRef.GetSpeed();
+        return this.privCharRef.GetSpeed() + 30;
     }
 
     @Override
@@ -143,5 +143,10 @@ public class WoodElf extends AbstractRace implements CharacterMethods
     @Override
     public String GetBackground() {
         return privCharRef.GetBackground();
+    }
+
+    @Override
+    public String GetDie() {
+        return privCharRef.GetDie();
     }
 }
