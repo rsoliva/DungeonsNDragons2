@@ -155,6 +155,12 @@ public class Character implements Parcelable, CharacterMethods
     public void SetName(String name) { this.name = name; }
 
     @Override
+    public void SetDie(String inDie)
+    {
+        this.hitDie = inDie;
+    }
+
+    @Override
     public int GetStrength()
     {
         return STRENGTH;

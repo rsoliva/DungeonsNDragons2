@@ -20,6 +20,7 @@ public interface CharacterMethods
     void SetProficiency(int val);
     void SetName(String name);
     void SetBackground(String inBackground);
+    void SetDie(String inDie);
 
 
     int GetStrength();
