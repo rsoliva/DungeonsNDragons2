@@ -64,6 +64,21 @@ public class Character implements Parcelable, CharacterMethods
     public Character(){
     }
 
+    public Character(CharacterMethods charRef){
+        this.STRENGTH = charRef.GetStrength();
+        this.DEXTERITY = charRef.GetDexterity();
+        this.CONSTITUTION = charRef.GetConstitution();
+        this.INTELLIGENCE = charRef.GetIntelligence();
+        this.WISDOM = charRef.GetWisdom();
+        this.CHARISMA = charRef.GetCharisma();
+        this.name = charRef.GetName();
+        this.race = charRef.GetRace();
+        this.background = charRef.GetBackground();
+        this.job = charRef.GetJob();
+        this.hitDie = charRef.GetDie();
+
+    }
+
     public static final Parcelable.Creator<Character> CREATOR = new Parcelable.Creator<Character>(){
 
         @Override
@@ -200,5 +215,6 @@ public class Character implements Parcelable, CharacterMethods
     public String GetDie() {
         return hitDie;
     }
+
 
 }

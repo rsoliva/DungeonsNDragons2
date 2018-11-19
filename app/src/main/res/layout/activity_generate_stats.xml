@@ -374,19 +374,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/roll" />
 
-            <Button
-                android:id="@+id/WeaponSelectBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="50dp"
-                android:text="@string/SelectWeapon" />
-
-            <Button
-                android:id="@+id/SkillSelectBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/SkillSelect" />
-
         </LinearLayout>
 
     </LinearLayout>

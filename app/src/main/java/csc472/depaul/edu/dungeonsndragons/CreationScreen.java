@@ -21,7 +21,7 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
 
     EditText name;
     Spinner RaceVals, JobVals, BGVals;
-    Button next;
+    Button next, weaponSelectBtn;
     String characterName;
     String characterRace, characterClass, characterBackground;
 
@@ -39,7 +39,7 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
         JobVals = findViewById(R.id.Class);
         BGVals = findViewById(R.id.BackgroundText);
         next = findViewById(R.id.button);
-
+        weaponSelectBtn = findViewById(R.id.weaponSelectBtn);
 
        /* ArrayAdapter<Race> raceAdapter = ArrayAdapter.createFromResource(this, R.array.RaceList, android.R.layout.simple_spinner_item);
         raceAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -58,6 +58,7 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
         BGVals.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, Background.values()));
         BGVals.setOnItemSelectedListener(this);
 
+        final WeaponSelectDialogFragment weaponSelectDialog = new WeaponSelectDialogFragment(this);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,9 +67,13 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
                 generateStatActivity();
             }
         });
+        weaponSelectBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-
-
+                weaponSelectDialog.show();
+            }
+        });
 
     }
 
@@ -109,100 +114,4 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
-
-   /* private void WrapRace()
-    {
-        //dummy = new DarkElf(dummy)
-        switch (dummy.GetRace())
-        {
-            case "Dark Elf":
-                dummy = new DarkElf(dummy);
-                break;
-            case "Dragonborn":
-                dummy = new Dragonborn(dummy);
-                break;
-            case "Forest Gnome":
-                dummy = new ForestGnome(dummy);
-                break;
-            case "Half Elf":
-                dummy = new Half_Elf(dummy);
-                break;
-            case  "Half Orc":
-                dummy = new Half_Orc(dummy);
-                break;
-            case "High Elf":
-                dummy = new HighElf(dummy);
-                break;
-            case "Hill Dwarf":
-                dummy = new HillDwarf(dummy);
-                break;
-            case "Human":
-                dummy = new Human(dummy);
-                break;
-            case "Lightfoot Halfling":
-                dummy = new LightfootHalfling(dummy);
-                break;
-            case "Mountain Dwarf":
-                dummy = new MountainDwarf(dummy);
-                break;
-            case "Rock Gnome":
-                dummy = new RockGnome(dummy);
-                break;
-            case "Stock Halfling":
-                dummy = new StoutHalfling(dummy);
-                break;
-            case "Tiefling":
-                dummy = new Tiefling(dummy);
-                break;
-            case "Wood Elf":
-                dummy = new WoodElf(dummy);
-                break;
-            default:
-                dummy = new Human(dummy);
-        }
-    }*/
-
-   /* private void WrapJob()
-    {
-        switch (dummy.GetJob())
-        {
-            case "Barbarian":
-                dummy = new Barbarian(dummy);
-                break;
-            case  "Bard":
-                dummy = new Bard(dummy);
-                break;
-            case "Cleric":
-                dummy = new Cleric(dummy);
-                break;
-            case "Druid":
-                dummy = new Druid(dummy);
-                break;
-            case "Fighter":
-                dummy = new Fighter(dummy);
-                break;
-            case "Monk":
-                dummy = new Monk(dummy);
-                break;
-            case "Paladin":
-                dummy = new Paladin(dummy);
-                break;
-            case "Ranger":
-                dummy = new Ranger(dummy);
-                break;
-            case "Rogue":
-                dummy = new Rogue(dummy);
-                break;
-            case "Sorcerer":
-                dummy = new Sorcerer(dummy);
-            case "Warlock":
-                dummy = new Warlock(dummy);
-                break;
-            case "Wizard":
-                dummy = new Wizard(dummy);
-                break;
-            default:
-                dummy = new Monk(dummy);
-        }
-    }*/
 }

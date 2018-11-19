@@ -1,12 +1,15 @@
 package csc472.depaul.edu.dungeonsndragons;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
 
-public class ChracterDisplayScreen2 extends AppCompatActivity {
+public class ChracterDisplayScreen2 extends AppCompatActivity implements View.OnClickListener {
     //strength skills
     TextView athletics;
     //wisdom skills
@@ -18,8 +21,14 @@ public class ChracterDisplayScreen2 extends AppCompatActivity {
     //charisma skills
     TextView decept, intimidate, persuade, perform;
 
+    //stores skills
+    Intent skillsIntent;
+
+    Button info,skills,magic,inventory;
+
     CharacterMethods dummy;
     int sMod, dMod, cMod, iMod, wMod, chMod;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +40,17 @@ public class ChracterDisplayScreen2 extends AppCompatActivity {
         calcModifiers();
         bindViews();
         updateUIText();
+//        info = findViewById(R.id.Info);
+//        info.setOnClickListener(this);
+//
+//        skills = findViewById(R.id.Skills);
+//        skills.setOnClickListener(this);
+//
+//        magic = findViewById(R.id.magic);
+//        magic.setOnClickListener(this);
+//
+//        inventory = findViewById(R.id.Inventory);
+//        inventory.setOnClickListener(this);
     }
 
     private void bindViews(){

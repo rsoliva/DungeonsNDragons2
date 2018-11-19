@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,10 +14,10 @@
             android:id="@+id/animalHandleCheckBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/AnimalHandling" />
+            android:text="Animal Handing" />
 
         <CheckBox
-            android:id="@+id/AthleticsCheckBox"
+            android:id="@+id/Athletics"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Athletics" />
@@ -58,4 +58,4 @@
             android:layout_height="wrap_content"
             android:text="@string/Survival" />
     </LinearLayout>
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
