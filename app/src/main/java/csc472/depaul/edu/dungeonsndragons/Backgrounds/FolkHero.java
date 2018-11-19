@@ -8,12 +8,13 @@ public class FolkHero extends AbstractBackground
 
     public FolkHero()
     {
-
+        SKILL_PROF = new Skills[] {Skills.ANIMAL_HANDLING, Skills.SURVIVAL};
     }
 
     public FolkHero(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.ANIMAL_HANDLING, Skills.SURVIVAL};
     }
 
     @Override
@@ -114,6 +115,13 @@ public class FolkHero extends AbstractBackground
     @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Artisan Tool x1, Shovel x1, Iron Pot x1, Common Clothes x1, GP x10";
+        return privCharRef.GetInventory() + INVENTORY;
     }
 
     @Override

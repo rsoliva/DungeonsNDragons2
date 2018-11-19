@@ -197,6 +197,11 @@ public class Character implements Parcelable, CharacterMethods
     }
 
     @Override
+    public String GetInventory() {
+        return "";
+    }
+
+    @Override
     public int GetProficiency()
     {
         return CLASS_PROFICIENCY;

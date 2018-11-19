@@ -8,12 +8,13 @@ public class Noble extends AbstractBackground
 
     public Noble()
     {
-
+        SKILL_PROF = new Skills[] {Skills.HISTORY, Skills.PERSUASION};
     }
 
     public Noble(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.HISTORY, Skills.PERSUASION};
     }
 
     @Override
@@ -114,6 +115,13 @@ public class Noble extends AbstractBackground
     @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Fine Clothes x1, Signet Ring x1, Scroll of Pedigree x1, GP x25";
+        return privCharRef.GetInventory() + INVENTORY;
     }
 
     @Override

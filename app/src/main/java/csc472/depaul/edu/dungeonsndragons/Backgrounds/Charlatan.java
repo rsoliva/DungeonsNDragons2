@@ -8,12 +8,13 @@ public class Charlatan extends AbstractBackground
 
     public Charlatan()
     {
-
+        SKILL_PROF = new Skills[] {Skills.DECEPTION, Skills.DECEPTION};
     }
 
     public Charlatan(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.DECEPTION, Skills.DECEPTION};
     }
 
     @Override
@@ -109,6 +110,13 @@ public class Charlatan extends AbstractBackground
     @Override
     public int GetSpeed() {
         return privCharRef.GetSpeed();
+    }
+
+    @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Fine Clothes x1 Disguise Kit x1 Tools x1 GP x15 ";
+        return privCharRef.GetInventory() + INVENTORY;
     }
 
     @Override

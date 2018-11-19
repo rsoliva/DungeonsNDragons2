@@ -120,6 +120,11 @@ public class Tiefling extends AbstractRace implements CharacterMethods
     }
 
     @Override
+    public String GetInventory() {
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public int GetProficiency() {
         return 0;
     }

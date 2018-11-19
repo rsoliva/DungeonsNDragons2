@@ -8,12 +8,13 @@ public class Acolyte extends AbstractBackground
 
     public Acolyte()
     {
-
+        SKILL_PROF = new Skills[] {Skills.RELIGION, Skills.INSIGHT};
     }
 
     public Acolyte(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.RELIGION, Skills.INSIGHT};
     }
 
     @Override
@@ -109,6 +110,13 @@ public class Acolyte extends AbstractBackground
     @Override
     public int GetSpeed() {
         return privCharRef.GetSpeed();
+    }
+
+    @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Holy Symbol x1 Prayer Book x1 Prayer Wheel x1 Incense x5 Vestments x1 Common Clothes x1 GP x15 ";
+        return privCharRef.GetInventory() + INVENTORY;
     }
 
     @Override

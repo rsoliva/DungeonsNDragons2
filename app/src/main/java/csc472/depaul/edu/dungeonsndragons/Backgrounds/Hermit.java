@@ -8,7 +8,7 @@ public class Hermit extends AbstractBackground
 
     public Hermit()
     {
-
+        SKILL_PROF = new Skills[] {Skills.RELIGION, Skills.MEDICINE};
     }
 
     public Hermit(CharacterMethods charRef)
@@ -114,6 +114,13 @@ public class Hermit extends AbstractBackground
     @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Prayer Notes x1, Winter Blanket x1, Common Clothes x1, Herbalism Kit x1, GP x5";
+        return privCharRef.GetInventory() + INVENTORY;
     }
 
     @Override

@@ -8,12 +8,13 @@ public class GuildArtisan extends AbstractBackground
 
     public GuildArtisan()
     {
-
+        SKILL_PROF = new Skills[] {Skills.INSIGHT, Skills.PERSUASION};
     }
 
     public GuildArtisan(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.INSIGHT, Skills.PERSUASION};
     }
 
     @Override
@@ -114,6 +115,13 @@ public class GuildArtisan extends AbstractBackground
     @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Artisan Tool x1, Guild Introduction Letter x1, Traveler's Clothes x1, GP x15";
+        return this.privCharRef.GetInventory() + INVENTORY;
     }
 
     @Override

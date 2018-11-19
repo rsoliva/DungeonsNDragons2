@@ -10,7 +10,8 @@ public abstract class AbstractRace implements CharacterMethods
     protected int INTELLIGENCE = 0;
     protected int CHARISMA = 0;
     protected int SPEED = 0;
-    protected int CLASS_PROFICIENCY = 0;
+    protected int CLASS_PROFICIENCY = 2;
+    protected String INVENTORY = "";
     protected String RACE = "";
     protected String NAME = "";
     protected String JOB = "";
@@ -23,5 +24,6 @@ public abstract class AbstractRace implements CharacterMethods
     public abstract int GetIntelligence();
     public abstract int GetCharisma();
     public abstract int GetSpeed();
+    public abstract String GetInventory();
     public abstract int GetProficiency();
 }

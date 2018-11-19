@@ -125,6 +125,11 @@ public class Dragonborn extends AbstractRace implements CharacterMethods
     }
 
     @Override
+    public String GetInventory() {
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public String GetName()
     {
         return this.privCharRef.GetName();

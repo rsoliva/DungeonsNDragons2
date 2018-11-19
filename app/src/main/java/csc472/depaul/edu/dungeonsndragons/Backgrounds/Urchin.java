@@ -8,12 +8,13 @@ public class Urchin extends AbstractBackground
 
     public Urchin()
     {
-
+        SKILL_PROF = new Skills[] {Skills.SLEIGHT_OF_HAND, Skills.STEALTH};
     }
 
     public Urchin(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.SLEIGHT_OF_HAND, Skills.STEALTH};
     }
 
     @Override
@@ -114,6 +115,13 @@ public class Urchin extends AbstractBackground
     @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Small Knife x1, Map x1, Pet Mouse x1, Family Token x1, Common Clothes x1, GP x10";
+        return privCharRef.GetInventory() + INVENTORY;
     }
 
     @Override
