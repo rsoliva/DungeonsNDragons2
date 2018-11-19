@@ -70,5 +70,11 @@
     <string name="Persuasion">Persuasion</string>
     <string name="Deception">Deception</string>
 
+    <!--NAVIGATION-->
+    <string name="Info">Info</string>
+    <string name="Skills">Skills</string>
+    <string name="Inventory">Inventory</string>
+    <string name="Magic">Magic</string>
 
-</resources>
+
+    </resources>
