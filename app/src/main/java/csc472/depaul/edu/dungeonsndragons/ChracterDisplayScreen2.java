@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
 
-public class CharacterDisplayScreen2 extends AppCompatActivity implements View.OnClickListener {
+public class ChracterDisplayScreen2 extends AppCompatActivity implements View.OnClickListener {
     //strength skills
     TextView athletics;
     //wisdom skills
@@ -21,10 +21,14 @@ public class CharacterDisplayScreen2 extends AppCompatActivity implements View.O
     //charisma skills
     TextView decept, intimidate, persuade, perform;
 
+    //stores skills
+    Intent skillsIntent;
+
+    Button info,skills,magic,inventory;
+
     CharacterMethods dummy;
     int sMod, dMod, cMod, iMod, wMod, chMod;
 
-    Button info, skills, inventory, magic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,21 +40,20 @@ public class CharacterDisplayScreen2 extends AppCompatActivity implements View.O
         calcModifiers();
         bindViews();
         updateUIText();
+//        info = findViewById(R.id.Info);
+//        info.setOnClickListener(this);
+//
+//        skills = findViewById(R.id.Skills);
+//        skills.setOnClickListener(this);
+//
+//        magic = findViewById(R.id.magic);
+//        magic.setOnClickListener(this);
+//
+//        inventory = findViewById(R.id.Inventory);
+//        inventory.setOnClickListener(this);
     }
 
     private void bindViews(){
-
-        //navigation
-        info = findViewById(R.id.Infos);
-        skills = findViewById(R.id.Skillss);
-        inventory = findViewById(R.id.Inventorys);
-        magic = findViewById(R.id.magics);
-
-        info.setOnClickListener(this);
-        skills.setOnClickListener(this);
-        inventory.setOnClickListener(this);
-        magic.setOnClickListener(this);
-
         athletics = findViewById(R.id.athleticsVal);
 
         animalHandling = findViewById(R.id.animalHandleVal);
@@ -114,25 +117,6 @@ public class CharacterDisplayScreen2 extends AppCompatActivity implements View.O
         intimidate.setText(Integer.toString(chMod));
         persuade.setText(Integer.toString(chMod));
         perform.setText(Integer.toString(chMod));
-
-    }
-
-    @Override
-    public void onClick(View v) {
-        Intent mainScreen;
-        switch(v.getId()){
-            case R.id.Infos:
-                mainScreen = new Intent(this, CharacterMainDisplayScreen.class);
-                mainScreen.putExtra("characterInfo", (Character)dummy);
-                startActivity(mainScreen);
-                break;
-            case R.id.Skills:
-                break;
-            case R.id.Inventory:
-                break;
-            case R.id.magic :
-                break;
-        }
 
     }
 
