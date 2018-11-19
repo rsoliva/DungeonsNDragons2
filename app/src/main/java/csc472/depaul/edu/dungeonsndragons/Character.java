@@ -23,6 +23,7 @@ public class Character implements Parcelable, CharacterMethods
     private String race;
     private String job;
     private String background;
+    private String hitDie = "";
 
     @Override
     public int describeContents() {
@@ -36,6 +37,7 @@ public class Character implements Parcelable, CharacterMethods
         dest.writeString(race);
         dest.writeString(job);
         dest.writeString(background);
+        dest.writeString(hitDie);
         dest.writeInt(STRENGTH);
         dest.writeInt(DEXTERITY);
         dest.writeInt(CONSTITUTION);
@@ -45,11 +47,12 @@ public class Character implements Parcelable, CharacterMethods
     }
 
     //read from a parcel
-    public Character(Parcel p){
+    private Character(Parcel p){
         name = p.readString();
         race = p.readString();
         job = p.readString();
         background = p.readString();
+        hitDie = p.readString();
         STRENGTH = p.readInt();
         DEXTERITY = p.readInt();
         CONSTITUTION = p.readInt();
@@ -197,5 +200,10 @@ public class Character implements Parcelable, CharacterMethods
     public String GetJob() { return this.job; }
     @Override
     public String GetBackground() { return this.background; }
+
+    @Override
+    public String GetDie() {
+        return hitDie;
+    }
 
 }

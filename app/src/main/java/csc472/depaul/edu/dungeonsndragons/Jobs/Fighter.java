@@ -158,4 +158,9 @@ public class Fighter extends AbstractJob
     public String GetJob() {
         return "Fighter";
     }
+
+    @Override
+    public String GetDie() {
+        return privCharRef.GetDie() + "1d10";
+    }
 }

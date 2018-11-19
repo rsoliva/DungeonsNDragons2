@@ -158,4 +158,9 @@ public class Paladin extends AbstractJob
     public String GetJob() {
         return "Paladin";
     }
+
+    @Override
+    public String GetDie() {
+        return privCharRef.GetDie() + "1d10";
+    }
 }

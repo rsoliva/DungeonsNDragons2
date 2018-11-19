@@ -2,7 +2,7 @@ package csc472.depaul.edu.dungeonsndragons.Races;
 
 public class LightfootHalfling extends AbstractRace implements CharacterMethods
 {
-    private CharacterMethods privCharRef = null;
+    private CharacterMethods privCharRef;
 
     public LightfootHalfling(CharacterMethods charRef)
     {
@@ -116,7 +116,7 @@ public class LightfootHalfling extends AbstractRace implements CharacterMethods
     @Override
     public int GetSpeed()
     {
-        return this.privCharRef.GetSpeed();
+        return this.privCharRef.GetSpeed() + 25;
     }
 
     @Override
@@ -148,5 +148,10 @@ public class LightfootHalfling extends AbstractRace implements CharacterMethods
     @Override
     public String GetBackground() {
         return privCharRef.GetBackground();
+    }
+
+    @Override
+    public String GetDie() {
+        return privCharRef.GetDie();
     }
 }

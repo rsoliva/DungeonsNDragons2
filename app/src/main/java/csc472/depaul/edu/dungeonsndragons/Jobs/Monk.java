@@ -158,4 +158,9 @@ public class Monk extends AbstractJob
     public String GetJob() {
         return "Monk";
     }
+
+    @Override
+    public String GetDie() {
+        return privCharRef.GetDie() + "1d8";
+    }
 }

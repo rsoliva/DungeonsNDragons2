@@ -142,4 +142,9 @@ public class Hermit extends AbstractBackground
     public String GetJob() {
         return privCharRef.GetJob();
     }
+
+    @Override
+    public String GetDie() {
+        return this.DIE.toString();
+    }
 }

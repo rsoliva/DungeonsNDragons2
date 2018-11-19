@@ -158,4 +158,9 @@ public class Druid extends AbstractJob
     public String GetJob() {
         return "Druid";
     }
+
+    @Override
+    public String GetDie() {
+        return privCharRef.GetDie() + "1d8";
+    }
 }
