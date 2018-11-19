@@ -1,5 +1,9 @@
 package csc472.depaul.edu.dungeonsndragons;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,6 +11,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
 
 import csc472.depaul.edu.dungeonsndragons.Jobs.Barbarian;
 import csc472.depaul.edu.dungeonsndragons.Jobs.Bard;
@@ -59,6 +67,7 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
         calcModifiers();
         bindViews();
         updateUIText();
+        SaveToSDCard();
     }
 
     private void calcModifiers(){
@@ -257,6 +266,51 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
                 break;
             default:
                 dummy = new Monk(dummy);
+        }
+    }
+
+    private void SaveToSDCard()
+    {
+        try
+        {
+            RequestWriteToExternalStoragePermission();
+
+            File sdCard = Environment.getExternalStorageDirectory();
+            File dir = new File(sdCard.getAbsolutePath() + "/D&D");
+            dir.mkdir();
+
+            File file = new File(dir + "/characters.txt");
+            file.createNewFile();
+            String test = "Test input";
+
+            FileOutputStream outputFile = new FileOutputStream(file);
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputFile);
+            outputStreamWriter.append(test);
+
+            outputStreamWriter.close();
+            outputFile.close();
+        }
+        catch (Exception e)
+        {
+            Toast toast = Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG);
+            toast.show();
+        }
+    }
+
+    private void RequestWriteToExternalStoragePermission()
+    {
+        int writePermission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        if (writePermission != PackageManager.PERMISSION_GRANTED)
+        {
+            int REQUEST_EXTERNAL_STORAGE = 1;
+
+            String[] PERMISSIONS_STORAGE =
+            {
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+            };
+
+            ActivityCompat.requestPermissions(this, PERMISSIONS_STORAGE, REQUEST_EXTERNAL_STORAGE);
         }
     }
 

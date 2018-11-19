@@ -115,7 +115,7 @@ public class Entertainer extends AbstractBackground
     @Override
     public String GetInventory()
     {
-        INVENTORY += " ";
+        INVENTORY += "Instrument x1, Admirer's Favor x1, Costume x1, GP x15";
         return privCharRef.GetInventory() + INVENTORY;
     }
 

@@ -118,6 +118,13 @@ public class Sailor extends AbstractBackground
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Belaying Pin x1, 50Ft. Silk Rope x1, Lucky Charm x1, Common Clothes x1, GP x10";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public String GetBackground() {
         return "Sailor";
     }

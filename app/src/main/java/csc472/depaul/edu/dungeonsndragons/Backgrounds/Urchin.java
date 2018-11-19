@@ -118,6 +118,13 @@ public class Urchin extends AbstractBackground
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Small Knife x1, Map x1, Pet Mouse x1, Family Token x1, Common Clothes x1, GP x10";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public String GetBackground() {
         return "Urchin";
     }

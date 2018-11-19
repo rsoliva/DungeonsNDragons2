@@ -118,6 +118,13 @@ public class FolkHero extends AbstractBackground
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Artisan Tool x1, Shovel x1, Iron Pot x1, Common Clothes x1, GP x10";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public String GetBackground() {
         return "Folk Hero";
     }

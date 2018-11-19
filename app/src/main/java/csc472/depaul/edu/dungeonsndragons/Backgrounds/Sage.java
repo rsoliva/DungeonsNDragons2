@@ -118,6 +118,13 @@ public class Sage extends AbstractBackground
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Blank Ink x1, Quill x1, Small Knife x1, Letter x1, Common Clothes x1, GP x10";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public String GetBackground() {
         return "Sage";
     }

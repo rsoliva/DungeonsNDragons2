@@ -118,6 +118,13 @@ public class GuildArtisan extends AbstractBackground
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Artisan Tool x1, Guild Introduction Letter x1, Traveler's Clothes x1, GP x15";
+        return this.privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public String GetBackground() {
         return "Guild Artisan";
     }

@@ -118,6 +118,13 @@ public class Outlander extends AbstractBackground
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Staff x1, Hunting Trap x1, Animal Trophy x1, Traveler's Clothes x1, GP x10";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public String GetBackground() {
         return "Outlander";
     }
