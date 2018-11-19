@@ -1,20 +1,11 @@
 package csc472.depaul.edu.dungeonsndragons;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.os.Environment;
-import android.support.v4.app.ActivityCompat;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStreamWriter;
 
 import csc472.depaul.edu.dungeonsndragons.Jobs.Barbarian;
 import csc472.depaul.edu.dungeonsndragons.Jobs.Bard;
@@ -44,30 +35,27 @@ import csc472.depaul.edu.dungeonsndragons.Races.StoutHalfling;
 import csc472.depaul.edu.dungeonsndragons.Races.Tiefling;
 import csc472.depaul.edu.dungeonsndragons.Races.WoodElf;
 
-public class CharacterMainDisplayScreen extends AppCompatActivity {
+public class CharacterMainDisplayScreen extends AppCompatActivity implements View.OnClickListener {
 
     CharacterMethods dummy;
     TextView dStr, dDex, dCon, dInt, dWis, dCha;
     TextView dName, dClass, dBackground;
     TextView strMod, dexMod, conMod, intMod, wisMod, chaMod;
     TextView initiative, proficiency, speed, hitDie, armorVal, hpVal;
-//    View screen;
     int sMod, dMod, cMod, iMod, wMod, chMod;
-//    float x1 = 0;
-//    float x2 = 0;
+    Button info, skills, inventory, magic;
+    Boolean wrapped = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_main_display_screen);
-//        screen = findViewById(R.id.mainScreen);
-//        screen.setOnTouchListener(this);
         getCharInfo();
-        wrapCharacter();
+        if(dummy.GetRace() != null && dummy.GetJob() != null)
+            wrapCharacter();
         calcModifiers();
         bindViews();
         updateUIText();
-        SaveToSDCard();
     }
 
     private void calcModifiers(){
@@ -83,11 +71,27 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
         return (int)(Math.floor(score / 2 - 5));
     }
     private void wrapCharacter(){
-        WrapRace();
-        WrapJob();
+        if(wrapped == false) {
+            WrapRace();
+            WrapJob();
+            wrapped = true;
+        }
+        dummy = new Character(dummy);
+
     }
 
     private void bindViews(){
+        //navigation
+        info = findViewById(R.id.Info);
+        skills = findViewById(R.id.Skills);
+        inventory = findViewById(R.id.Inventory);
+        magic = findViewById(R.id.magic);
+
+        info.setOnClickListener(this);
+        skills.setOnClickListener(this);
+        inventory.setOnClickListener(this);
+        magic.setOnClickListener(this);
+
         //General
         dName = findViewById(R.id.nameVal);
         dBackground = findViewById(R.id.BackgroundVal);
@@ -269,73 +273,21 @@ public class CharacterMainDisplayScreen extends AppCompatActivity {
         }
     }
 
-    private void SaveToSDCard()
-    {
-        try
-        {
-            RequestWriteToExternalStoragePermission();
-
-            File sdCard = Environment.getExternalStorageDirectory();
-            File dir = new File(sdCard.getAbsolutePath() + "/D&D");
-            dir.mkdir();
-
-            File file = new File(dir + "/characters.txt");
-            file.createNewFile();
-            String test = "Test input";
-
-            FileOutputStream outputFile = new FileOutputStream(file);
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputFile);
-            outputStreamWriter.append(test);
-
-            outputStreamWriter.close();
-            outputFile.close();
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.info:
+                break;
+            case R.id.Skills:
+                Intent mainScreen = new Intent(this, CharacterDisplayScreen2.class);
+                mainScreen.putExtra("characterInfo", (Character)dummy);
+                startActivity(mainScreen);
+                break;
+            case R.id.Inventory:
+                break;
+            case R.id.magic :
+                break;
         }
-        catch (Exception e)
-        {
-            Toast toast = Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG);
-            toast.show();
-        }
+
     }
-
-    private void RequestWriteToExternalStoragePermission()
-    {
-        int writePermission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-
-        if (writePermission != PackageManager.PERMISSION_GRANTED)
-        {
-            int REQUEST_EXTERNAL_STORAGE = 1;
-
-            String[] PERMISSIONS_STORAGE =
-            {
-                Manifest.permission.WRITE_EXTERNAL_STORAGE
-            };
-
-            ActivityCompat.requestPermissions(this, PERMISSIONS_STORAGE, REQUEST_EXTERNAL_STORAGE);
-        }
-    }
-
-//    @Override
-//    public boolean onTouch(View v, MotionEvent event) {
-//        switch(event.getAction())
-//        {
-//            case MotionEvent.ACTION_DOWN:
-//                x1 = event.getX();
-//                break;
-//            case MotionEvent.ACTION_UP:
-//                x2 = event.getX();
-//                float deltaX = x2 - x1;
-//                Log.d("distance", Float.toString(deltaX));
-//                Log.d("touched", Float.toString(x2));
-//                if (Math.abs(deltaX) > 10)
-//                {
-//                    Toast.makeText(this, "left2right swipe", Toast.LENGTH_SHORT).show ();
-//                }
-//                else
-//                {
-//                    // consider as something else - a screen tap for example
-//                }
-//                break;
-//        }
-//        return false;
-//    }
 }

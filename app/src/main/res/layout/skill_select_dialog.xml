@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/animalHandleCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Animal Handing" />
+
+        <CheckBox
+            android:id="@+id/Athletics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Athletics" />
+
+        <CheckBox
+            android:id="@+id/InsightCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Insight" />
+
+        <CheckBox
+            android:id="@+id/IntimidationCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Intimidation" />
+
+        <CheckBox
+            android:id="@+id/NatureCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Nature" />
+
+        <CheckBox
+            android:id="@+id/PerceptionCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Perception" />
+
+        <CheckBox
+            android:id="@+id/ReligionCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Religion" />
+
+        <CheckBox
+            android:id="@+id/SurvivalCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Survival" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

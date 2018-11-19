@@ -9,6 +9,42 @@
     tools:context=".CharacterMainDisplayScreen" >
 
     <LinearLayout
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/Info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Info" />
+
+        <Button
+            android:id="@+id/Skills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Skills" />
+
+        <Button
+            android:id="@+id/Inventory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Inventory" />
+
+        <Button
+            android:id="@+id/magic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Magic" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/NCB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
