@@ -93,6 +93,11 @@ public class Paladin extends AbstractJob
     }
 
     @Override
+    public void SetDie(String inDie) {
+
+    }
+
+    @Override
     public int GetStrength() {
         return privCharRef.GetStrength();
     }

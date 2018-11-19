@@ -1,11 +1,20 @@
 package csc472.depaul.edu.dungeonsndragons;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
 
 import csc472.depaul.edu.dungeonsndragons.Jobs.Barbarian;
 import csc472.depaul.edu.dungeonsndragons.Jobs.Bard;
@@ -43,6 +52,7 @@ public class CharacterMainDisplayScreen extends AppCompatActivity implements Vie
     TextView strMod, dexMod, conMod, intMod, wisMod, chaMod;
     TextView initiative, proficiency, speed, hitDie, armorVal, hpVal;
     int sMod, dMod, cMod, iMod, wMod, chMod;
+    int HP_VALUE;
     Button info, skills, inventory, magic;
     Boolean wrapped = false;
 
@@ -51,11 +61,12 @@ public class CharacterMainDisplayScreen extends AppCompatActivity implements Vie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_main_display_screen);
         getCharInfo();
-        if(dummy.GetRace() != null && dummy.GetJob() != null)
+        if(dummy.GetDie().compareTo("") == 0)
             wrapCharacter();
         calcModifiers();
         bindViews();
         updateUIText();
+        SaveToSD();
     }
 
     private void calcModifiers(){
@@ -155,15 +166,19 @@ public class CharacterMainDisplayScreen extends AppCompatActivity implements Vie
         switch (dummy.GetDie()){
             case "1d6":
                 hpVal.setText("6");
+                HP_VALUE = 6;
                 break;
             case "1d8":
                 hpVal.setText("8");
+                HP_VALUE = 8;
                 break;
             case "1d10":
                 hpVal.setText("10");
+                HP_VALUE = 10;
                 break;
             case "1d12":
                 hpVal.setText("12");
+                HP_VALUE = 12;
                 break;
         }
     }
@@ -288,6 +303,99 @@ public class CharacterMainDisplayScreen extends AppCompatActivity implements Vie
             case R.id.magic :
                 break;
         }
+    }
 
+
+
+
+
+
+
+
+    private void SaveToSD()
+    {
+        try
+        {
+            RequestWriteToExternalStoragePermission();
+
+            File sdCard = Environment.getExternalStorageDirectory();
+            File dir = new File(sdCard.getAbsolutePath() + "/DnD");
+            dir.mkdir();
+
+            File file = new File(dir + "/character.txt");
+            file.createNewFile();
+
+            FileOutputStream outputFile = new FileOutputStream(file);
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputFile);
+            StoreCharacter(outputStreamWriter);
+
+            outputStreamWriter.close();
+            outputFile.close();
+        }
+        catch (Exception e)
+        {
+            Toast toast = Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG);
+            toast.show();
+        }
+    }
+    private void StoreCharacter(OutputStreamWriter streamWriter)
+    {
+        try
+        {
+            //Grab Character Data
+            String sdName = dummy.GetName();
+            String sdBackground = dummy.GetBackground();
+            String sdRace = dummy.GetRace();
+            String sdJob = dummy.GetJob();
+
+            //Grab Character Stats
+            String sdStr = Integer.toString(dummy.GetStrength());
+            String sdDex = Integer.toString(dummy.GetDexterity());
+            String sdCon = Integer.toString(dummy.GetConstitution());
+            String sdInt = Integer.toString(dummy.GetIntelligence());
+            String sdWis = Integer.toString(dummy.GetWisdom());
+            String sdCha = Integer.toString(dummy.GetCharisma());
+            String sdHP  = Integer.toString(this.HP_VALUE);
+
+            //Grab Character Die
+            String sdDie = dummy.GetDie();
+
+            //Write to Card
+            streamWriter.append(sdName + ",");
+            streamWriter.append(sdBackground + ",");
+            streamWriter.append(sdRace + ",");
+            streamWriter.append(sdJob + ",");
+
+            streamWriter.append(sdDie + ",");
+
+            streamWriter.append(sdStr + ",");
+            streamWriter.append(sdDex + ",");
+            streamWriter.append(sdCon + ",");
+            streamWriter.append(sdInt + ",");
+            streamWriter.append(sdWis + ",");
+            streamWriter.append(sdCha + ",");
+            streamWriter.append(sdHP);
+        }
+        catch (Exception e)
+        {
+            Toast toast = Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG);
+            toast.show();
+        }
+    }
+
+    private void RequestWriteToExternalStoragePermission()
+    {
+        int writePermission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+
+        if (writePermission != PackageManager.PERMISSION_GRANTED)
+        {
+            int REQUEST_EXTERNAL_STORAGE = 1;
+
+            String[] PERMISSIONS_STORAGE = {
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE
+            };
+
+            ActivityCompat.requestPermissions(this, PERMISSIONS_STORAGE, REQUEST_EXTERNAL_STORAGE);
+        }
     }
 }

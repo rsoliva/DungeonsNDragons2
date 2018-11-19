@@ -67,6 +67,11 @@ public class MountainDwarf extends AbstractRace implements CharacterMethods
     }
 
     @Override
+    public void SetDie(String inDie) {
+
+    }
+
+    @Override
     public void SetProficiency(int val) {
 
     }

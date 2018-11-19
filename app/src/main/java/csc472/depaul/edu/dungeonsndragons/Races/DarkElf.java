@@ -67,6 +67,11 @@ public class DarkElf extends AbstractRace
     }
 
     @Override
+    public void SetDie(String inDie) {
+
+    }
+
+    @Override
     public void SetProficiency(int val) {
 
     }
