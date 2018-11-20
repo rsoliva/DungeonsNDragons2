@@ -12,14 +12,71 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <EditText
-        android:id="@+id/inventoryText"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="top|left"
-        android:lines="10"
-       android:scrollbars="vertical"
-        android:inputType="textImeMultiLine"
-        android:text="@string/blank" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Weapons"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/inventoryText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:digits="abcefghijklmnopqrstuvwxyzABCEDFGHIJKLMNOPQRSTUVWXYZ1234567890\n "
+                android:gravity="top|left"
+                android:inputType="textImeMultiLine"
+
+                android:scrollbars="vertical"
+                android:text="@string/blank" />
+
+            <TextView
+                android:id="@+id/EquipmentText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Equipment"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/inventoryText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="abcefghijklmnopqrstuvwxyzABCEDFGHIJKLMNOPQRSTUVWXYZ1234567890\n "
+                android:gravity="top|left"
+                android:inputType="textImeMultiLine"
+
+                android:scrollbars="vertical"
+                android:text="@string/blank" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Consumables"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/inventoryText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="abcefghijklmnopqrstuvwxyzABCEDFGHIJKLMNOPQRSTUVWXYZ1234567890\n "
+                android:gravity="top|left"
+                android:inputType="textImeMultiLine"
+
+                android:scrollbars="vertical"
+                android:text="@string/blank" />
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>

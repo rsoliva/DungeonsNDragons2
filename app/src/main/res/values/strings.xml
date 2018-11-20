@@ -70,6 +70,11 @@
     <string name="Persuasion">Persuasion</string>
     <string name="Deception">Deception</string>
 
+
+    <!---Inventory Categories-->
+    <string name = "Weapons"> Weapons </string>
+    <string name = "Equipment"> Equipment</string>>
+    <string name = "Consumables"> Consumables </string>
     <!--NAVIGATION-->
     <string name="Info">Info</string>
     <string name="Skills">Skills</string>
