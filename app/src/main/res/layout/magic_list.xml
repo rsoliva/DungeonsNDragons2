@@ -3,7 +3,8 @@
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/magicTable"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:visibility="invisible">
     <!--android:layout_weight="1"-->
 
     <TextView
@@ -21,7 +22,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/wpnName"
+            android:id="@+id/mgcName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -53,56 +54,28 @@
         android:layout_height="15dp">
 
         <TextView
-            android:id="@+id/wpn1"
+            android:id="@+id/mgc1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/tMagic"
+            android:text="@string/burningHands"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/wpn1t"
+            android:id="@+id/mgc1t"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/blank"
+            android:text="@string/evocation"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/wpn1d"
+            android:id="@+id/mgc1d"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/blank"
-            android:textSize="18sp" />
-
-    </TableRow>
-
-    <TableRow
-        android:layout_width="122dp"
-        android:layout_height="15dp">
-
-        <TextView
-            android:id="@+id/wpn2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/tMagic"
-            android:textSize="18sp" />
-        <TextView
-            android:id="@+id/wpn2t"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/blank"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/wpn2d"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/blank"
+            android:text="@string/d6"
+            android:layout_gravity="center"
             android:textSize="18sp" />
 
     </TableRow>
@@ -112,27 +85,59 @@
         android:layout_height="15dp">
 
         <TextView
-            android:id="@+id/wpn3"
+            android:id="@+id/mgc2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/tMagic"
+            android:text="@string/disguiseSelf"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/wpn3t"
+            android:id="@+id/mgc2t"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/blank"
+            android:text="@string/illusion"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/wpn3d"
+            android:id="@+id/mgc2d"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/blank"
+            android:text="@string/none"
+            android:layout_gravity="center"
+            android:textSize="18sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="122dp"
+        android:layout_height="15dp">
+
+        <TextView
+            android:id="@+id/mgc3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/detectMagic"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/mgc3t"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/divination"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/mgc3d"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/none"
+            android:layout_gravity="center"
             android:textSize="18sp" />
 
     </TableRow>

@@ -275,6 +275,7 @@ public class CharacterMainDisplayScreen extends AppCompatActivity implements Vie
                 break;
             case "Sorcerer":
                 dummy = new Sorcerer(dummy);
+                break;
             case "Warlock":
                 dummy = new Warlock(dummy);
                 break;

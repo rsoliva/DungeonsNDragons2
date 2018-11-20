@@ -203,8 +203,6 @@ public class ChracterDisplayScreen2 extends AppCompatActivity implements View.On
 
     }
 
-
-
     private void WrapJob()
     {
         switch (dummy.GetJob())
