@@ -48,7 +48,7 @@ public class CharacterList extends AppCompatActivity {
         });
 
         File dir = Environment.getExternalStorageDirectory();
-        File file = new File(dir, "/DnD/character.txt");
+        File file = new File(dir, "/DnD");
 
         if (file.exists())
         {

@@ -63,7 +63,7 @@ public class Barbarian extends AbstractJob
 
     @Override
     public void SetSpeed(int val) {
-
+        this.privCharRef.SetSpeed(val);
     }
 
     @Override

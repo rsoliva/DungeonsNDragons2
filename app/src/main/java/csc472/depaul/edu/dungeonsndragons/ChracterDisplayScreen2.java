@@ -7,13 +7,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import csc472.depaul.edu.dungeonsndragons.Jobs.Barbarian;
 import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
 
 public class ChracterDisplayScreen2 extends AppCompatActivity implements View.OnClickListener {
     //strength skills
     TextView athletics;
     //wisdom skills
-    TextView animalHandling, insight, medicine, survival;
+    TextView animalHandling, insight, medicine, survival, perception;
     //dex skills
     TextView stealth, acrobatics, sleight;
     //intelligence skills
@@ -39,6 +40,9 @@ public class ChracterDisplayScreen2 extends AppCompatActivity implements View.On
 //        wrapCharacter();
         calcModifiers();
         bindViews();
+
+
+
         updateUIText();
         info = findViewById(R.id.Info);
         info.setOnClickListener(this);
@@ -60,6 +64,7 @@ public class ChracterDisplayScreen2 extends AppCompatActivity implements View.On
         insight = findViewById(R.id.insightVal);
         medicine = findViewById(R.id.medVal);
         survival = findViewById(R.id.survivalVal);
+        perception = findViewById(R.id.perceptionVal);
 
         stealth = findViewById(R.id.stealthVal);
         acrobatics = findViewById(R.id.acroVal);
@@ -95,13 +100,16 @@ public class ChracterDisplayScreen2 extends AppCompatActivity implements View.On
         return (int)(Math.floor(score / 2 - 5));
     }
 
-    private void updateUIText() {
+    private void updateUIText()
+    {
+
         athletics.setText(Integer.toString(sMod));
 
         animalHandling.setText(Integer.toString(wMod));
         insight.setText(Integer.toString(wMod));
         medicine.setText(Integer.toString(wMod));
         survival.setText(Integer.toString(wMod));
+        perception.setText(Integer.toString(wMod));
 
         stealth.setText(Integer.toString(dMod));
         acrobatics.setText(Integer.toString(dMod));
@@ -139,16 +147,10 @@ public class ChracterDisplayScreen2 extends AppCompatActivity implements View.On
                 startActivity(inventory);
                 break;
 
-//            case R.id.magic :
-//                mainScreen = new Intent(this, Magic.class);
-//                mainScreen.putExtra("characterInfo", (Character)dummy);
-//                startActivity(mainScreen);
-
 
         }
 
     }
-
 
 
 }
