@@ -8,12 +8,65 @@
         android:id="@+id/weaponSelectText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select Your Weapon"
+        android:text="@string/PickWeapons"
+        android:textAlignment="center"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/mmtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/MartialMelee"
         android:textAlignment="center"
         android:textSize="18sp"/>
 
     <Spinner
-        android:id="@+id/weaponSpinner"
+        android:id="@+id/MartialMelee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:spinnerMode="dialog"/>
+
+    <TextView
+        android:id="@+id/mrtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/MartialRanged"
+        android:textAlignment="center"
+        android:textSize="18sp"/>
+
+    <Spinner
+        android:id="@+id/MartialRanged"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:spinnerMode="dialog"/>
+
+    <TextView
+        android:id="@+id/smtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/SimpleMelee"
+        android:textAlignment="center"
+        android:textSize="18sp"/>
+
+    <Spinner
+        android:id="@+id/SimpleMelee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:spinnerMode="dialog"/>
+
+    <TextView
+        android:id="@+id/srtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/SimpleRanged"
+        android:textAlignment="center"
+        android:textSize="18sp"/>
+
+    <Spinner
+        android:id="@+id/SimpleRanged"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 

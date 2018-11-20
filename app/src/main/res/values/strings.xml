@@ -77,14 +77,19 @@
     <string name = "Consumables"> Consumables </string>
     <!--NAVIGATION-->
 
+
+    <string name = "Info">Info</string>
+    <string name = "Skills"> Skills </string>
+    <string name = "Inventory"> Inventory </string>
+    <!--<string name = "Magic"> Magic </string>-->
+
     <string name = "Magic"> Magic </string>
+
     <string name = "Confirm"> Confirm </string>
     <string name = "PickWeapons">Pick Weapons </string>
     <string name = "PickSkills"> Pick SKills </string>
+    <string name ="Magic">Magic</string>
 
-    <string name="Info">Info</string>
-    <string name="Skills">Skills</string>
-    <string name="Inventory">Inventory</string>
     <string name="Combat">Combat</string>
 
     <!--Combat Stuff-->
@@ -93,6 +98,11 @@
     <string name="Type">Type</string>
     <string name="tWeapon">Sword</string>
     <string name="tMagic">Fireball</string>
+
+    <string name="MartialMelee">Martial Melee</string>
+    <string name="MartialRanged">Martial Ranged</string>
+    <string name="SimpleMelee">Simple Melee</string>
+    <string name="SimpleRanged">Simple Ranged</string>
 
 
 </resources>

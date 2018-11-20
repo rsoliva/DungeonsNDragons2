@@ -1,6 +1,7 @@
 package csc472.depaul.edu.dungeonsndragons;
 
 import android.content.Intent;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -71,7 +72,7 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
         BGVals.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, Background.values()));
         BGVals.setOnItemSelectedListener(this);
 
-        weaponSelectDialog = new WeaponSelectDialogFragment(this);
+//        weaponSelectDialog = new WeaponSelectDialogFragment(this);
         skillSelectDialog = new SkillSelectDialogFragment(this);
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,8 +85,8 @@ public class CreationScreen extends AppCompatActivity implements AdapterView.OnI
         weaponSelectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                weaponSelectDialog.show();
+                DialogFragment newFragment = new WeaponSelectDialogFragment();
+                newFragment.show(getSupportFragmentManager(), "missiles");
             }
         });
 
