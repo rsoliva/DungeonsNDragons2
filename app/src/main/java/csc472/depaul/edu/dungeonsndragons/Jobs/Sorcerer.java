@@ -10,7 +10,7 @@ public class Sorcerer extends AbstractJob
     {
         this.DIE = DieType.D6;
         this.PRIMARY_STAT = new Stats[] {Stats.CHARISMA};
-        this.SAVING_THROW = new Stats[] {Stats.CONSTITUTION, Stats.CHARISMA};
+        this.SAVING_THROW = new String[] {Stats.CONSTITUTION.toString(), Stats.CHARISMA.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.NONE};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.DAGGER, SimpleMelee.QUARTERSTAFF};
         this.SR_PROF = new SimpleRange[] {SimpleRange.DART, SimpleRange.SLING, SimpleRange.LIGHT_CROSSBOW};
@@ -24,7 +24,7 @@ public class Sorcerer extends AbstractJob
 
         this.DIE = DieType.D6;
         this.PRIMARY_STAT = new Stats[] {Stats.CHARISMA};
-        this.SAVING_THROW = new Stats[] {Stats.CONSTITUTION, Stats.CHARISMA};
+        this.SAVING_THROW = new String[] {Stats.CONSTITUTION.toString(), Stats.CHARISMA.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.NONE};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.DAGGER, SimpleMelee.QUARTERSTAFF};
         this.SR_PROF = new SimpleRange[] {SimpleRange.DART, SimpleRange.SLING, SimpleRange.LIGHT_CROSSBOW};
@@ -93,6 +93,11 @@ public class Sorcerer extends AbstractJob
     }
 
     @Override
+    public void SetDie(String inDie) {
+
+    }
+
+    @Override
     public int GetStrength() {
         return privCharRef.GetStrength();
     }
@@ -128,8 +133,20 @@ public class Sorcerer extends AbstractJob
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Dagger x2 ";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return SAVING_THROW;
     }
 
     @Override

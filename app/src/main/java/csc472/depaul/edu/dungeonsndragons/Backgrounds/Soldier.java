@@ -8,12 +8,13 @@ public class Soldier extends AbstractBackground
 
     public Soldier()
     {
-
+        SKILL_PROF = new Skills[] {Skills.ATHLETICS, Skills.INTIMIDATION};
     }
 
     public Soldier(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.ATHLETICS, Skills.INTIMIDATION};
     }
 
     @Override
@@ -77,6 +78,11 @@ public class Soldier extends AbstractBackground
     }
 
     @Override
+    public void SetDie(String inDie) {
+
+    }
+
+    @Override
     public int GetStrength() {
         return privCharRef.GetStrength();
     }
@@ -114,6 +120,18 @@ public class Soldier extends AbstractBackground
     @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return privCharRef.GetSavingThrows();
+    }
+
+    @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Rank Insignia x1, Enemy Trophy x1, Deck of Cards x1, Common Clothes x1, GP x10";
+        return privCharRef.GetInventory() + INVENTORY;
     }
 
     @Override

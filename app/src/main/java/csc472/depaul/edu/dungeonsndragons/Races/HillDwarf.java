@@ -67,6 +67,11 @@ public class HillDwarf extends AbstractRace implements CharacterMethods
     }
 
     @Override
+    public void SetDie(String inDie) {
+
+    }
+
+    @Override
     public void SetProficiency(int val){
     }
 
@@ -119,8 +124,18 @@ public class HillDwarf extends AbstractRace implements CharacterMethods
     }
 
     @Override
+    public String GetInventory() {
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public int GetProficiency() {
         return 0;
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return new String[0];
     }
 
     @Override

@@ -8,12 +8,13 @@ public class Sailor extends AbstractBackground
 
     public Sailor()
     {
-
+        SKILL_PROF = new Skills[] {Skills.ATHLETICS, Skills.PERCEPTION};
     }
 
     public Sailor(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.ATHLETICS, Skills.PERCEPTION};
     }
 
     @Override
@@ -77,6 +78,11 @@ public class Sailor extends AbstractBackground
     }
 
     @Override
+    public void SetDie(String inDie) {
+
+    }
+
+    @Override
     public int GetStrength() {
         return privCharRef.GetStrength();
     }
@@ -114,6 +120,18 @@ public class Sailor extends AbstractBackground
     @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return privCharRef.GetSavingThrows();
+    }
+
+    @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Belaying Pin x1, 50Ft. Silk Rope x1, Lucky Charm x1, Common Clothes x1, GP x10";
+        return privCharRef.GetInventory() + INVENTORY;
     }
 
     @Override

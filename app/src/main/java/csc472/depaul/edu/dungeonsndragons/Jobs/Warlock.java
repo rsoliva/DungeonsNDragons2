@@ -10,7 +10,7 @@ public class Warlock extends AbstractJob
     {
         this.DIE = DieType.D8;
         this.PRIMARY_STAT = new Stats[] {Stats.CHARISMA};
-        this.SAVING_THROW = new Stats[] {Stats.WISDOM, Stats.CHARISMA};
+        this.SAVING_THROW = new String[] {Stats.WISDOM.toString(), Stats.CHARISMA.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.LIGHT};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.ALL};
         this.SR_PROF = new SimpleRange[] {SimpleRange.ALL};
@@ -24,7 +24,7 @@ public class Warlock extends AbstractJob
 
         this.DIE = DieType.D8;
         this.PRIMARY_STAT = new Stats[] {Stats.CHARISMA};
-        this.SAVING_THROW = new Stats[] {Stats.WISDOM, Stats.CHARISMA};
+        this.SAVING_THROW = new String[] {Stats.WISDOM.toString(), Stats.CHARISMA.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.LIGHT};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.ALL};
         this.SR_PROF = new SimpleRange[] {SimpleRange.ALL};
@@ -93,6 +93,11 @@ public class Warlock extends AbstractJob
     }
 
     @Override
+    public void SetDie(String inDie) {
+
+    }
+
+    @Override
     public int GetStrength() {
         return privCharRef.GetStrength();
     }
@@ -130,6 +135,18 @@ public class Warlock extends AbstractJob
     @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return SAVING_THROW;
+    }
+
+    @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Leather Armor x1 Dagger x2 ";
+        return privCharRef.GetInventory() + INVENTORY;
     }
 
     @Override
