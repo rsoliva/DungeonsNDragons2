@@ -22,10 +22,12 @@ public class CharacterList extends AppCompatActivity {
 
     Button newCharacter;
     TextView dndTitle;
-    ArrayList<StringBuilder> charList = new ArrayList<>();
+    StringBuilder[] charList = new StringBuilder[3];
+//    ArrayList<StringBuilder> charList = new ArrayList<>();
     String[] name = new String[3], background = new String[3], race = new String[3], job = new String[3], dice = new String[3];
-    int[] str = new int[3], dex = new int[3], con = new int[3], intt = new int[3], wis = new int[3], cha = new int[3];
+    int[] str = new int[3], dex = new int[3], con = new int[3], intt = new int[3], wis = new int[3], cha = new int[3], speed = new int[3];
     int counter = 0;
+    int charListIndex = 0;
     CharacterMethods dummy;
 
     @Override
@@ -66,33 +68,40 @@ public class CharacterList extends AppCompatActivity {
     {
         File dir = Environment.getExternalStorageDirectory();
 
-        File file = new File(dir, "/DnD/character.txt");
-
-        if (file.exists())
-        {
-            StringBuilder text = new StringBuilder();
-
-            try
+        File file = new File(dir, "/DnD");
+//        dir = dir.);
+        File[] fileList = file.listFiles();
+        for(File tFile : fileList){
+            if (tFile.exists())
             {
-                BufferedReader br = new BufferedReader(new FileReader(file));
-                String line;
+                StringBuilder text = new StringBuilder();
 
-                while ((line = br.readLine()) != null)
+                try
                 {
-                    text.append(line);
-                    text.append('n');
-                    charList.add(text);
+                    BufferedReader br = new BufferedReader(new FileReader(tFile));
+                    String line;
+
+                    while ((line = br.readLine()) != null)
+                    {
+                        text.append(line);
+                        text.append('n');
+                        charList[charListIndex] = text;
+
+                        //loops index so max 3 characters, and overwrites first if there are more than 3
+                        if(charListIndex == 2) charListIndex = 0;
+                        else charListIndex++;
+                    }
+                }
+                catch (Exception e) {
+                    Toast toast = Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG);
+                    toast.show();
                 }
             }
-            catch (Exception e) {
-                Toast toast = Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG);
+            else
+            {
+                Toast toast = Toast.makeText(this, "File Does Not Exists", Toast.LENGTH_LONG);
                 toast.show();
             }
-        }
-        else
-        {
-            Toast toast = Toast.makeText(this, "File Does Not Exists", Toast.LENGTH_LONG);
-            toast.show();
         }
     }
 
@@ -100,14 +109,19 @@ public class CharacterList extends AppCompatActivity {
     {
         for (StringBuilder chars : charList)
         {
-            String[] tokens = chars.toString().split(",");
-            ConvertToStats(tokens, counter);
-            if (counter >= 3)
-                counter = 0;
-            else
-                counter++;
+            if(chars != null){
+                String[] tokens = chars.toString().split(",");
+                ConvertToStats(tokens, counter);
+                SetButtons(counter);
+
+                //increments for the next character
+                if (counter >= 3)
+                    counter = 0;
+                else
+                    counter++;
+            }
         }
-        SetButtons(counter);
+//        SetButtons(counter);
     }
 
     private void ConvertToStats(String[] inTokens, int index)
@@ -116,14 +130,15 @@ public class CharacterList extends AppCompatActivity {
         background[index] = inTokens[1];
         race[index] = inTokens[2];
         job[index] = inTokens[3];
-        dice[index] = inTokens[4];
+        speed[index] = Integer.parseInt(inTokens[4]);
+        dice[index] = inTokens[5];
 
-        str[index] = Integer.parseInt(inTokens[5]);
-        dex[index] = Integer.parseInt(inTokens[6]);
-        con[index] = Integer.parseInt(inTokens[7]);
-        intt[index] = Integer.parseInt(inTokens[8]);
-        wis[index] = Integer.parseInt(inTokens[9]);
-        cha[index] = Integer.parseInt(inTokens[10]);
+        str[index] = Integer.parseInt(inTokens[6]);
+        dex[index] = Integer.parseInt(inTokens[7]);
+        con[index] = Integer.parseInt(inTokens[8]);
+        intt[index] = Integer.parseInt(inTokens[9]);
+        wis[index] = Integer.parseInt(inTokens[10]);
+        cha[index] = Integer.parseInt(inTokens[11]);
     }
 
     private void SetButtons(final int index)
@@ -134,19 +149,19 @@ public class CharacterList extends AppCompatActivity {
 
         String charID = name[index] + ", " + race[index] + ", " + job[index] + ", " + background[index];
 
-        if (charList.get(0) != null)
+        if (charList[0] != null && index == 0)
         {
             btn1.setText(charID);
             btn1.setVisibility(View.VISIBLE);
         }
 
-        if (charList.get(1) != null)
+        if (charList[1] != null && index == 1)
         {
             btn2.setText(charID);
             btn2.setVisibility(View.VISIBLE);
         }
 
-        if (charList.get(2) != null)
+        if (charList[2] != null && index == 2)
         {
             btn3.setText(charID);
             btn3.setVisibility(View.VISIBLE);

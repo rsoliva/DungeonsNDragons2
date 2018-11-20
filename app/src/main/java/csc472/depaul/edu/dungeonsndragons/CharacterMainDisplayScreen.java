@@ -331,7 +331,7 @@ public class CharacterMainDisplayScreen extends AppCompatActivity implements Vie
             File dir = new File(sdCard.getAbsolutePath() + "/DnD");
             dir.mkdir();
 
-            File file = new File(dir + "/character.txt");
+            File file = new File(dir + "/" + dummy.GetName() + ".txt");
             file.createNewFile();
 
             FileOutputStream outputFile = new FileOutputStream(file);
@@ -356,6 +356,7 @@ public class CharacterMainDisplayScreen extends AppCompatActivity implements Vie
             String sdBackground = dummy.GetBackground();
             String sdRace = dummy.GetRace();
             String sdJob = dummy.GetJob();
+            String sdSpeed = Integer.toString(dummy.GetSpeed());
 
             //Grab Character Stats
             String sdStr = Integer.toString(dummy.GetStrength());
@@ -374,6 +375,7 @@ public class CharacterMainDisplayScreen extends AppCompatActivity implements Vie
             streamWriter.append(sdBackground + ",");
             streamWriter.append(sdRace + ",");
             streamWriter.append(sdJob + ",");
+            streamWriter.append(sdSpeed + ",");
 
             streamWriter.append(sdDie + ",");
 
