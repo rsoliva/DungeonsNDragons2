@@ -1,5 +1,6 @@
 package csc472.depaul.edu.dungeonsndragons;
 
+import android.content.Intent;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -27,10 +28,25 @@ public class Character implements Parcelable, CharacterMethods
     private String background;
     private String hitDie = "";
     private String[] SAVING_THROWS;
-
+    public String WeaponInventory="";
+    public String EquipmentInventory="";
+    public String ConsumablesInventory="";
     //Character skills
     public ArrayList<String> SkillList;
 
+    public void setInventory(String addInventory,String inventorytype){
+        switch(inventorytype){
+            case "Weapon":
+                WeaponInventory += " " + addInventory;
+                break;
+            case "Consumable":
+                ConsumablesInventory += " "+ addInventory;
+                break;
+            case "Equipment":
+                EquipmentInventory += " " + addInventory;
+                break;
+        }
+    }
     @Override
     public int describeContents() {
         return hashCode();
@@ -44,6 +60,9 @@ public class Character implements Parcelable, CharacterMethods
         dest.writeString(job);
         dest.writeString(background);
         dest.writeString(hitDie);
+        dest.writeString(WeaponInventory);
+        dest.writeString(EquipmentInventory);
+        dest.writeString(ConsumablesInventory);
         dest.writeInt(STRENGTH);
         dest.writeInt(DEXTERITY);
         dest.writeInt(CONSTITUTION);
@@ -51,6 +70,7 @@ public class Character implements Parcelable, CharacterMethods
         dest.writeInt(WISDOM);
         dest.writeInt(CHARISMA);
         dest.writeInt(SPEED);
+
     }
 
     //read from a parcel
@@ -60,6 +80,9 @@ public class Character implements Parcelable, CharacterMethods
         job = p.readString();
         background = p.readString();
         hitDie = p.readString();
+        WeaponInventory = p.readString();
+        EquipmentInventory = p.readString();
+        ConsumablesInventory = p.readString();
         STRENGTH = p.readInt();
         DEXTERITY = p.readInt();
         CONSTITUTION = p.readInt();
@@ -85,6 +108,10 @@ public class Character implements Parcelable, CharacterMethods
         this.job = charRef.GetJob();
         this.hitDie = charRef.GetDie();
         this.SPEED = charRef.GetSpeed();
+        this.WeaponInventory = charRef.GetspecificInventory("Weapon");
+        this.ConsumablesInventory = charRef.GetspecificInventory("Consumable");
+        this.EquipmentInventory = charRef.GetspecificInventory("Equipment");
+
     }
 
     public static final Parcelable.Creator<Character> CREATOR = new Parcelable.Creator<Character>(){
@@ -212,6 +239,19 @@ public class Character implements Parcelable, CharacterMethods
 
     @Override
     public String GetInventory() {
+
+        return "";
+    }
+
+    public String GetspecificInventory(String inventoryType){
+        switch(inventoryType){
+            case "Weapon":
+                return WeaponInventory;
+            case "Equipment":
+                return EquipmentInventory;
+            case "Consumable":
+                return ConsumablesInventory;
+        }
         return "";
     }
 

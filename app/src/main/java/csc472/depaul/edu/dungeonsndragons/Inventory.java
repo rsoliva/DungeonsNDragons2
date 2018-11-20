@@ -27,12 +27,35 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
         currentWeaponInventory = findViewById(R.id.WeaponlistText);
         currentEquipmentInventory = findViewById(R.id.EquipmentListText);
         currentConsumableInventory = findViewById(R.id.ConsumablesListText);
+        String weaponInvStr = ((Character) dummy).GetspecificInventory("Weapon");
+        String equipInvStr = ((Character) dummy).GetspecificInventory("Weapon");
+        String consumableInvStr = ((Character) dummy).GetspecificInventory("Weapon");
+
+        if(weaponInvStr.compareTo("")==0) {
+            currentWeaponInventory.setText("");
+        }
+        else{
+            currentWeaponInventory.setText(((Character) dummy).GetspecificInventory("Weapon"));
+        }
+
+        if(equipInvStr.compareTo("")==0 ) {
+            currentEquipmentInventory.setText("");
+        }
+        else{
+            currentEquipmentInventory.setText(((Character) dummy).GetspecificInventory("Equipment"));
+        }
+
+        if(consumableInvStr.compareTo("")==0) {
+            currentConsumableInventory.setText("");
+        }
+        else {
+            currentConsumableInventory.setText(((Character) dummy).GetspecificInventory("Consumable"));
+        }
 
 
-
-        currentWeaponInventoryData += currentWeaponInventory.getText() + "/n";
-        currentEquipmentInventoryData += currentEquipmentInventory.getText()+ "/n";
-        currentConsumableInventoryData += currentConsumableInventory.getText() + "/n";
+//        currentWeaponInventoryData += currentWeaponInventory.getText();
+//        currentEquipmentInventoryData += currentEquipmentInventory.getText();
+//        currentConsumableInventoryData += currentConsumableInventory.getText();
 
         Info = findViewById(R.id.Info);
         Skills = findViewById(R.id.Skills);
@@ -80,25 +103,31 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
         if(b != null)
             dummy = (Character)b.getParcelable("characterInfo");
 
-            currentWeaponInventoryData =b.getParcelable("WeaponInventoryData");
+
     }
 
 
     @Override
     public void onClick(View v) {
-        currentWeaponInventoryData += currentWeaponInventory.getText() + "/n";
-        currentEquipmentInventoryData += currentEquipmentInventory.getText()+ "/n";
-        currentConsumableInventoryData += currentConsumableInventory.getText() + "/n";
+        currentWeaponInventoryData = currentWeaponInventory.getText().toString();
+        currentEquipmentInventoryData = currentEquipmentInventory.getText().toString();
+        currentConsumableInventoryData = currentConsumableInventory.getText().toString();
+        ((Character)dummy).setInventory(currentWeaponInventoryData,"Weapon");
+        ((Character)dummy).setInventory(currentEquipmentInventoryData,"Equipment");
+        ((Character)dummy).setInventory(currentConsumableInventoryData,"Consumable");
+
 
         switch(v.getId()){
             case R.id.Info:
                 Intent mainScreen = new Intent(this, CharacterMainDisplayScreen.class);
+
                 mainScreen.putExtra("characterInfo", (Character)dummy);
                 //mainScreen.putExtra("characterInventory",currentInventoryData);
                 startActivity(mainScreen);
                 break;
             case R.id.Skills:
                 Intent skillScreen = new Intent(this, ChracterDisplayScreen2.class);
+
                 skillScreen.putExtra("characterInfo", (Character)dummy);
               //  skillScreen.putExtra("characterInventory",currentInventoryData);
                 startActivity(skillScreen);

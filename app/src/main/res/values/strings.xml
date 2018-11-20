@@ -81,10 +81,6 @@
     <string name = "Confirm"> Confirm </string>
     <string name = "PickWeapons">Pick Weapons </string>
     <string name = "PickSkills"> Pick SKills </string>
-
-    <string name="Info">Info</string>
-    <string name="Skills">Skills</string>
-    <string name="Inventory">Inventory</string>
     <string name="Combat">Combat</string>
 
     <!--Combat Stuff-->

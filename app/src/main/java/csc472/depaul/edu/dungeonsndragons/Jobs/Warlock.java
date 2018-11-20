@@ -173,4 +173,9 @@ public class Warlock extends AbstractJob
     public String GetDie() {
         return privCharRef.GetDie() + "1d8";
     }
+
+    @Override
+    public String GetspecificInventory(String inventoryType) {
+        return this.privCharRef.GetspecificInventory(inventoryType);
+    }
 }

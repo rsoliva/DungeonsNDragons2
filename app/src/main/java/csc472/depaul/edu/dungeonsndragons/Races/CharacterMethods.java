@@ -31,6 +31,7 @@ public interface CharacterMethods
     int GetCharisma();
     int GetSpeed();
     int GetProficiency();
+    String GetspecificInventory(String inventoryType);
     String[] GetSavingThrows();
     String GetInventory();
     String GetBackground();
