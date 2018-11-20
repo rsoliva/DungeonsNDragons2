@@ -173,4 +173,8 @@ public class Fighter extends AbstractJob
     public String GetDie() {
         return privCharRef.GetDie() + "1d10";
     }
+    @Override
+    public String GetspecificInventory(String inventoryType) {
+        return this.privCharRef.GetspecificInventory(inventoryType);
+    }
 }

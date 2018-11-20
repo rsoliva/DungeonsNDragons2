@@ -156,6 +156,11 @@ public class Entertainer extends AbstractBackground
 
     @Override
     public String GetDie() {
-        return this.DIE.toString();
+        return privCharRef.DIE.toString();
+    }
+
+    @Override
+    public String GetspecificInventory(String inventoryType) {
+        return this.privCharRef.GetspecificInventory(inventoryType);
     }
 }

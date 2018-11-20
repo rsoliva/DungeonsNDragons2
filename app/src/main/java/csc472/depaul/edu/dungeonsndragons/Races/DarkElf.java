@@ -130,6 +130,11 @@ public class DarkElf extends AbstractRace
     }
 
     @Override
+    public String GetspecificInventory(String inventoryType) {
+        return this.character.GetspecificInventory(inventoryType);
+    }
+
+    @Override
     public String[] GetSavingThrows() {
         return new String[0];
     }

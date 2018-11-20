@@ -164,4 +164,9 @@ public class WoodElf extends AbstractRace implements CharacterMethods
     public String GetDie() {
         return privCharRef.GetDie();
     }
+
+    @Override
+    public String GetspecificInventory(String inventoryType) {
+        return this.privCharRef.GetspecificInventory(inventoryType);
+    }
 }

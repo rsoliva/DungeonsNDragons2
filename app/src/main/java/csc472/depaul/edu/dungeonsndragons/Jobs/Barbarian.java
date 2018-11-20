@@ -172,4 +172,9 @@ public class Barbarian extends AbstractJob
     public String GetDie() {
         return privCharRef.GetDie() + "1d12";
     }
+
+    @Override
+    public String GetspecificInventory(String inventoryType) {
+        return this.privCharRef.GetspecificInventory(inventoryType);
+    }
 }

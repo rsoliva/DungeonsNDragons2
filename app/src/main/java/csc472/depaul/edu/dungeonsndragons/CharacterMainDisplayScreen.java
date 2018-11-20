@@ -16,6 +16,17 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 
+import csc472.depaul.edu.dungeonsndragons.Backgrounds.Acolyte;
+import csc472.depaul.edu.dungeonsndragons.Backgrounds.Charlatan;
+import csc472.depaul.edu.dungeonsndragons.Backgrounds.Criminal;
+import csc472.depaul.edu.dungeonsndragons.Backgrounds.Entertainer;
+import csc472.depaul.edu.dungeonsndragons.Backgrounds.FolkHero;
+import csc472.depaul.edu.dungeonsndragons.Backgrounds.GuildArtisan;
+import csc472.depaul.edu.dungeonsndragons.Backgrounds.Hermit;
+import csc472.depaul.edu.dungeonsndragons.Backgrounds.Noble;
+import csc472.depaul.edu.dungeonsndragons.Backgrounds.Sage;
+import csc472.depaul.edu.dungeonsndragons.Backgrounds.Sailor;
+import csc472.depaul.edu.dungeonsndragons.Backgrounds.Urchin;
 import csc472.depaul.edu.dungeonsndragons.Jobs.Barbarian;
 import csc472.depaul.edu.dungeonsndragons.Jobs.Bard;
 import csc472.depaul.edu.dungeonsndragons.Jobs.Cleric;
@@ -82,11 +93,52 @@ public class CharacterMainDisplayScreen extends AppCompatActivity implements Vie
         return (int)(Math.floor(score / 2 - 5));
     }
     private void wrapCharacter(){
+
+
             WrapRace();
+            WrapBackground();
             WrapJob();
 
             dummy = new Character(dummy);
 
+    }
+
+    private void WrapBackground() {
+        switch (dummy.GetBackground()){
+            case "Acolyte":
+                dummy = new Acolyte(dummy);
+                break;
+            case "Charlatan":
+                dummy = new Charlatan(dummy);
+                break;
+            case "Criminal":
+                dummy = new Criminal(dummy);
+                break;
+            case "Entertainer":
+                dummy = new Entertainer(dummy);
+                break;
+            case "Folk Hero":
+                dummy = new FolkHero(dummy);
+                break;
+            case "Guild Artisan":
+                dummy = new GuildArtisan(dummy);
+                break;
+            case "Hermit":
+                dummy = new Hermit(dummy);
+                break;
+            case "Noble":
+                dummy = new Noble(dummy);
+                break;
+            case "Sage":
+                dummy = new Sage(dummy);
+                break;
+            case "sailor":
+                dummy = new Sailor(dummy);
+                break;
+            case "Urchin":
+                dummy = new Urchin(dummy);
+                break;
+        }
     }
 
     private void bindViews(){
