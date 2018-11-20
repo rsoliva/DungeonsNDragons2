@@ -77,9 +77,6 @@
     <string name = "Consumables"> Consumables </string>
     <!--NAVIGATION-->
 
-    <string name = "Info">Info</string>
-    <string name = "Skills"> Skills </string>
-    <string name = "Inventory"> Inventory </string>
     <string name = "Magic"> Magic </string>
     <string name = "Confirm"> Confirm </string>
     <string name = "PickWeapons">Pick Weapons </string>
@@ -94,7 +91,6 @@
     <string name="weapon">Weapons</string>
     <string name="Damage">Damage</string>
     <string name="Type">Type</string>
-    <string name="Magic">Magic</string>
     <string name="tWeapon">Sword</string>
     <string name="tMagic">Fireball</string>
 

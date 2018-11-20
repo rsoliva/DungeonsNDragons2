@@ -37,7 +37,7 @@ public class ChracterDisplayScreen2 extends AppCompatActivity implements View.On
     //stores skills
     Intent skillsIntent;
 
-    Button info,skills,magic,inventory;
+    Button info,skills,combat,inventory;
     String hitDie;
 
     CharacterMethods dummy;
@@ -59,16 +59,20 @@ public class ChracterDisplayScreen2 extends AppCompatActivity implements View.On
 
         updateUIText();
         info = findViewById(R.id.Info);
-        info.setOnClickListener(this);
+        if (info != null)
+            info.setOnClickListener(this);
 
         skills = findViewById(R.id.Skills);
-        skills.setOnClickListener(this);
+        if (skills != null)
+            skills.setOnClickListener(this);
 
-        magic = findViewById(R.id.magic);
-        magic.setOnClickListener(this);
+        combat = findViewById(R.id.Combat);
+        if (combat != null)
+            combat.setOnClickListener(this);
 
         inventory = findViewById(R.id.Inventory);
-        inventory.setOnClickListener(this);
+        if (inventory != null)
+            inventory.setOnClickListener(this);
     }
 
     private void bindViews(){
@@ -171,11 +175,10 @@ public class ChracterDisplayScreen2 extends AppCompatActivity implements View.On
     }
     @Override
     public void onClick(View v) {
-
+        dummy.SetDie(hitDie);
         switch(v.getId()){
 
             case R.id.Info:
-                dummy.SetDie(hitDie);
                 Intent skillsScreen = new Intent(this, CharacterMainDisplayScreen.class);
                 skillsScreen.putExtra("characterInfo", (Character)dummy);
                 startActivity(skillsScreen);
@@ -185,12 +188,17 @@ public class ChracterDisplayScreen2 extends AppCompatActivity implements View.On
                 break;
 
             case R.id.Inventory:
+
                 Intent inventory = new Intent(this, Inventory.class);
                 inventory.putExtra("characterInfo", (Character)dummy);
                 startActivity(inventory);
                 break;
 
-
+            case R.id.Combat:
+                Intent combat = new Intent(this, CombatActivity.class);
+                combat.putExtra("characterInfo", (Character)dummy);
+                startActivity(combat);
+                break;
         }
 
     }
