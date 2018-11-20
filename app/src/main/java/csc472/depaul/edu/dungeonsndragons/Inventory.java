@@ -12,9 +12,9 @@ import android.widget.EditText;
 import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
 
 public class Inventory extends AppCompatActivity implements View.OnClickListener {
-    EditText currentInventory;
+    EditText currentWeaponInventory,currentEquipmentInventory,currentConsumableInventory;
     Button Info,Skills,Inventory,Magic;
-    String currentInventorydata;
+    String currentWeaponInventoryData,currentEquipmentInventoryData,currentConsumableInventoryData = "";
     CharacterMethods dummy;
     Boolean isReached = false;
     @Override
@@ -23,7 +23,17 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.activity_inventory);
 
         getCharInfo();
-        currentInventory = findViewById(R.id.inventoryText);
+
+        currentWeaponInventory = findViewById(R.id.WeaponlistText);
+        currentEquipmentInventory = findViewById(R.id.EquipmentListText);
+        currentConsumableInventory = findViewById(R.id.ConsumablesListText);
+
+
+
+        currentWeaponInventoryData += currentWeaponInventory.getText() + "/n";
+        currentEquipmentInventoryData += currentEquipmentInventory.getText()+ "/n";
+        currentConsumableInventoryData += currentConsumableInventory.getText() + "/n";
+
         Info = findViewById(R.id.Info);
         Skills = findViewById(R.id.Skills);
         Inventory = findViewById(R.id.Inventory);
@@ -33,6 +43,7 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
         Inventory.setOnClickListener(this);
         Skills.setOnClickListener(this);
         Info.setOnClickListener(this);
+
 
 //        currentInventory.addTextChangedListener(new TextWatcher() {
 //            @Override
@@ -64,20 +75,28 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
         Bundle b = getIntent().getExtras();
         if(b != null)
             dummy = (Character)b.getParcelable("characterInfo");
+
+            currentWeaponInventoryData =b.getParcelable("WeaponInventoryData");
     }
 
 
     @Override
     public void onClick(View v) {
+        currentWeaponInventoryData += currentWeaponInventory.getText() + "/n";
+        currentEquipmentInventoryData += currentEquipmentInventory.getText()+ "/n";
+        currentConsumableInventoryData += currentConsumableInventory.getText() + "/n";
+
         switch(v.getId()){
             case R.id.Info:
                 Intent mainScreen = new Intent(this, CharacterMainDisplayScreen.class);
                 mainScreen.putExtra("characterInfo", (Character)dummy);
+                //mainScreen.putExtra("characterInventory",currentInventoryData);
                 startActivity(mainScreen);
                 break;
             case R.id.Skills:
                 Intent skillScreen = new Intent(this, ChracterDisplayScreen2.class);
                 skillScreen.putExtra("characterInfo", (Character)dummy);
+              //  skillScreen.putExtra("characterInventory",currentInventoryData);
                 startActivity(skillScreen);
                 break;
             case R.id.Inventory:
