@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/weaponTable"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--android:layout_weight="1"-->
+
+    <TextView
+        android:id="@+id/wpnText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/weapon"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/wpnName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/Name"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/typeText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/Type"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/damText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/Damage"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="122dp"
+        android:layout_height="15dp">
+
+        <TextView
+            android:id="@+id/wpn1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/tWeapon"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/wpn1t"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/blank"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/wpn1d"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/blank"
+            android:textSize="18sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="122dp"
+        android:layout_height="15dp">
+
+        <TextView
+            android:id="@+id/wpn2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/tWeapon"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/wpn2t"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/blank"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/wpn2d"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/blank"
+            android:textSize="18sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="122dp"
+        android:layout_height="15dp">
+
+        <TextView
+            android:id="@+id/wpn3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/tWeapon"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/wpn3t"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/blank"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/wpn3d"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/blank"
+            android:textSize="18sp" />
+
+    </TableRow>
+
+</TableLayout>
