@@ -2,13 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="csc472.depaul.edu.dungeonsndragons">
 
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE">
-    </uses-permission>
-    
-    <uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE">
-    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -28,7 +23,8 @@
         <activity android:name=".ChracterDisplayScreen2" />
         <activity android:name=".CharacterMainDisplayScreen" />
         <activity android:name=".GenerateStatsActivity" />
-        <activity android:name=".Inventory"></activity>
+        <activity android:name=".Inventory" />
+        <activity android:name=".CombatActivity"></activity>
     </application>
 
 </manifest>
