@@ -20,6 +20,7 @@ public interface CharacterMethods
     void SetProficiency(int val);
     void SetName(String name);
     void SetBackground(String inBackground);
+    void SetDie(String inDie);
 
 
     int GetStrength();
@@ -30,6 +31,8 @@ public interface CharacterMethods
     int GetCharisma();
     int GetSpeed();
     int GetProficiency();
+    String[] GetSavingThrows();
+    String GetInventory();
     String GetBackground();
     String GetName();
     String GetRace();

@@ -67,6 +67,11 @@ public class DarkElf extends AbstractRace
     }
 
     @Override
+    public void SetDie(String inDie) {
+
+    }
+
+    @Override
     public void SetProficiency(int val) {
 
     }
@@ -122,6 +127,16 @@ public class DarkElf extends AbstractRace
     @Override
     public int GetProficiency() {
         return 0;
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return new String[0];
+    }
+
+    @Override
+    public String GetInventory() {
+        return character.GetInventory() + INVENTORY;
     }
 
     @Override

@@ -8,12 +8,13 @@ public class Sage extends AbstractBackground
 
     public Sage()
     {
-
+        SKILL_PROF = new Skills[] {Skills.ARCANA, Skills.HISTORY};
     }
 
     public Sage(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.ARCANA, Skills.HISTORY};
     }
 
     @Override
@@ -77,6 +78,11 @@ public class Sage extends AbstractBackground
     }
 
     @Override
+    public void SetDie(String inDie) {
+
+    }
+
+    @Override
     public int GetStrength() {
         return privCharRef.GetStrength();
     }
@@ -114,6 +120,18 @@ public class Sage extends AbstractBackground
     @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return privCharRef.GetSavingThrows();
+    }
+
+    @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Blank Ink x1, Quill x1, Small Knife x1, Letter x1, Common Clothes x1, GP x10";
+        return privCharRef.GetInventory() + INVENTORY;
     }
 
     @Override

@@ -8,12 +8,13 @@ public class Outlander extends AbstractBackground
 
     public Outlander()
     {
-
+        SKILL_PROF = new Skills[] {Skills.ATHLETICS, Skills.SURVIVAL};
     }
 
     public Outlander(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.ATHLETICS, Skills.SURVIVAL};
     }
 
     @Override
@@ -77,6 +78,11 @@ public class Outlander extends AbstractBackground
     }
 
     @Override
+    public void SetDie(String inDie) {
+
+    }
+
+    @Override
     public int GetStrength() {
         return privCharRef.GetStrength();
     }
@@ -114,6 +120,18 @@ public class Outlander extends AbstractBackground
     @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return privCharRef.GetSavingThrows();
+    }
+
+    @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Staff x1, Hunting Trap x1, Animal Trophy x1, Traveler's Clothes x1, GP x10";
+        return privCharRef.GetInventory() + INVENTORY;
     }
 
     @Override

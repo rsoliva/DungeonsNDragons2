@@ -10,7 +10,7 @@ public class Barbarian extends AbstractJob
     {
         this.DIE = DieType.D12;
         this.PRIMARY_STAT = new Stats[] {Stats.STRENGTH};
-        this.SAVING_THROW = new Stats[] {Stats.STRENGTH, Stats.CONSTITUTION};
+        this.SAVING_THROW = new String[] {Stats.STRENGTH.toString(), Stats.CONSTITUTION.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.LIGHT, ArmorTypes.MEDIUM, ArmorTypes.SHIELDS};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.ALL};
         this.SR_PROF = new SimpleRange[] {SimpleRange.ALL};
@@ -23,7 +23,7 @@ public class Barbarian extends AbstractJob
         this.privCharRef = charRef;
         this.DIE = DieType.D12;
         this.PRIMARY_STAT = new Stats[] {Stats.STRENGTH};
-        this.SAVING_THROW = new Stats[] {Stats.STRENGTH, Stats.CONSTITUTION};
+        this.SAVING_THROW = new String[] {Stats.STRENGTH.toString(), Stats.CONSTITUTION.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.LIGHT, ArmorTypes.MEDIUM, ArmorTypes.SHIELDS};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.ALL};
         this.SR_PROF = new SimpleRange[] {SimpleRange.ALL};
@@ -63,7 +63,7 @@ public class Barbarian extends AbstractJob
 
     @Override
     public void SetSpeed(int val) {
-
+        this.privCharRef.SetSpeed(val);
     }
 
     @Override
@@ -88,6 +88,11 @@ public class Barbarian extends AbstractJob
 
     @Override
     public void SetBackground(String inBackground) {
+
+    }
+
+    @Override
+    public void SetDie(String inDie) {
 
     }
 
@@ -127,8 +132,20 @@ public class Barbarian extends AbstractJob
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Explorers' Pack x1 Javelins x4 ";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return SAVING_THROW;
     }
 
     @Override

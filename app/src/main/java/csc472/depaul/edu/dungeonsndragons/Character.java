@@ -26,6 +26,7 @@ public class Character implements Parcelable, CharacterMethods
     private String job;
     private String background;
     private String hitDie = "";
+    private String[] SAVING_THROWS;
 
     //Character skills
     public ArrayList<String> SkillList;
@@ -49,6 +50,7 @@ public class Character implements Parcelable, CharacterMethods
         dest.writeInt(INTELLIGENCE);
         dest.writeInt(WISDOM);
         dest.writeInt(CHARISMA);
+        dest.writeInt(SPEED);
     }
 
     //read from a parcel
@@ -64,6 +66,7 @@ public class Character implements Parcelable, CharacterMethods
         INTELLIGENCE = p.readInt();
         WISDOM = p.readInt();
         CHARISMA = p.readInt();
+        SPEED = p.readInt();
     }
 
     public Character(){
@@ -81,7 +84,7 @@ public class Character implements Parcelable, CharacterMethods
         this.background = charRef.GetBackground();
         this.job = charRef.GetJob();
         this.hitDie = charRef.GetDie();
-
+        this.SPEED = charRef.GetSpeed();
     }
 
     public static final Parcelable.Creator<Character> CREATOR = new Parcelable.Creator<Character>(){
@@ -160,6 +163,12 @@ public class Character implements Parcelable, CharacterMethods
     public void SetName(String name) { this.name = name; }
 
     @Override
+    public void SetDie(String inDie)
+    {
+        this.hitDie = inDie;
+    }
+
+    @Override
     public int GetStrength()
     {
         return STRENGTH;
@@ -202,9 +211,19 @@ public class Character implements Parcelable, CharacterMethods
     }
 
     @Override
+    public String GetInventory() {
+        return "";
+    }
+
+    @Override
     public int GetProficiency()
     {
         return CLASS_PROFICIENCY;
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return SAVING_THROWS;
     }
 
     @Override

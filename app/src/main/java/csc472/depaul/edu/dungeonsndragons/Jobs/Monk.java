@@ -10,7 +10,7 @@ public class Monk extends AbstractJob
     {
         this.DIE = DieType.D8;
         this.PRIMARY_STAT = new Stats[] {Stats.DEXTERITY, Stats.WISDOM};
-        this.SAVING_THROW = new Stats[] {Stats.STRENGTH, Stats.DEXTERITY};
+        this.SAVING_THROW = new String[] {Stats.STRENGTH.toString(), Stats.DEXTERITY.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.NONE};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.ALL};
         this.SR_PROF = new SimpleRange[] {SimpleRange.ALL};
@@ -24,7 +24,7 @@ public class Monk extends AbstractJob
 
         this.DIE = DieType.D8;
         this.PRIMARY_STAT = new Stats[] {Stats.DEXTERITY, Stats.WISDOM};
-        this.SAVING_THROW = new Stats[] {Stats.STRENGTH, Stats.DEXTERITY};
+        this.SAVING_THROW = new String[] {Stats.STRENGTH.toString(), Stats.DEXTERITY.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.NONE};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.ALL};
         this.SR_PROF = new SimpleRange[] {SimpleRange.ALL};
@@ -93,6 +93,11 @@ public class Monk extends AbstractJob
     }
 
     @Override
+    public void SetDie(String inDie) {
+
+    }
+
+    @Override
     public int GetStrength() {
         return privCharRef.GetStrength();
     }
@@ -128,8 +133,20 @@ public class Monk extends AbstractJob
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Darts x10 ";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return SAVING_THROW;
     }
 
     @Override

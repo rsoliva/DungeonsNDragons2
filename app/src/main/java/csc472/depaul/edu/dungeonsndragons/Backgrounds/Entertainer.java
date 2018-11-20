@@ -8,12 +8,13 @@ public class Entertainer extends AbstractBackground
 
     public Entertainer()
     {
-
+        SKILL_PROF = new Skills[] {Skills.ACROBATICS, Skills.PERFORMANCE};
     }
 
     public Entertainer(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.ACROBATICS, Skills.PERFORMANCE};
     }
 
     @Override
@@ -77,6 +78,11 @@ public class Entertainer extends AbstractBackground
     }
 
     @Override
+    public void SetDie(String inDie) {
+
+    }
+
+    @Override
     public int GetStrength() {
         return privCharRef.GetStrength();
     }
@@ -112,8 +118,20 @@ public class Entertainer extends AbstractBackground
     }
 
     @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Instrument x1, Admirer's Favor x1, Costume x1, GP x15";
+        return privCharRef.GetInventory() + INVENTORY;
+    }
+
+    @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return privCharRef.GetSavingThrows();
     }
 
     @Override

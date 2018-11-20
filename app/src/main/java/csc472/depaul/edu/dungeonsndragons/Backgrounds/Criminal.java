@@ -8,12 +8,13 @@ public class Criminal extends AbstractBackground
 
     public Criminal()
     {
-
+        SKILL_PROF = new Skills[] {Skills.DECEPTION, Skills.STEALTH};
     }
 
     public Criminal(CharacterMethods charRef)
     {
         privCharRef = charRef;
+        SKILL_PROF = new Skills[] {Skills.DECEPTION, Skills.STEALTH};
     }
 
     @Override
@@ -77,6 +78,11 @@ public class Criminal extends AbstractBackground
     }
 
     @Override
+    public void SetDie(String inDie) {
+
+    }
+
+    @Override
     public int GetStrength() {
         return privCharRef.GetStrength();
     }
@@ -114,6 +120,18 @@ public class Criminal extends AbstractBackground
     @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return privCharRef.GetSavingThrows();
+    }
+
+    @Override
+    public String GetInventory()
+    {
+        INVENTORY += "Crowbar x1, Dark Common Clothes x1 GP x15 ";
+        return privCharRef.GetInventory() + INVENTORY;
     }
 
     @Override
