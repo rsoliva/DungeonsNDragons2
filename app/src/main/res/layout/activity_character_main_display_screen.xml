@@ -36,7 +36,7 @@
             android:text="@string/Inventory" />
 
         <Button
-            android:id="@+id/magic"
+            android:id="@+id/Combat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

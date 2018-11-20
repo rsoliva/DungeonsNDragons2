@@ -13,7 +13,7 @@ import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
 
 public class Inventory extends AppCompatActivity implements View.OnClickListener {
     EditText currentWeaponInventory,currentEquipmentInventory,currentConsumableInventory;
-    Button Info,Skills,Inventory,Magic;
+    Button Info,Skills,Inventory,Combat;
     String currentWeaponInventoryData,currentEquipmentInventoryData,currentConsumableInventoryData = "";
     CharacterMethods dummy;
     Boolean isReached = false;
@@ -37,12 +37,16 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
         Info = findViewById(R.id.Info);
         Skills = findViewById(R.id.Skills);
         Inventory = findViewById(R.id.Inventory);
-        Magic = findViewById(R.id.magic);
+        Combat = findViewById(R.id.Combat);
 
-        Magic.setOnClickListener(this);
-        Inventory.setOnClickListener(this);
-        Skills.setOnClickListener(this);
-        Info.setOnClickListener(this);
+        if (Combat != null)
+            Combat.setOnClickListener(this);
+        if (Inventory != null)
+            Inventory.setOnClickListener(this);
+        if (Skills != null)
+            Skills.setOnClickListener(this);
+        if (Info != null)
+            Info.setOnClickListener(this);
 
 
 //        currentInventory.addTextChangedListener(new TextWatcher() {
@@ -102,10 +106,10 @@ public class Inventory extends AppCompatActivity implements View.OnClickListener
             case R.id.Inventory:
 
                 break;
-            case R.id.magic :
-//                inventoryScreen = new Intent(this, CharacterDisplayScreen2.class);
-//                inventoryScreen.putExtra("InventoryInfo", currentInventorydata);
-//                startActivity(inventoryScreen);
+            case R.id.Combat:
+                Intent combat = new Intent(this, CombatActivity.class);
+                combat.putExtra("characterInfo", (Character)dummy);
+                startActivity(combat);
                 break;
         }
 

@@ -53,7 +53,7 @@ public class CharacterMainDisplayScreen extends AppCompatActivity implements Vie
     TextView initiative, proficiency, speed, hitDie, armorVal, hpVal;
     int sMod, dMod, cMod, iMod, wMod, chMod;
     int HP_VALUE;
-    Button info, skills, inventory, magic;
+    Button info, skills, inventory, combat;
     Boolean wrapped = false;
 
     @Override
@@ -94,12 +94,12 @@ public class CharacterMainDisplayScreen extends AppCompatActivity implements Vie
         info = findViewById(R.id.Info);
         skills = findViewById(R.id.Skills);
         inventory = findViewById(R.id.Inventory);
-        magic = findViewById(R.id.magic);
+        combat = findViewById(R.id.Combat);
 
         info.setOnClickListener(this);
         skills.setOnClickListener(this);
         inventory.setOnClickListener(this);
-        magic.setOnClickListener(this);
+        combat.setOnClickListener(this);
 
         //General
         dName = findViewById(R.id.nameVal);
@@ -305,11 +305,11 @@ public class CharacterMainDisplayScreen extends AppCompatActivity implements Vie
                 startActivity(inventory);
                 break;
 
-//            case R.id.magic :
-//                mainScreen = new Intent(this, Magic.class);
-//                mainScreen.putExtra("characterInfo", (Character)dummy);
-//                startActivity(mainScreen);
-
+            case R.id.Combat:
+                Intent combat = new Intent(this, CombatActivity.class);
+                combat.putExtra("characterInfo", (Character)dummy);
+                startActivity(combat);
+                break;
 
         }
     }

@@ -12,7 +12,7 @@ import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
 public class CombatActivity extends AppCompatActivity implements View.OnClickListener{
 
 //    EditText currentInventory;
-    Button Info,Skills,Inventory,Magic;
+    Button Info,Skills,Inventory,Combat;
 //    String currentInventorydata;
     CharacterMethods dummy;
 
@@ -26,9 +26,7 @@ public class CombatActivity extends AppCompatActivity implements View.OnClickLis
         Info = findViewById(R.id.Info);
         Skills = findViewById(R.id.Skills);
         Inventory = findViewById(R.id.Inventory);
-        Magic = findViewById(R.id.magic);
 
-        Magic.setOnClickListener(this);
         Inventory.setOnClickListener(this);
         Skills.setOnClickListener(this);
         Info.setOnClickListener(this);
@@ -54,12 +52,9 @@ public class CombatActivity extends AppCompatActivity implements View.OnClickLis
                 startActivity(skillScreen);
                 break;
             case R.id.Inventory:
-
-                break;
-            case R.id.magic :
-//                inventoryScreen = new Intent(this, CharacterDisplayScreen2.class);
-//                inventoryScreen.putExtra("InventoryInfo", currentInventorydata);
-//                startActivity(inventoryScreen);
+                Intent inventory = new Intent(this, Inventory.class);
+                inventory.putExtra("characterInfo", (Character)dummy);
+                startActivity(inventory);
                 break;
         }
 
