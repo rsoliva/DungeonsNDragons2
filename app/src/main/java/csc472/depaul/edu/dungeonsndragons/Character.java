@@ -3,6 +3,8 @@ package csc472.depaul.edu.dungeonsndragons;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.ArrayList;
+
 import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
 
 //Base class that gets wrapped in decorator
@@ -24,6 +26,9 @@ public class Character implements Parcelable, CharacterMethods
     private String job;
     private String background;
     private String hitDie = "";
+
+    //Character skills
+    public ArrayList<String> SkillList;
 
     @Override
     public int describeContents() {

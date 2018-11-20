@@ -14,10 +14,10 @@
             android:id="@+id/animalHandleCheckBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Animal Handing" />
+            android:text="@string/AnimalHandling" />
 
         <CheckBox
-            android:id="@+id/Athletics"
+            android:id="@+id/AthleticsCheckBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Athletics" />
@@ -57,5 +57,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/Survival" />
+
+        <Button
+            android:id="@+id/ConfirmBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Confirm" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

@@ -29,10 +29,10 @@
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/inventoryText"
+                android:id="@+id/WeaponlistText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:digits="abcefghijklmnopqrstuvwxyzABCEDFGHIJKLMNOPQRSTUVWXYZ1234567890\n "
+                android:digits="abcdefghijklmnopqrstuvwxyzABCEDFGHIJKLMNOPQRSTUVWXYZ1234567890=-+\n "
                 android:gravity="top|left"
                 android:inputType="textImeMultiLine"
 
@@ -47,10 +47,10 @@
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/inventoryText2"
+                android:id="@+id/EquipmentListText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:digits="abcefghijklmnopqrstuvwxyzABCEDFGHIJKLMNOPQRSTUVWXYZ1234567890\n "
+                android:digits="abcdefghijklmnopqrstuvwxyzABCEDFGHIJKLMNOPQRSTUVWXYZ1234567890=-+\n "
                 android:gravity="top|left"
                 android:inputType="textImeMultiLine"
 
@@ -65,10 +65,10 @@
                 android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/inventoryText3"
+                android:id="@+id/ConsumablesListText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:digits="abcefghijklmnopqrstuvwxyzABCEDFGHIJKLMNOPQRSTUVWXYZ1234567890\n "
+                android:digits="abcdefghijklmnopqrstuvwxyzABCEDFGHIJKLMNOPQRSTUVWXYZ1234567890=-+\n "
                 android:gravity="top|left"
                 android:inputType="textImeMultiLine"
 

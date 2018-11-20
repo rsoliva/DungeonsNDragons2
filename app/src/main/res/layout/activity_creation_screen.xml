@@ -118,14 +118,29 @@
         android:id="@+id/weaponSelectBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="113dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="6dp"
-        android:layout_marginEnd="135dp"
+        android:layout_marginEnd="232dp"
         android:layout_marginBottom="16dp"
         android:text="Weapon Select"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/SkillSelectBtn"
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/Skills"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weaponSelectBtn"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
 
