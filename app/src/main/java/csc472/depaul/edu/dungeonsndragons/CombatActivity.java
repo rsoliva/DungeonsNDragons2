@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TableLayout;
 
 import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
 
@@ -30,6 +31,17 @@ public class CombatActivity extends AppCompatActivity implements View.OnClickLis
         Inventory.setOnClickListener(this);
         Skills.setOnClickListener(this);
         Info.setOnClickListener(this);
+
+        if (dummy.GetJob().compareTo("Sorcerer") == 0)
+        {
+            SetSorcerer();
+        }
+    }
+
+    private void SetSorcerer()
+    {
+        TableLayout magTab = findViewById(R.id.magicTable);
+        magTab.setVisibility(View.VISIBLE);
     }
 
     private void getCharInfo(){

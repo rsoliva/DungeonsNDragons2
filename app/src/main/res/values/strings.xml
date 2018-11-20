@@ -93,6 +93,13 @@
     <string name="Type">Type</string>
     <string name="tWeapon">Sword</string>
     <string name="tMagic">Fireball</string>
-
+    <string name="burningHands">Burning Hands</string>
+    <string name="disguiseSelf">Disguise Self</string>
+    <string name="detectMagic">Detect Magic</string>
+    <string name="evocation">Evocation</string>
+    <string name="illusion">Illusion</string>
+    <string name="divination">Divination</string>
+    <string name="d6">1D6</string>
+    <string name="none">-</string>
 
 </resources>
