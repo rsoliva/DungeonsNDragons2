@@ -10,7 +10,7 @@ public class Paladin extends AbstractJob
     {
         this.DIE = DieType.D10;
         this.PRIMARY_STAT = new Stats[] {Stats.STRENGTH, Stats.CHARISMA};
-        this.SAVING_THROW = new Stats[] {Stats.WISDOM, Stats.CHARISMA};
+        this.SAVING_THROW = new String[] {Stats.WISDOM.toString(), Stats.CHARISMA.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.ALL};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.ALL};
         this.SR_PROF = new SimpleRange[] {SimpleRange.ALL};
@@ -24,7 +24,7 @@ public class Paladin extends AbstractJob
 
         this.DIE = DieType.D10;
         this.PRIMARY_STAT = new Stats[] {Stats.STRENGTH, Stats.CHARISMA};
-        this.SAVING_THROW = new Stats[] {Stats.WISDOM, Stats.CHARISMA};
+        this.SAVING_THROW = new String[] {Stats.WISDOM.toString(), Stats.CHARISMA.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.ALL};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.ALL};
         this.SR_PROF = new SimpleRange[] {SimpleRange.ALL};
@@ -142,6 +142,11 @@ public class Paladin extends AbstractJob
     @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return SAVING_THROW;
     }
 
     @Override

@@ -130,6 +130,11 @@ public class Dragonborn extends AbstractRace implements CharacterMethods
     }
 
     @Override
+    public String[] GetSavingThrows() {
+        return new String[0];
+    }
+
+    @Override
     public String GetInventory() {
         return privCharRef.GetInventory() + INVENTORY;
     }

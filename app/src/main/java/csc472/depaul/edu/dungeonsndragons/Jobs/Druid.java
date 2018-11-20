@@ -10,7 +10,7 @@ public class Druid extends AbstractJob
     {
         this.DIE = DieType.D8;
         this.PRIMARY_STAT = new Stats[] {Stats.WISDOM};
-        this.SAVING_THROW = new Stats[] {Stats.INTELLIGENCE, Stats.WISDOM};
+        this.SAVING_THROW = new String[] {Stats.INTELLIGENCE.toString(), Stats.WISDOM.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.LIGHT, ArmorTypes.MEDIUM, ArmorTypes.SHIELDS};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.CLUB, SimpleMelee.DAGGER, SimpleMelee.JAVELIN, SimpleMelee.MACE, SimpleMelee.QUARTERSTAFF, SimpleMelee.SICKLE, SimpleMelee.SPEAR};
         this.SR_PROF = new SimpleRange[] {SimpleRange.DART, SimpleRange.SLING};
@@ -24,7 +24,7 @@ public class Druid extends AbstractJob
 
         this.DIE = DieType.D8;
         this.PRIMARY_STAT = new Stats[] {Stats.WISDOM};
-        this.SAVING_THROW = new Stats[] {Stats.INTELLIGENCE, Stats.WISDOM};
+        this.SAVING_THROW = new String[] {Stats.INTELLIGENCE.toString(), Stats.WISDOM.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.LIGHT, ArmorTypes.MEDIUM, ArmorTypes.SHIELDS};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.CLUB, SimpleMelee.DAGGER, SimpleMelee.JAVELIN, SimpleMelee.MACE, SimpleMelee.QUARTERSTAFF, SimpleMelee.SICKLE, SimpleMelee.SPEAR};
         this.SR_PROF = new SimpleRange[] {SimpleRange.DART, SimpleRange.SLING};
@@ -142,6 +142,11 @@ public class Druid extends AbstractJob
     @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return SAVING_THROW;
     }
 
     @Override

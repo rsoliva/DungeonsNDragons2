@@ -10,7 +10,7 @@ public class Wizard extends AbstractJob
     {
         this.DIE = DieType.D6;
         this.PRIMARY_STAT = new Stats[] {Stats.INTELLIGENCE};
-        this.SAVING_THROW = new Stats[] {Stats.INTELLIGENCE, Stats.WISDOM};
+        this.SAVING_THROW = new String[] {Stats.INTELLIGENCE.toString(), Stats.WISDOM.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.NONE};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.DAGGER, SimpleMelee.QUARTERSTAFF};
         this.SR_PROF = new SimpleRange[] {SimpleRange.DART, SimpleRange.SLING, SimpleRange.LIGHT_CROSSBOW};
@@ -24,7 +24,7 @@ public class Wizard extends AbstractJob
 
         this.DIE = DieType.D6;
         this.PRIMARY_STAT = new Stats[] {Stats.INTELLIGENCE};
-        this.SAVING_THROW = new Stats[] {Stats.INTELLIGENCE, Stats.WISDOM};
+        this.SAVING_THROW = new String[] {Stats.INTELLIGENCE.toString(), Stats.WISDOM.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.NONE};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.DAGGER, SimpleMelee.QUARTERSTAFF};
         this.SR_PROF = new SimpleRange[] {SimpleRange.DART, SimpleRange.SLING, SimpleRange.LIGHT_CROSSBOW};
@@ -135,6 +135,11 @@ public class Wizard extends AbstractJob
     @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return SAVING_THROW;
     }
 
     @Override

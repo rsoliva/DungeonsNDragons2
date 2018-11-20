@@ -10,7 +10,7 @@ public class Rogue extends AbstractJob
     {
         this.DIE = DieType.D8;
         this.PRIMARY_STAT = new Stats[] {Stats.DEXTERITY};
-        this.SAVING_THROW = new Stats[] {Stats.DEXTERITY, Stats.INTELLIGENCE};
+        this.SAVING_THROW = new String[] {Stats.DEXTERITY.toString(), Stats.INTELLIGENCE.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.LIGHT};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.ALL};
         this.SR_PROF = new SimpleRange[] {SimpleRange.ALL};
@@ -24,7 +24,7 @@ public class Rogue extends AbstractJob
 
         this.DIE = DieType.D8;
         this.PRIMARY_STAT = new Stats[] {Stats.DEXTERITY};
-        this.SAVING_THROW = new Stats[] {Stats.DEXTERITY, Stats.INTELLIGENCE};
+        this.SAVING_THROW = new String[] {Stats.DEXTERITY.toString(), Stats.INTELLIGENCE.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.LIGHT};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.ALL};
         this.SR_PROF = new SimpleRange[] {SimpleRange.ALL};
@@ -142,6 +142,11 @@ public class Rogue extends AbstractJob
     @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return SAVING_THROW;
     }
 
     @Override

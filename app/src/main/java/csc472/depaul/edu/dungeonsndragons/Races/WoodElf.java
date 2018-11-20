@@ -135,6 +135,11 @@ public class WoodElf extends AbstractRace implements CharacterMethods
     }
 
     @Override
+    public String[] GetSavingThrows() {
+        return new String[0];
+    }
+
+    @Override
     public String GetName()
     {
         return this.privCharRef.GetName();

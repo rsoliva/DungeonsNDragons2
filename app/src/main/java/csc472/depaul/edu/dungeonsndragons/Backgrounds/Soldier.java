@@ -123,6 +123,11 @@ public class Soldier extends AbstractBackground
     }
 
     @Override
+    public String[] GetSavingThrows() {
+        return privCharRef.GetSavingThrows();
+    }
+
+    @Override
     public String GetInventory()
     {
         INVENTORY += "Rank Insignia x1, Enemy Trophy x1, Deck of Cards x1, Common Clothes x1, GP x10";
