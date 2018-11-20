@@ -74,7 +74,15 @@
     <string name="Info">Info</string>
     <string name="Skills">Skills</string>
     <string name="Inventory">Inventory</string>
+    <string name="Combat">Combat</string>
+
+    <!--Combat Stuff-->
+    <string name="weapon">Weapons</string>
+    <string name="Damage">Damage</string>
+    <string name="Type">Type</string>
     <string name="Magic">Magic</string>
+    <string name="tWeapon">Sword</string>
+    <string name="tMagic">Fireball</string>
 
 
 </resources>
