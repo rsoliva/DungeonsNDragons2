@@ -40,17 +40,17 @@ public class ChracterDisplayScreen2 extends AppCompatActivity implements View.On
         calcModifiers();
         bindViews();
         updateUIText();
-//        info = findViewById(R.id.Info);
-//        info.setOnClickListener(this);
-//
-//        skills = findViewById(R.id.Skills);
-//        skills.setOnClickListener(this);
-//
-//        magic = findViewById(R.id.magic);
-//        magic.setOnClickListener(this);
-//
-//        inventory = findViewById(R.id.Inventory);
-//        inventory.setOnClickListener(this);
+        info = findViewById(R.id.Info);
+        info.setOnClickListener(this);
+
+        skills = findViewById(R.id.Skills);
+        skills.setOnClickListener(this);
+
+        magic = findViewById(R.id.magic);
+        magic.setOnClickListener(this);
+
+        inventory = findViewById(R.id.Inventory);
+        inventory.setOnClickListener(this);
     }
 
     private void bindViews(){
@@ -117,6 +117,35 @@ public class ChracterDisplayScreen2 extends AppCompatActivity implements View.On
         intimidate.setText(Integer.toString(chMod));
         persuade.setText(Integer.toString(chMod));
         perform.setText(Integer.toString(chMod));
+
+    }
+    @Override
+    public void onClick(View v) {
+
+        switch(v.getId()){
+
+            case R.id.Info:
+                Intent skillsScreen = new Intent(this, CharacterMainDisplayScreen.class);
+                skillsScreen.putExtra("characterInfo", (Character)dummy);
+                startActivity(skillsScreen);
+                break;
+
+            case R.id.Skills:
+                break;
+
+            case R.id.Inventory:
+                Intent inventory = new Intent(this, Inventory.class);
+                inventory.putExtra("characterInfo", (Character)dummy);
+                startActivity(inventory);
+                break;
+
+//            case R.id.magic :
+//                mainScreen = new Intent(this, Magic.class);
+//                mainScreen.putExtra("characterInfo", (Character)dummy);
+//                startActivity(mainScreen);
+
+
+        }
 
     }
 

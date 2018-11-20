@@ -10,41 +10,10 @@
     tools:context=".CharacterDisplayScreen2"
     android:baselineAligned="false">
 
-    <LinearLayout
-        android:id="@+id/navigation"
+    <include layout = "@layout/nav_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/Infos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Info" />
-
-        <Button
-            android:id="@+id/Skillss"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Skills" />
-
-        <Button
-            android:id="@+id/Inventorys"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Inventory" />
-
-        <Button
-            android:id="@+id/magics"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/Magic" />
-
-    </LinearLayout>
+         />
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -82,11 +82,9 @@ public class CharacterMainDisplayScreen extends AppCompatActivity implements Vie
         return (int)(Math.floor(score / 2 - 5));
     }
     private void wrapCharacter(){
-        if(wrapped == false) {
             WrapRace();
             WrapJob();
-            wrapped = true;
-        }
+
         dummy = new Character(dummy);
 
     }
@@ -290,18 +288,29 @@ public class CharacterMainDisplayScreen extends AppCompatActivity implements Vie
 
     @Override
     public void onClick(View v) {
+
         switch(v.getId()){
+
             case R.id.info:
                 break;
             case R.id.Skills:
-                Intent mainScreen = new Intent(this, CharacterDisplayScreen2.class);
-                mainScreen.putExtra("characterInfo", (Character)dummy);
-                startActivity(mainScreen);
+                Intent skillsScreen = new Intent(this, ChracterDisplayScreen2.class);
+                skillsScreen.putExtra("characterInfo", (Character)dummy);
+                startActivity(skillsScreen);
                 break;
+
             case R.id.Inventory:
+                Intent inventory = new Intent(this, Inventory.class);
+                inventory.putExtra("characterInfo", (Character)dummy);
+                startActivity(inventory);
                 break;
-            case R.id.magic :
-                break;
+
+//            case R.id.magic :
+//                mainScreen = new Intent(this, Magic.class);
+//                mainScreen.putExtra("characterInfo", (Character)dummy);
+//                startActivity(mainScreen);
+
+
         }
     }
 

@@ -151,6 +151,6 @@ public class Acolyte extends AbstractBackground
 
     @Override
     public String GetDie() {
-        return this.DIE.toString();
+        return privCharRef.GetDie();
     }
 }
