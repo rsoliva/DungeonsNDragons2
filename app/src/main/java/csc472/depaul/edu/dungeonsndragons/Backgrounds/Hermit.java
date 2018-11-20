@@ -122,6 +122,11 @@ public class Hermit extends AbstractBackground
     }
 
     @Override
+    public String[] GetSavingThrows() {
+        return privCharRef.GetSavingThrows();
+    }
+
+    @Override
     public String GetInventory()
     {
         INVENTORY += "Prayer Notes x1, Winter Blanket x1, Common Clothes x1, Herbalism Kit x1, GP x5";

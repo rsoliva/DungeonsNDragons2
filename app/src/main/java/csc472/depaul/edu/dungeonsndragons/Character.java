@@ -24,6 +24,7 @@ public class Character implements Parcelable, CharacterMethods
     private String job;
     private String background;
     private String hitDie = "";
+    private String[] SAVING_THROWS;
 
     @Override
     public int describeContents() {
@@ -217,7 +218,7 @@ public class Character implements Parcelable, CharacterMethods
 
     @Override
     public String[] GetSavingThrows() {
-        return new String[0];
+        return SAVING_THROWS;
     }
 
     @Override

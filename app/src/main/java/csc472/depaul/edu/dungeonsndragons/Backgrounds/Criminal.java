@@ -123,6 +123,11 @@ public class Criminal extends AbstractBackground
     }
 
     @Override
+    public String[] GetSavingThrows() {
+        return privCharRef.GetSavingThrows();
+    }
+
+    @Override
     public String GetInventory()
     {
         INVENTORY += "Crowbar x1, Dark Common Clothes x1 GP x15 ";

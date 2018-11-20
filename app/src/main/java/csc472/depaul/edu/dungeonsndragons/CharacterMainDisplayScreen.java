@@ -85,7 +85,6 @@ public class CharacterMainDisplayScreen extends AppCompatActivity implements Vie
             WrapRace();
             WrapJob();
 
-            //dummy.SetSpeed(dummy.GetSpeed());
             dummy = new Character(dummy);
 
     }

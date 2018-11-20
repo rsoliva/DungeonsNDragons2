@@ -130,6 +130,11 @@ public class Entertainer extends AbstractBackground
     }
 
     @Override
+    public String[] GetSavingThrows() {
+        return privCharRef.GetSavingThrows();
+    }
+
+    @Override
     public String GetBackground() {
         return "Entertainer";
     }

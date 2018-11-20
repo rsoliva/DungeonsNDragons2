@@ -130,6 +130,11 @@ public class Acolyte extends AbstractBackground
     }
 
     @Override
+    public String[] GetSavingThrows() {
+        return privCharRef.GetSavingThrows();
+    }
+
+    @Override
     public String GetBackground() {
         return "Acolyte";
     }

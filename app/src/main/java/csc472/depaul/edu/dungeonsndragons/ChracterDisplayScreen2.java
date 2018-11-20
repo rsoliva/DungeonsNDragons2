@@ -7,7 +7,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import csc472.depaul.edu.dungeonsndragons.Jobs.AbstractJob;
 import csc472.depaul.edu.dungeonsndragons.Jobs.Barbarian;
+import csc472.depaul.edu.dungeonsndragons.Jobs.Bard;
+import csc472.depaul.edu.dungeonsndragons.Jobs.Cleric;
+import csc472.depaul.edu.dungeonsndragons.Jobs.Druid;
+import csc472.depaul.edu.dungeonsndragons.Jobs.Fighter;
+import csc472.depaul.edu.dungeonsndragons.Jobs.Monk;
+import csc472.depaul.edu.dungeonsndragons.Jobs.Paladin;
+import csc472.depaul.edu.dungeonsndragons.Jobs.Ranger;
+import csc472.depaul.edu.dungeonsndragons.Jobs.Rogue;
+import csc472.depaul.edu.dungeonsndragons.Jobs.Sorcerer;
+import csc472.depaul.edu.dungeonsndragons.Jobs.Warlock;
+import csc472.depaul.edu.dungeonsndragons.Jobs.Wizard;
 import csc472.depaul.edu.dungeonsndragons.Races.CharacterMethods;
 
 public class ChracterDisplayScreen2 extends AppCompatActivity implements View.OnClickListener {
@@ -26,9 +38,11 @@ public class ChracterDisplayScreen2 extends AppCompatActivity implements View.On
     Intent skillsIntent;
 
     Button info,skills,magic,inventory;
+    String hitDie;
 
     CharacterMethods dummy;
     int sMod, dMod, cMod, iMod, wMod, chMod;
+    int ssMod = 0, ddMod = 0, ccMod = 0, iiMod = 0, wwMod = 0, chchMod = 0;
 
 
     @Override
@@ -102,29 +116,57 @@ public class ChracterDisplayScreen2 extends AppCompatActivity implements View.On
 
     private void updateUIText()
     {
+        hitDie = dummy.GetDie();
+        WrapJob();
+        String[] savingThrows = dummy.GetSavingThrows();
+        for (String s : savingThrows)
+        {
+            if (s.equals("STRENGTH"))
+            {
+                ssMod = 2;
+            }
+            else if (s.equals("DEXTERITY"))
+            {
+                ddMod = 2;
+            }
+            else if (s.equals("WISDOM"))
+            {
+                wwMod = 2;
+            }
+            else if (s.equals("INTELLIGENCE"))
+            {
+                iiMod = 2;
+            }
+            else if (s.equals("CHARISMA"))
+            {
+                chchMod = 2;
+            }
+        }
 
-        athletics.setText(Integer.toString(sMod));
+        dummy = new Character(dummy);
 
-        animalHandling.setText(Integer.toString(wMod));
-        insight.setText(Integer.toString(wMod));
-        medicine.setText(Integer.toString(wMod));
-        survival.setText(Integer.toString(wMod));
-        perception.setText(Integer.toString(wMod));
+        athletics.setText(Integer.toString(sMod + ssMod));
 
-        stealth.setText(Integer.toString(dMod));
-        acrobatics.setText(Integer.toString(dMod));
-        sleight.setText(Integer.toString(dMod));
+        animalHandling.setText(Integer.toString(wMod + wwMod));
+        insight.setText(Integer.toString(wMod + wwMod));
+        medicine.setText(Integer.toString(wMod + wwMod));
+        survival.setText(Integer.toString(wMod + wwMod));
+        perception.setText(Integer.toString(wMod + wwMod));
 
-        arcane.setText(Integer.toString(iMod));
-        history.setText(Integer.toString(iMod));
-        investigation.setText(Integer.toString(iMod));
-        nature.setText(Integer.toString(iMod));
-        religion.setText(Integer.toString(iMod));
+        stealth.setText(Integer.toString(dMod + ddMod));
+        acrobatics.setText(Integer.toString(dMod + ddMod));
+        sleight.setText(Integer.toString(dMod + ddMod));
 
-        decept.setText(Integer.toString(chMod));
-        intimidate.setText(Integer.toString(chMod));
-        persuade.setText(Integer.toString(chMod));
-        perform.setText(Integer.toString(chMod));
+        arcane.setText(Integer.toString(iMod + iiMod));
+        history.setText(Integer.toString(iMod + iiMod));
+        investigation.setText(Integer.toString(iMod + iiMod));
+        nature.setText(Integer.toString(iMod + iiMod));
+        religion.setText(Integer.toString(iMod + iiMod));
+
+        decept.setText(Integer.toString(chMod + chchMod));
+        intimidate.setText(Integer.toString(chMod + chchMod));
+        persuade.setText(Integer.toString(chMod + chchMod));
+        perform.setText(Integer.toString(chMod + chchMod));
 
     }
     @Override
@@ -133,6 +175,7 @@ public class ChracterDisplayScreen2 extends AppCompatActivity implements View.On
         switch(v.getId()){
 
             case R.id.Info:
+                dummy.SetDie(hitDie);
                 Intent skillsScreen = new Intent(this, CharacterMainDisplayScreen.class);
                 skillsScreen.putExtra("characterInfo", (Character)dummy);
                 startActivity(skillsScreen);
@@ -152,5 +195,50 @@ public class ChracterDisplayScreen2 extends AppCompatActivity implements View.On
 
     }
 
+
+
+    private void WrapJob()
+    {
+        switch (dummy.GetJob())
+        {
+            case "Barbarian":
+                dummy = new Barbarian(dummy);
+                break;
+            case  "Bard":
+                dummy = new Bard(dummy);
+                break;
+            case "Cleric":
+                dummy = new Cleric(dummy);
+                break;
+            case "Druid":
+                dummy = new Druid(dummy);
+                break;
+            case "Fighter":
+                dummy = new Fighter(dummy);
+                break;
+            case "Monk":
+                dummy = new Monk(dummy);
+                break;
+            case "Paladin":
+                dummy = new Paladin(dummy);
+                break;
+            case "Ranger":
+                dummy = new Ranger(dummy);
+                break;
+            case "Rogue":
+                dummy = new Rogue(dummy);
+                break;
+            case "Sorcerer":
+                dummy = new Sorcerer(dummy);
+            case "Warlock":
+                dummy = new Warlock(dummy);
+                break;
+            case "Wizard":
+                dummy = new Wizard(dummy);
+                break;
+            default:
+                dummy = new Monk(dummy);
+        }
+    }
 
 }

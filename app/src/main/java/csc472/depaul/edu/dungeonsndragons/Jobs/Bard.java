@@ -10,7 +10,7 @@ public class Bard extends AbstractJob
     {
         this.DIE = DieType.D8;
         this.PRIMARY_STAT = new Stats[] {Stats.CHARISMA};
-        this.SAVING_THROW = new Stats[] {Stats.DEXTERITY, Stats.CHARISMA};
+        this.SAVING_THROW = new String[] {Stats.DEXTERITY.toString(), Stats.CHARISMA.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.LIGHT};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.ALL};
         this.SR_PROF = new SimpleRange[] {SimpleRange.ALL};
@@ -23,7 +23,7 @@ public class Bard extends AbstractJob
         this.privCharRef = charRef;
         this.DIE = DieType.D8;
         this.PRIMARY_STAT = new Stats[] {Stats.CHARISMA};
-        this.SAVING_THROW = new Stats[] {Stats.DEXTERITY, Stats.CHARISMA};
+        this.SAVING_THROW = new String[] {Stats.DEXTERITY.toString(), Stats.CHARISMA.toString()};
         this.ARMOR_PROF = new ArmorTypes[] {ArmorTypes.LIGHT};
         this.SM_PROF = new SimpleMelee[] {SimpleMelee.ALL};
         this.SR_PROF = new SimpleRange[] {SimpleRange.ALL};
@@ -141,6 +141,11 @@ public class Bard extends AbstractJob
     @Override
     public int GetProficiency() {
         return privCharRef.GetProficiency();
+    }
+
+    @Override
+    public String[] GetSavingThrows() {
+        return SAVING_THROW;
     }
 
     @Override

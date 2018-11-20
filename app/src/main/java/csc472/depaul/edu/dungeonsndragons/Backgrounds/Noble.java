@@ -123,6 +123,11 @@ public class Noble extends AbstractBackground
     }
 
     @Override
+    public String[] GetSavingThrows() {
+        return privCharRef.GetSavingThrows();
+    }
+
+    @Override
     public String GetInventory()
     {
         INVENTORY += "Fine Clothes x1, Signet Ring x1, Scroll of Pedigree x1, GP x25";
